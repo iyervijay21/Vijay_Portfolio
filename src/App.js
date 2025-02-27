@@ -96,8 +96,9 @@ function MainPage() {
     <div>
       {/* HERO SECTION */}
       <FadeInSection className="pt-24 pb-20">
-        <div id="home" className="w-full bg-gray-800 shadow-md mb-8 p-6 border-b border-gray-700">
-          <section className="flex flex-col-reverse md:flex-row items-center">
+      <div id="Hero" className="w-full bg-gray-800 shadow-md mb-8 p-6">
+
+          <section id="home" className="flex flex-col-reverse md:flex-row items-center">
             <div className="w-full md:w-1/2">
               <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-purple-300">
                 Hi, I'm Vijay <span role="img" aria-label="wave">👋</span>
@@ -112,7 +113,13 @@ function MainPage() {
               </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-              <img src="/media/hero.jpg" alt="Hero" className="max-w-xs md:max-w-sm rounded-full" />
+            <img
+  src="/media/hero.jpg"
+  alt="Hero"
+  className="max-w-xs md:max-w-sm rounded-full"
+/>
+
+
             </div>
           </section>
         </div>
@@ -506,7 +513,7 @@ function EducationDetail() {
 function AppRouter() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <Router>
+    <Router basename="/Vijay_portfolio">
       <div className="bg-gray-900 min-h-screen">
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>
@@ -525,5 +532,6 @@ function AppRouter() {
     </Router>
   );
 }
+
 
 export default AppRouter;

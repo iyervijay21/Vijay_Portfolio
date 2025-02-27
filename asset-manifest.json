@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Vijay_Portfolio/static/css/main.2759ad8a.css",
+    "main.js": "/Vijay_Portfolio/static/js/main.daf366da.js",
+    "index.html": "/Vijay_Portfolio/index.html",
+    "main.2759ad8a.css.map": "/Vijay_Portfolio/static/css/main.2759ad8a.css.map",
+    "main.daf366da.js.map": "/Vijay_Portfolio/static/js/main.daf366da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2759ad8a.css",
+    "static/js/main.daf366da.js"
+  ]
+}

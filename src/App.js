@@ -29,15 +29,16 @@ function FadeInSection({ children, className = "" }) {
   );
 }
 
-// Navbar with transparent background and white text.
 function Navbar({ menuOpen, setMenuOpen }) {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 absolute w-full top-0 z-20">
+    <nav className="flex items-center justify-between px-6 py-4 fixed w-full top-0 z-20 bg-black bg-opacity-80 backdrop-blur">
       <div className="text-2xl font-bold text-white">Vijay Mohanram Iyer</div>
+
+      {/* Hamburger button */}
       <div className="md:hidden">
         <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
           {!menuOpen ? (
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -46,7 +47,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
               />
             </svg>
           ) : (
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -57,6 +58,8 @@ function Navbar({ menuOpen, setMenuOpen }) {
           )}
         </button>
       </div>
+
+      {/* Desktop menu */}
       <ul className="hidden md:flex space-x-6">
         <li><a href="#home" className="text-white hover-glow">Home</a></li>
         <li><a href="#skills" className="text-white hover-glow">Skills</a></li>
@@ -65,9 +68,22 @@ function Navbar({ menuOpen, setMenuOpen }) {
         <li><a href="#projects" className="text-white hover-glow">Projects</a></li>
         <li><a href="#contact" className="text-white hover-glow">Contact</a></li>
       </ul>
+
+      {/* Mobile menu, shows when menuOpen is true */}
+      {menuOpen && (
+        <ul className="flex flex-col space-y-4 bg-black bg-opacity-90 absolute top-full left-0 w-full p-6 md:hidden">
+          <li><a href="#home" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Home</a></li>
+          <li><a href="#skills" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Skills</a></li>
+          <li><a href="#education" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Education</a></li>
+          <li><a href="#experience" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Experience</a></li>
+          <li><a href="#projects" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Projects</a></li>
+          <li><a href="#contact" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Contact</a></li>
+        </ul>
+      )}
     </nav>
   );
 }
+
 
 // ToolsIcons: Renders tool icons using regular image URLs.
 function ToolsIcons() {

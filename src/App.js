@@ -99,13 +99,13 @@ function MainPage() {
       <div id="Hero" className="w-full bg-gray-800 shadow-md mb-8 p-6">
 
           <section id="home" className="flex flex-col-reverse md:flex-row items-center">
-            <div className="w-full md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-purple-300">
-                Hi, I'm Vijay <span role="img" aria-label="wave">👋</span>
-              </h1>
+            <div className="w-full md:w-1/2 text-align: justify;">
+              
               <p className="text-xl md:text-2xl mb-6 text-purple-200">
-                A dedicated AI/ML/OpenCV Engineer specializing in advanced machine learning solutions for the health sector.
+              Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities.  I mix creativity with code, teaching machines to interpret the visual world in fun, unexpected ways. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
+            
               </p>
+              
               <div className="space-x-4">
                 <a href="#contact" className="bg-purple-600 text-white hover-glow px-4 py-2 rounded font-bold">
                   Contact Me
@@ -114,13 +114,15 @@ function MainPage() {
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
             <img
-  src="/media/hero.jpg"
+  src={require('./media/vijay.jpg')}
   alt="Hero"
-  className="max-w-xs md:max-w-sm rounded-full"
+  className="w-80 h-80 object-cover rounded-full"
 />
 
 
-            </div>
+
+</div>
+
           </section>
         </div>
       </FadeInSection>
@@ -133,10 +135,14 @@ function MainPage() {
           
           
           
-          {/* AI/ML */}
+          {/* Language/Frameworks */}
           <div className="mb-12 p-4 border rounded border-gray-700">
-            <h3 className="text-2xl font-bold text-purple-200 mb-4">AI/ML</h3>
+            <h3 className="text-2xl font-bold text-purple-200 mb-4">Language/Frameworks</h3>
             <div className="flex flex-wrap justify-evenly gap-6">
+            <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" className="w-16 h-16 mb-2" />
+                <p className="text-purple-300 font-semibold">python</p>
+              </div>
             <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" className="w-16 h-16 mb-2" />
                 <p className="text-purple-300 font-semibold">OpenCV</p>
@@ -232,7 +238,13 @@ function MainPage() {
       Education
     </h2>
     <div className="flex flex-col md:flex-row justify-evenly gap-8">
-      <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none">
+      <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
+      <img
+        src={require('./media/KIT.webp')}
+        alt="KIT Logo"
+        className="h-20 w-20 rounded bg-white object-contain"
+      />
+       <div>
         <h3 className="text-xl font-bold mb-2 text-white">
           Karlsruhe Institute of Technology
         </h3>
@@ -240,11 +252,20 @@ function MainPage() {
           M.Sc. in Electrical Engineering and Information Technology
         </p>
         <p className="text-sm text-purple-200 mt-2">
-          May 2022 – Present
+          May 2022 – July 2025
+          <br />
+          GPA: 2.3
         </p>
       </div>
-      <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none">
-        <h3 className="text-xl font-bold mb-2 text-white">
+      </div>
+      <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
+      <img
+        src={require('./media/booklogo.png')}
+        alt="TCET logo"
+        className="h-20 w-20 rounded bg-white object-contain"
+      />
+      <div>
+<h3 className="text-xl font-bold mb-2 text-white">
           Thakur College of Engineering and Technology
         </h3>
         <p className="text-white">
@@ -252,7 +273,11 @@ function MainPage() {
         </p>
         <p className="text-sm text-purple-200 mt-2">
           Aug 2017 – May 2021
+          <br />
+          GPA: 2.8
         </p>
+      </div>
+        
       </div>
     </div>
   </div>
@@ -261,143 +286,225 @@ function MainPage() {
 
 
 
+{/* WORK EXPERIENCE SECTION */}
+<FadeInSection className="py-20">
+  <div id="experience" className="w-full bg-gray-800 shadow-md mb-8 p-6">
+    <h2 className="text-3xl font-bold mb-8 text-purple-300">Work Experience</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
-      {/* WORK EXPERIENCE SECTION */}
-      <FadeInSection className="py-20">
-        <div id="experience" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-          <h2 className="text-3xl font-bold mb-8 text-purple-300">Work Experience</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            <Link to="/experience/tecolab" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  T
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">TecoLab</h3>
-                  <p className="text-purple-200">Working Student (Mar 2023 – Present)</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                Built and optimized websites using Jekyll &amp; WordPress. Contributed to ML4Print and performed predictive maintenance simulations.
-              </div>
-            </Link>
-            <Link to="/experience/accesskit" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  A
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Access@KIT</h3>
-                  <p className="text-purple-200">Working Student (Mar 2023 – May 2023)</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                Designed accessible UIs with Material-UI and integrated a TTS model.
-              </div>
-            </Link>
-            <Link to="/experience/accurdigitus" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  AD
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
-                  <p className="text-purple-200">Web Dev (Jan 2020 – May 2020)</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                Developed responsive React.js web apps and implemented RESTful APIs.
-              </div>
-            </Link>
-            <Link to="/experience/accenture" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  AC
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Accenture India</h3>
-                  <p className="text-purple-200">Associate SE (Feb 2022 – Apr 2022)</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                Maintained IBM Mainframe servers and ensured system reliability.
-              </div>
-            </Link>
+            {/* FZI */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+          <img
+  src={require('./media/1524.png')}
+  alt="FZI Logo"
+  className="h-20 w-20 rounded bg-white object-contain"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white">FZI</h3>
+            <p className="text-purple-200">Working Student (Sept 2025 – Dec 2025)</p>
           </div>
         </div>
-      </FadeInSection>
-
-      {/* PROJECTS SECTION */}
-      <FadeInSection className="py-20">
-        <div id="projects" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-          <h2 className="text-3xl font-bold mb-6 text-purple-300">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            <Link to="/projects/car-accident" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  Car
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Car Accident Alert</h3>
-                  <p className="text-purple-200">Crash Detection</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                Real-time crash detection using sensor integration and auto alerts.
-              </div>
-            </Link>
-            <Link to="/projects/self-driving" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  SDC
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Self-Driving Car</h3>
-                  <p className="text-purple-200">Autonomous Nav</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                3D mapping with LIDAR &amp; camera inputs and sensor fusion.
-              </div>
-            </Link>
-            <Link to="/projects/camcussion" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  CC
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">CamCussion</h3>
-                  <p className="text-purple-200">Eye Tracking</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                Analyzes pupil dilation &amp; saccadic movements for concussion diagnosis.
-              </div>
-            </Link>
-            <Link to="/projects/deepfake" className="block bg-transparent p-6 rounded shadow hover-glow">
-              <div className="flex items-center space-x-4">
-                <div className="h-12 w-12 flex items-center justify-center rounded bg-purple-600 text-white font-bold">
-                  DF
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">DeepFake Detection</h3>
-                  <p className="text-purple-200">rPPG Analysis</p>
-                </div>
-              </div>
-              <div className="mt-4 text-white">
-                Leverages subtle facial color variations to enhance media security.
-              </div>
-            </Link>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">FZI</h3>
+          <p className="text-sm">
+            Focused on digital accessibility improvements by crafting intuitive UIs with Material-UI and React. Integrated a real-time text-to-speech engine using Python-based microservices to deliver dynamic audio feedback, ensuring the platform was fully accessible to visually impaired users. Optimized asynchronous data flows to reduce load times by nearly 40%.
+          </p>
+        </div>
+      </div>
+      
+      {/* TecoLab */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+          <img
+  src={require('./media/teco_trans.png')}
+  alt="TecoLab Logo"
+  className="h-20 w-20 rounded bg-white object-contain"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white">TecoLab</h3>
+            <p className="text-purple-200">Working Student (Mar 2023 – Present)</p>
           </div>
         </div>
-      </FadeInSection>
+        {/* Hover overlay with max height and scrolling */}
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">TecoLab</h3>
+          <p className="text-sm">
+            Led the ML4Print project, where I designed a robust document analysis pipeline using OCR and deep neural networks to classify printed materials in real time. I developed custom pre-processing modules in Python and fine-tuned TensorFlow models to minimize inference latency. Additionally, I built a heat simulation module leveraging RNNs to model thermal behavior in industrial valves, significantly reducing downtime. My role also included containerizing applications with Docker and orchestrating deployments via Kubernetes.
+          </p>
+        </div>
+      </div>
+      
+      {/* Access@KIT */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+          <img
+  src={require('./media/6379_access@kit_rgb_dt.png')}
+  alt="Access@KIT Logo"
+  className="h-20 w-20 rounded bg-white object-contain"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white">Access@KIT</h3>
+            <p className="text-purple-200">Working Student (Mar 2023 – May 2023)</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
+          <p className="text-sm">
+            Focused on digital accessibility improvements by crafting intuitive UIs with Material-UI and React. Integrated a real-time text-to-speech engine using Python-based microservices to deliver dynamic audio feedback, ensuring the platform was fully accessible to visually impaired users. Optimized asynchronous data flows to reduce load times by nearly 40%.
+          </p>
+        </div>
+      </div>
+      
+      {/* Accur Digitus */}
+<div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+  <div className="flex items-center space-x-4">
+    <img
+  src={require('./media/accur_digitus_logo.jpg')}
+  alt="Accur Digitus Logo"
+  className="h-20 w-20 rounded bg-white object-contain"
+/>
+    <div>
+      <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
+      <p className="text-purple-200">Web Developer (Jan 2020 – May 2020)</p>
+    </div>
+  </div>
+  <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+    <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
+    <p className="text-sm">
+      Engineered responsive web applications using React and Tailwind CSS. Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components. Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.
+    </p>
+  </div>
+</div>
+
+      
+      {/* Accenture */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+          <img
+  src={require('./media/Accenture.webp')}
+  alt="Accenture Logo"
+  className="h-20 w-20 rounded bg-white object-contain"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white">Accenture India</h3>
+            <p className="text-purple-200">Associate SE (Feb 2022 – Apr 2022)</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">Accenture India</h3>
+          <p className="text-sm">
+            Maintained critical IBM Mainframe systems through custom COBOL scripts and proactive monitoring tools. Collaborated with cross-functional teams to diagnose performance bottlenecks, ensuring 99.9% uptime and efficient legacy system integration with modern technologies.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</FadeInSection>
+
+{/* PROJECTS SECTION */}
+<FadeInSection className="py-20">
+  <div id="projects" className="w-full bg-gray-800 shadow-md mb-8 p-6">
+    <h2 className="text-3xl font-bold mb-6 text-purple-300">Projects</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      
+      {/* Real-Time Car Accident Alert System */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+           <img
+  src={require('./media/RTC.png')}
+  alt="RTC Logo"
+  className="h-20 w-20 object-cover rounded-full"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white"> Real Time Car Accident Alert System</h3>
+            <p className="text-purple-200">Crash Detection</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
+          <p className="text-sm">
+            Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time. Employed a custom CNN model alongside sensor fusion algorithms to trigger precise geolocation-based alerts, dramatically reducing emergency response times.
+          </p>
+        </div>
+      </div>
+      
+      {/* Self-Driving Car */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+           <img
+  src={require('./media/LiDAR-Technology.png')}
+  alt="LiDAR Logo"
+  className="h-20 w-20 object-cover rounded-full"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white">Self-Driving Car using LIDAR</h3>
+            <p className="text-purple-200">Autonomous Nav</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
+          <p className="text-sm">
+            Engineered an autonomous navigation system by integrating LIDAR, radar, and camera inputs to generate real-time 3D maps. Applied YOLO for rapid obstacle detection and used reinforcement learning algorithms to refine path planning in dynamic urban environments.
+          </p>
+        </div>
+      </div>
+      
+      {/* CamCussion */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+           <img
+  src={require('./media/CCS.jpg')}
+  alt="CCS Logo"
+  className="h-20 w-20 object-cover rounded-full"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white">CamCussion (Zeiss Innovation Hub)</h3>
+            <p className="text-purple-200">Eye Tracking</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">CamCussion</h3>
+          <p className="text-sm">
+            In collaboration with industry partners, developed a real-time eye tracking solution using OpenCV. The system analyzes pupil dilation and saccadic movements to provide early indicators for concussion diagnosis, employing advanced feature detection and machine learning for accurate measurement.
+          </p>
+        </div>
+      </div>
+      
+      {/* DeepFake Detection */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+           <img
+  src={require('./media/DEEP.jpg')}
+  alt="DeepFake Logo"
+  className="h-20 w-20 object-cover rounded-full"
+/>
+          <div>
+            <h3 className="text-xl font-bold text-white">DeepFake Detection (FZI)</h3>
+            <p className="text-purple-200">rPPG Analysis</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
+          <p className="text-sm">
+            Currently under development, this system harnesses rPPG signals to capture subtle facial blood flow patterns. By employing attention-based neural networks and multi-region analysis, it distinguishes authentic video content from deepfakes, providing a critical layer of security in digital media verification.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</FadeInSection>
+
+
 
       {/* CONTACT SECTION */}
       <FadeInSection className="py-20">
         <div id="contact" className="w-full bg-gray-800 shadow-md mb-8 p-6">
           <h2 className="text-3xl font-bold mb-4 text-purple-300">Contact Me</h2>
           <p className="text-purple-200 mb-6">
-            I'm eager to discuss opportunities and collaborations in AI, ML, and Computer Vision.
+          I'm always up for a wild brainstorming session where we turn pixels into pure magic—let’s chat if you're as excited about playful AI, ML, and computer vision adventures as I am!
           </p>
           <div className="space-y-3">
             <div>
@@ -449,56 +556,56 @@ function MainPage() {
 function TecoLabDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for TecoLab
+      At TecoLab, I played a pivotal role in integrating advanced machine learning algorithms into our production systems. I spearheaded the development of the ML4Print project—a sophisticated document analysis pipeline that combines OCR, pattern recognition, and custom deep learning models to classify and authenticate printed documents in real time. My contributions involved designing data pre-processing modules using Python and TensorFlow, optimizing neural network architectures to reduce inference latency, and implementing RESTful API endpoints that integrated seamlessly with our existing CMS. Additionally, I engineered a heat simulation module that leverages regression models and recurrent neural networks (RNNs) to simulate the thermal behavior of liquids in industrial valves. This module not only improved our predictive maintenance capabilities but also reduced system downtime by 25%. I also collaborated closely with the DevOps team to containerize our applications using Docker and orchestrate deployments with Kubernetes, ensuring scalability and robust performance in a cloud environment.
     </div>
   );
 }
 function AccessKITDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for Access@KIT
+      At Access@KIT, my focus was on enhancing digital accessibility and user engagement. I developed a dynamic front-end using React and Material-UI, incorporating ARIA roles and semantic HTML to improve accessibility standards across the platform. I integrated a cutting-edge text-to-speech (TTS) engine using custom Python scripts and third-party APIs, enabling real-time audio rendering of on-screen text for visually impaired users. Additionally, I implemented custom caching and asynchronous data fetching techniques to optimize the performance of the application, reducing load times by nearly 40%. These improvements resulted in a more inclusive and user-friendly interface, setting new benchmarks for accessibility in web applications.
     </div>
   );
 }
 function AccurDigitusDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for Accur Digitus
+      In my role at Accur Digitus, I was responsible for building responsive and scalable web applications using React.js. I developed reusable components that interfaced with complex back-end systems via RESTful APIs, ensuring smooth and efficient data flow. I also introduced state management solutions with Redux to handle application-wide states, improving performance and maintainability. My work involved close collaboration with UI/UX designers to iterate on designs and implement pixel-perfect layouts using Tailwind CSS, ultimately enhancing user engagement and overall web performance.
     </div>
   );
 }
 function AccentureDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for Accenture India
+      At Accenture, I contributed to the maintenance and optimization of IBM Mainframe systems, which were critical to supporting enterprise-level business operations. My responsibilities included writing COBOL scripts and implementing system monitoring tools that automated routine maintenance tasks. I collaborated with cross-functional teams to debug and resolve performance bottlenecks, ensuring continuous system reliability and uptime. This role honed my skills in legacy system integration and modernized maintenance practices.
     </div>
   );
 }
 function CarAccidentDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for Car Accident Alert System
+     I engineered a real-time embedded system designed to detect vehicle collisions using a combination of accelerometers, gyroscopes, and computer vision techniques. The system utilizes a fusion algorithm implemented in Python that aggregates sensor data and processes video streams using OpenCV. A custom deep learning model—trained on thousands of simulated accident scenarios—detects impact events and triggers an immediate alert, complete with geolocation data retrieved via GPS modules. The backend, developed in Node.js, communicates with emergency services and dispatches notifications to a mobile application within seconds. This project required meticulous calibration of sensor fusion parameters and optimization of convolutional neural networks (CNNs) to balance accuracy with latency.
     </div>
   );
 }
 function SelfDrivingDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for Self-Driving Car
+      For the autonomous navigation project, I developed a robust computer vision system that integrates data from LIDAR, radar, and high-resolution cameras to construct detailed 3D environmental maps in real time. I implemented sensor fusion algorithms that merge disparate data sources into a unified spatial model, using techniques such as Kalman filtering and point cloud processing. A deep learning model based on YOLO (You Only Look Once) was integrated to identify obstacles and dynamic objects, while reinforcement learning algorithms optimized navigation decisions under uncertain conditions. The project also involved significant work on simulation environments, where I used MATLAB and Python to validate the system under varying conditions and improve model accuracy. The outcome was a self-driving prototype capable of autonomous navigation in complex urban settings, demonstrating state-of-the-art performance in obstacle detection and path planning.
     </div>
   );
 }
 function CamCussionDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for CamCussion
+      In collaboration with the Zeiss Innovation Hub, I developed an eye tracking solution to aid in the diagnosis of concussions. Using OpenCV, I built a system that captures real-time video of a subject’s face and employs advanced feature detection to track pupil movement and saccadic behavior. The software incorporates a custom machine learning model that analyzes these metrics to provide early indicators of concussion. This project involved optimizing video processing pipelines for real-time analysis and integrating statistical methods to ensure robust performance under varied lighting conditions. The results have the potential to transform how concussions are diagnosed, making the process faster and more reliable.
     </div>
   );
 }
 function DeepFakeDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Detail for DeepFake Detection
+      Currently under development, this project focuses on creating a robust system to detect deepfakes by analyzing subtle facial cues. The system employs remote photoplethysmography (rPPG) to capture minute variations in facial blood flow—a signal that deepfake algorithms often fail to replicate accurately. Using a combination of attention-based neural networks and multi-region analysis, the system processes video inputs and flags inconsistencies that indicate tampering. I’ve experimented with several deep learning architectures and loss functions to fine-tune the detection accuracy. The project aims to provide a critical tool for digital media security, ensuring authenticity in an era of increasingly sophisticated manipulation techniques.
     </div>
   );
 }

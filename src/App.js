@@ -367,7 +367,7 @@ function MainPage() {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
           <p className="text-sm">
-            Focused on digital accessibility improvements by crafting intuitive UIs with Material-UI and React. Integrated a real-time text-to-speech Model using Python-based microservices to deliver dynamic audio feedback, ensuring the platform was fully accessible to visually impaired users.
+            Designed and trained a custom bi-directional RNN for text-to-speech conversion for acoustic modeling and to understand the contextual relationship enhancing improved digital content accessibility for visually impaired users on the web application.
           </p>
         </div>
       </div>

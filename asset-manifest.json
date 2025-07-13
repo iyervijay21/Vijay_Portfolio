@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vijay_Portfolio/static/css/main.9e72b2ea.css",
-    "main.js": "/Vijay_Portfolio/static/js/main.b2f41d8c.js",
+    "main.js": "/Vijay_Portfolio/static/js/main.9a437c97.js",
     "static/media/RTC.png": "/Vijay_Portfolio/static/media/RTC.71ec259252f71197e69f.png",
     "static/media/vijay.jpg": "/Vijay_Portfolio/static/media/vijay.281704d5d3e0b8b3dd84.jpg",
     "static/media/LiDAR-Technology.png": "/Vijay_Portfolio/static/media/LiDAR-Technology.fe096479ca58b4913af3.png",
@@ -13,10 +13,10 @@
     "static/media/Accenture.webp": "/Vijay_Portfolio/static/media/Accenture.ecb0107f5367eaedf074.webp",
     "index.html": "/Vijay_Portfolio/index.html",
     "main.9e72b2ea.css.map": "/Vijay_Portfolio/static/css/main.9e72b2ea.css.map",
-    "main.b2f41d8c.js.map": "/Vijay_Portfolio/static/js/main.b2f41d8c.js.map"
+    "main.9a437c97.js.map": "/Vijay_Portfolio/static/js/main.9a437c97.js.map"
   },
   "entrypoints": [
     "static/css/main.9e72b2ea.css",
-    "static/js/main.b2f41d8c.js"
+    "static/js/main.9a437c97.js"
   ]
 }

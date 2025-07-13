@@ -276,13 +276,13 @@ function MainPage() {
       </div>
       <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
       <img
-        src={require('./media/booklogo.png')}
-        alt="TCET logo"
+        src={require('./media/MU.png')}
+        alt="MU logo"
         className="h-20 w-20 rounded bg-white object-contain"
       />
       <div>
 <h3 className="text-xl font-bold mb-2 text-white">
-          Thakur College of Engineering and Technology
+          University of Mumbai
         </h3>
         <p className="text-white">
           B.Eng. in Electronics Engineering
@@ -324,7 +324,7 @@ function MainPage() {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">FZI</h3>
           <p className="text-sm">
-            Focused on digital accessibility improvements by crafting intuitive UIs with Material-UI and React. Integrated a real-time text-to-speech engine using Python-based microservices to deliver dynamic audio feedback, ensuring the platform was fully accessible to visually impaired users. Optimized asynchronous data flows to reduce load times by nearly 40%.
+            The objective is to enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment. Furthermore, the project entails developing an interactive user interface that visualizes multiple ROIs, emphasizing regions with elevated artifact energy concentrations. The methodology will be rigorously fine-tuned and cross-validated across diverse DeepFake detection techniques to ensure robustness and generalizability. This work aims to contribute significantly to the academic discourse through a subsequent research publication.
           </p>
         </div>
       </div>
@@ -339,14 +339,14 @@ function MainPage() {
 />
           <div>
             <h3 className="text-xl font-bold text-white">TecoLab</h3>
-            <p className="text-purple-200">Working Student (Mar 2023 – Present)</p>
+            <p className="text-purple-200">Working Student (Mar 2023 – Sept 2025)</p>
           </div>
         </div>
         {/* Hover overlay with max height and scrolling */}
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">TecoLab</h3>
           <p className="text-sm">
-            Led the ML4Print project, where I designed a robust document analysis pipeline using OCR and deep neural networks to classify printed materials in real time. I developed custom pre-processing modules in Python and fine-tuned TensorFlow models to minimize inference latency. Additionally, I built a heat simulation module leveraging RNNs to model thermal behavior in industrial valves, significantly reducing downtime. My role also included containerizing applications with Docker and orchestrating deployments via Kubernetes.
+            I have developed and optimized websites using Jekyll and WordPress, concentrating on enhancing performance and implementing SEO best practices. In the ML4Print project, I analyzed and classified printed documents by leveraging printer-specific characteristics and paper types to accurately identify counterfeit documents. Additionally, I applied machine learning techniques to simulate the thermal behavior of liquids within industrial valves, contributing to improved predictive maintenance capabilities. My work also involved optimizing sensor performance for open-ear wearable devices by utilizing edge machine learning (EdgeML) methods.
           </p>
         </div>
       </div>
@@ -367,32 +367,10 @@ function MainPage() {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
           <p className="text-sm">
-            Focused on digital accessibility improvements by crafting intuitive UIs with Material-UI and React. Integrated a real-time text-to-speech engine using Python-based microservices to deliver dynamic audio feedback, ensuring the platform was fully accessible to visually impaired users. Optimized asynchronous data flows to reduce load times by nearly 40%.
+            Focused on digital accessibility improvements by crafting intuitive UIs with Material-UI and React. Integrated a real-time text-to-speech Model using Python-based microservices to deliver dynamic audio feedback, ensuring the platform was fully accessible to visually impaired users.
           </p>
         </div>
       </div>
-      
-      {/* Accur Digitus */}
-<div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
-  <div className="flex items-center space-x-4">
-    <img
-  src={require('./media/accur_digitus_logo.jpg')}
-  alt="Accur Digitus Logo"
-  className="h-20 w-20 rounded bg-white object-contain"
-/>
-    <div>
-      <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
-      <p className="text-purple-200">Web Developer (Jan 2020 – May 2020)</p>
-    </div>
-  </div>
-  <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-    <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
-    <p className="text-sm">
-      Engineered responsive web applications using React and Tailwind CSS. Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components. Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.
-    </p>
-  </div>
-</div>
-
       
       {/* Accenture */}
       <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
@@ -404,7 +382,7 @@ function MainPage() {
 />
           <div>
             <h3 className="text-xl font-bold text-white">Accenture India</h3>
-            <p className="text-purple-200">Associate SE (Feb 2022 – Apr 2022)</p>
+            <p className="text-purple-200">Associate Software Engineer (Feb 2022 – Apr 2022)</p>
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
@@ -414,6 +392,30 @@ function MainPage() {
           </p>
         </div>
       </div>
+
+      {/* Accur Digitus */}
+<div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+  <div className="flex items-center space-x-4">
+    <img
+  src={require('./media/accur_digitus_logo.jpg')}
+  alt="Accur Digitus Logo"
+  className="h-20 w-20 rounded bg-white object-contain"
+/>
+    <div>
+      <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
+      <p className="text-purple-200">Web Developer Intern (Jan 2020 – May 2020)</p>
+    </div>
+  </div>
+  <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+    <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
+    <p className="text-sm">
+      Engineered responsive web applications using React and Tailwind CSS. Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components. Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.
+    </p>
+  </div>
+</div>
+
+      
+
       
     </div>
   </div>
@@ -424,38 +426,59 @@ function MainPage() {
   <div id="projects" className="w-full bg-gray-800 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-6 text-purple-300">Projects</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-      
-      {/* Real-Time Car Accident Alert System */}
+
+      {/* DeepFake Detection */}
       <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
         <div className="flex items-center space-x-4">
-           <img
-  src={require('./media/RTC.png')}
-  alt="RTC Logo"
-  className="h-20 w-20 object-cover rounded-full"
-/>
+          <img
+            src={require('./media/DEEP.jpg')}
+            alt="DeepFake Logo"
+            className="h-20 w-20 object-cover rounded-full"
+          />
           <div>
-            <h3 className="text-xl font-bold text-white"> Real Time Car Accident Alert System</h3>
-            <p className="text-purple-200">Crash Detection</p>
+            <h3 className="text-xl font-bold text-white">DeepFake Detection (FZI-2025)</h3>
+            <p className="text-purple-200">rPPG Analysis</p>
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
+          <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
           <p className="text-sm">
-            Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time. Employed a custom CNN model alongside sensor fusion algorithms to trigger precise geolocation-based alerts, dramatically reducing emergency response times.
+            This Master’s thesis focused on designing and evaluating a DeepFake detection system leveraging remote photoplethysmography (rPPG) signals. The approach exploits subtle facial color variations caused by blood flow—features that are challenging for DeepFake algorithms to replicate—by analyzing the time domain and applying continuous wavelet transform (CWT) to detect artifacts. The system incorporates a fusion model that concatenates features extracted from both a Vision Transformer and a Convolutional Neural Network, capturing local and global dependencies. A custom fusion head was developed to integrate these features, achieving benchmark-level performance.
           </p>
         </div>
       </div>
-      
+
+      {/* CamCussion */}
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+        <div className="flex items-center space-x-4">
+          <img
+            src={require('./media/CCS.jpg')}
+            alt="CCS Logo"
+            className="h-20 w-20 object-cover rounded-full"
+          />
+          <div>
+            <h3 className="text-xl font-bold text-white">CamCussion (Zeiss Innovation Hub-2024)</h3>
+            <p className="text-purple-200">Eye Tracking</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">CamCussion</h3>
+          <p className="text-sm">
+            Utilized OpenCV to develop a real-time eye-tracking system that analyzes pupil dilation and saccadic eye movements with high precision. By capturing and quantifying subtle changes in pupil size and rapid eye movements, the system provides objective metrics that correlate with neurological function. This analysis plays a critical role in the accurate assessment and early diagnosis of concussions, enabling clinicians to monitor cognitive and neurological impairment non-invasively and in real time. The integration of computer vision techniques with medical diagnostics demonstrates the potential for advancing concussion evaluation through automated, data-driven approaches.
+          </p>
+        </div>
+      </div>
+
       {/* Self-Driving Car */}
       <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
         <div className="flex items-center space-x-4">
-           <img
-  src={require('./media/LiDAR-Technology.png')}
-  alt="LiDAR Logo"
-  className="h-20 w-20 object-cover rounded-full"
-/>
+          <img
+            src={require('./media/LiDAR-Technology.png')}
+            alt="LiDAR Logo"
+            className="h-20 w-20 object-cover rounded-full"
+          />
           <div>
-            <h3 className="text-xl font-bold text-white">Self-Driving Car using LIDAR</h3>
+            <h3 className="text-xl font-bold text-white">Self-Driving Car using LIDAR (2022)</h3>
             <p className="text-purple-200">Autonomous Nav</p>
           </div>
         </div>
@@ -466,52 +489,32 @@ function MainPage() {
           </p>
         </div>
       </div>
-      
-      {/* CamCussion */}
+
+      {/* Real-Time Car Accident Alert System */}
       <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
         <div className="flex items-center space-x-4">
-           <img
-  src={require('./media/CCS.jpg')}
-  alt="CCS Logo"
-  className="h-20 w-20 object-cover rounded-full"
-/>
+          <img
+            src={require('./media/RTC.png')}
+            alt="RTC Logo"
+            className="h-20 w-20 object-cover rounded-full"
+          />
           <div>
-            <h3 className="text-xl font-bold text-white">CamCussion (Zeiss Innovation Hub)</h3>
-            <p className="text-purple-200">Eye Tracking</p>
+            <h3 className="text-xl font-bold text-white">Real Time Car Accident Alert System (2021)</h3>
+            <p className="text-purple-200">Crash Detection</p>
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">CamCussion</h3>
+          <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
           <p className="text-sm">
-            In collaboration with industry partners, developed a real-time eye tracking solution using OpenCV. The system analyzes pupil dilation and saccadic movements to provide early indicators for concussion diagnosis, employing advanced feature detection and machine learning for accurate measurement.
+            Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time. Employed a custom CNN model alongside sensor fusion algorithms to trigger precise geolocation-based alerts, dramatically reducing emergency response times.
           </p>
         </div>
       </div>
-      
-      {/* DeepFake Detection */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
-        <div className="flex items-center space-x-4">
-           <img
-  src={require('./media/DEEP.jpg')}
-  alt="DeepFake Logo"
-  className="h-20 w-20 object-cover rounded-full"
-/>
-          <div>
-            <h3 className="text-xl font-bold text-white">DeepFake Detection (FZI)</h3>
-            <p className="text-purple-200">rPPG Analysis</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
-          <p className="text-sm">
-            Currently under development, this system harnesses rPPG signals to capture subtle facial blood flow patterns. By employing attention-based neural networks and multi-region analysis, it distinguishes authentic video content from deepfakes, providing a critical layer of security in digital media verification.
-          </p>
-        </div>
-      </div>
-      
+
     </div>
   </div>
 </FadeInSection>
+
 
 
 

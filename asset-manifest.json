@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Vijay_Portfolio/static/css/main.17e0fd19.css",
-    "main.js": "/Vijay_Portfolio/static/js/main.826e6f40.js",
+    "main.css": "/Vijay_Portfolio/static/css/main.9e72b2ea.css",
+    "main.js": "/Vijay_Portfolio/static/js/main.d6e7c4fe.js",
     "static/media/RTC.png": "/Vijay_Portfolio/static/media/RTC.71ec259252f71197e69f.png",
     "static/media/booklogo.png": "/Vijay_Portfolio/static/media/booklogo.8e48f4990fd7015933ac.png",
     "static/media/vijay.jpg": "/Vijay_Portfolio/static/media/vijay.281704d5d3e0b8b3dd84.jpg",
@@ -12,11 +12,11 @@
     "static/media/KIT.webp": "/Vijay_Portfolio/static/media/KIT.555374c4b4e2f28da886.webp",
     "static/media/Accenture.webp": "/Vijay_Portfolio/static/media/Accenture.ecb0107f5367eaedf074.webp",
     "index.html": "/Vijay_Portfolio/index.html",
-    "main.17e0fd19.css.map": "/Vijay_Portfolio/static/css/main.17e0fd19.css.map",
-    "main.826e6f40.js.map": "/Vijay_Portfolio/static/js/main.826e6f40.js.map"
+    "main.9e72b2ea.css.map": "/Vijay_Portfolio/static/css/main.9e72b2ea.css.map",
+    "main.d6e7c4fe.js.map": "/Vijay_Portfolio/static/js/main.d6e7c4fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.17e0fd19.css",
-    "static/js/main.826e6f40.js"
+    "static/css/main.9e72b2ea.css",
+    "static/js/main.d6e7c4fe.js"
   ]
 }

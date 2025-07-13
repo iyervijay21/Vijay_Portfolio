@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Vijay_Portfolio/static/css/main.9e72b2ea.css",
-    "main.js": "/Vijay_Portfolio/static/js/main.d6e7c4fe.js",
+    "main.js": "/Vijay_Portfolio/static/js/main.b2f41d8c.js",
     "static/media/RTC.png": "/Vijay_Portfolio/static/media/RTC.71ec259252f71197e69f.png",
-    "static/media/booklogo.png": "/Vijay_Portfolio/static/media/booklogo.8e48f4990fd7015933ac.png",
     "static/media/vijay.jpg": "/Vijay_Portfolio/static/media/vijay.281704d5d3e0b8b3dd84.jpg",
     "static/media/LiDAR-Technology.png": "/Vijay_Portfolio/static/media/LiDAR-Technology.fe096479ca58b4913af3.png",
     "static/media/DEEP.jpg": "/Vijay_Portfolio/static/media/DEEP.14b903052e4ff56214fa.jpg",
+    "static/media/MU.png": "/Vijay_Portfolio/static/media/MU.acd2f6b0c3687615386d.png",
     "static/media/CCS.jpg": "/Vijay_Portfolio/static/media/CCS.4ef5251acc4fc9dc5d00.jpg",
     "static/media/6379_access@kit_rgb_dt.png": "/Vijay_Portfolio/static/media/6379_access@kit_rgb_dt.ea13d0f5fb79dc4b76de.png",
     "static/media/KIT.webp": "/Vijay_Portfolio/static/media/KIT.555374c4b4e2f28da886.webp",
     "static/media/Accenture.webp": "/Vijay_Portfolio/static/media/Accenture.ecb0107f5367eaedf074.webp",
     "index.html": "/Vijay_Portfolio/index.html",
     "main.9e72b2ea.css.map": "/Vijay_Portfolio/static/css/main.9e72b2ea.css.map",
-    "main.d6e7c4fe.js.map": "/Vijay_Portfolio/static/js/main.d6e7c4fe.js.map"
+    "main.b2f41d8c.js.map": "/Vijay_Portfolio/static/js/main.b2f41d8c.js.map"
   },
   "entrypoints": [
     "static/css/main.9e72b2ea.css",
-    "static/js/main.d6e7c4fe.js"
+    "static/js/main.b2f41d8c.js"
   ]
 }

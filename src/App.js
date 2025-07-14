@@ -736,7 +736,6 @@ function CarAccidentDetail() {
           <ul className="list-disc ml-6 space-y-1">
             <li>Potential to reduce accident fatalities by 6% per minute of improved response time.</li>
             <li>Cost-effective solution deployable in existing vehicles without CAN bus integration.</li>
-            <li>Published at IC-TELCON-2021 conference with future 5G upgrade path.</li>
           </ul>
         </div>
 
@@ -806,7 +805,6 @@ function SelfDrivingDetail() {
           <ul className="list-disc ml-6 space-y-1">
             <li>Demonstrated 90% obstacle detection accuracy in prototype testing.</li>
             <li>Proposed as scalable solution for last-mile delivery robots and urban micro-mobility.</li>
-            <li>Published at IC-TELCON-2021 with future radar/LIDAR fusion research direction.</li>
           </ul>
         </div>
 

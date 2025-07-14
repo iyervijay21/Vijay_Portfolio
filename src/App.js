@@ -1,6 +1,6 @@
 // src/App.js
 import React, { useState, useRef, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 
 // FadeInSection: Re-triggers fade/slide animation each time its content enters the viewport.
 function FadeInSection({ children, className = "" }) {
@@ -29,7 +29,37 @@ function FadeInSection({ children, className = "" }) {
   );
 }
 
+
 function Navbar({ menuOpen, setMenuOpen }) {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
+  const handleClick = (hash) => {
+    if (isHomePage) {
+      // Smooth scroll on home page
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setMenuOpen(false); // always close mobile menu
+  };
+
+  // Menu items for home page
+  const fullMenuItems = [
+    { label: "Home", hash: "#home" },
+    { label: "Skills", hash: "#skills" },
+    { label: "Education", hash: "#education" },
+    { label: "Experience", hash: "#experience" },
+    { label: "Projects", hash: "#projects" },
+    { label: "Contact", hash: "#contact" },
+  ];
+
+  // Only Home for routed pages
+  const homeOnlyMenu = [{ label: "Home", hash: "#home" }];
+
+  const menuToShow = isHomePage ? fullMenuItems : homeOnlyMenu;
+
   return (
     <nav className="flex items-center justify-between px-6 py-4 fixed w-full top-0 z-20 bg-black bg-opacity-80 backdrop-blur">
       <div className="text-2xl font-bold text-white">Vijay Mohanram Iyer</div>
@@ -38,22 +68,22 @@ function Navbar({ menuOpen, setMenuOpen }) {
       <div className="md:hidden">
         <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
           {!menuOpen ? (
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           ) : (
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           )}
         </button>
@@ -61,28 +91,39 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
       {/* Desktop menu */}
       <ul className="hidden md:flex space-x-6">
-        <li><a href="#home" className="text-white hover-glow">Home</a></li>
-        <li><a href="#skills" className="text-white hover-glow">Skills</a></li>
-        <li><a href="#education" className="text-white hover-glow">Education</a></li>
-        <li><a href="#experience" className="text-white hover-glow">Experience</a></li>
-        <li><a href="#projects" className="text-white hover-glow">Projects</a></li>
-        <li><a href="#contact" className="text-white hover-glow">Contact</a></li>
+        {menuToShow.map(({ label, hash }) => (
+          <li key={label}>
+            <Link
+              to={`/${hash}`}
+              className="text-white hover-glow"
+              onClick={() => handleClick(hash)}
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
       </ul>
 
-      {/* Mobile menu, shows when menuOpen is true */}
+      {/* Mobile menu */}
       {menuOpen && (
         <ul className="flex flex-col space-y-4 bg-black bg-opacity-90 absolute top-full left-0 w-full p-6 md:hidden">
-          <li><a href="#home" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a href="#skills" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Skills</a></li>
-          <li><a href="#education" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Education</a></li>
-          <li><a href="#experience" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Experience</a></li>
-          <li><a href="#projects" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Projects</a></li>
-          <li><a href="#contact" className="text-white hover-glow" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          {menuToShow.map(({ label, hash }) => (
+            <li key={label}>
+              <Link
+                to={`/${hash}`}
+                className="text-white hover-glow"
+                onClick={() => handleClick(hash)}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       )}
     </nav>
   );
 }
+
 
 
 // ToolsIcons: Renders tool icons using regular image URLs.
@@ -324,8 +365,15 @@ function MainPage() {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">FZI</h3>
           <p className="text-sm">
-            The objective is to enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment. Furthermore, the project entails developing an interactive user interface that visualizes multiple ROIs, emphasizing regions with elevated artifact energy concentrations. The methodology will be rigorously fine-tuned and cross-validated across diverse DeepFake detection techniques to ensure robustness and generalizability. This work aims to contribute significantly to the academic discourse through a subsequent research publication.
-          </p>
+  <strong>Key Contributions:</strong>
+  <ul className="list-disc list-inside mt-2">
+    <li>Enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment.</li>
+    <li>Develop an interactive user interface that visualizes multiple ROIs, emphasizing regions with elevated artifact energy concentrations.</li>
+    <li>Rigorously fine-tune and cross-validate the methodology across diverse DeepFake detection techniques to ensure robustness and generalizability.</li>
+    <li>Contribute significantly to academic discourse through a subsequent research publication.</li>
+  </ul>
+</p>
+
         </div>
       </div>
       
@@ -346,8 +394,15 @@ function MainPage() {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">TecoLab</h3>
           <p className="text-sm">
-            I have developed and optimized websites using Jekyll and WordPress, concentrating on enhancing performance and implementing SEO best practices. In the ML4Print project, I analyzed and classified printed documents by leveraging printer-specific characteristics and paper types to accurately identify counterfeit documents. Additionally, I applied machine learning techniques to simulate the thermal behavior of liquids within industrial valves, contributing to improved predictive maintenance capabilities. My work also involved optimizing sensor performance for open-ear wearable devices by utilizing edge machine learning (EdgeML) methods.
-          </p>
+  <strong>Key Contributions:</strong>
+  <ul className="list-disc list-inside mt-2">
+    <li>Worked on ML4Print project to analyze and classify printed documents based on printer-specific characteristics and paper substrate type to identify fake documents.</li>
+    <li>Worked on a heat simulation project, utilizing machine learning to simulate the thermal behavior of liquids within industrial valves, enhancing predictive maintenance capabilities.</li>
+    <li>Sensor optimization for open-earables with edgeML.</li>
+    <li>Built and optimized websites using Jekyll and WordPress, focusing on performance improvements and SEO optimization.</li>
+  </ul>
+</p>
+
         </div>
       </div>
       
@@ -367,8 +422,12 @@ function MainPage() {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
           <p className="text-sm">
-            Designed and trained a custom bi-directional RNN for text-to-speech conversion for acoustic modeling and to understand the contextual relationship enhancing improved digital content accessibility for visually impaired users on the web application.
-          </p>
+  <strong>Key Contribution:</strong>
+  <ul className="list-disc list-inside mt-2">
+    <li>Designed and trained a custom bi-directional RNN for text-to-speech conversion for acoustic modeling, enhancing digital content accessibility for visually impaired users on the web application by understanding contextual relationships.</li>
+  </ul>
+</p>
+
         </div>
       </div>
       
@@ -388,8 +447,12 @@ function MainPage() {
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Accenture India</h3>
           <p className="text-sm">
-            Maintained critical IBM Mainframe systems through custom COBOL scripts and proactive monitoring tools. Collaborated with cross-functional teams to diagnose performance bottlenecks, ensuring 99.9% uptime and efficient legacy system integration with modern technologies.
-          </p>
+  <strong>Key Contribution:</strong>
+  <ul className="list-disc list-inside mt-2">
+    <li>Maintained critical IBM Mainframe systems through custom COBOL scripts and proactive monitoring tools. Collaborated with cross-functional teams to diagnose performance bottlenecks, ensuring 99.9% uptime and efficient legacy system integration with modern technologies.</li>
+  </ul>
+</p>
+
         </div>
       </div>
 
@@ -409,8 +472,14 @@ function MainPage() {
   <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
     <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
     <p className="text-sm">
-      Engineered responsive web applications using React and Tailwind CSS. Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components. Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.
-    </p>
+  <strong>Key Contributions:</strong>
+  <ul className="list-disc list-inside mt-2">
+    <li>Engineered responsive web applications using React and Tailwind CSS.</li>
+    <li>Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components.</li>
+    <li>Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.</li>
+  </ul>
+</p>
+
   </div>
 </div>
 
@@ -440,11 +509,18 @@ function MainPage() {
             <p className="text-purple-200">rPPG Analysis</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
-          <p className="text-sm">
-            This Master’s thesis focused on designing and evaluating a DeepFake detection system leveraging remote photoplethysmography (rPPG) signals. The approach exploits subtle facial color variations caused by blood flow—features that are challenging for DeepFake algorithms to replicate—by analyzing the time domain and applying continuous wavelet transform (CWT) to detect artifacts. The system incorporates a fusion model that concatenates features extracted from both a Vision Transformer and a Convolutional Neural Network, capturing local and global dependencies. A custom fusion head was developed to integrate these features, achieving benchmark-level performance.
-          </p>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
+            <p className="text-sm mb-4">
+              This Master’s thesis focused on designing and evaluating a DeepFake detection system leveraging remote photoplethysmography (rPPG) signals...
+            </p>
+          </div>
+          <Link to="/projects/deepfake" className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
+  More Info
+</Link>
+
+      
         </div>
       </div>
 
@@ -461,11 +537,19 @@ function MainPage() {
             <p className="text-purple-200">Eye Tracking</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">CamCussion</h3>
-          <p className="text-sm">
-            Utilized OpenCV to develop a real-time eye-tracking system that analyzes pupil dilation and saccadic eye movements with high precision. By capturing and quantifying subtle changes in pupil size and rapid eye movements, the system provides objective metrics that correlate with neurological function. This analysis plays a critical role in the accurate assessment and early diagnosis of concussions, enabling clinicians to monitor cognitive and neurological impairment non-invasively and in real time. The integration of computer vision techniques with medical diagnostics demonstrates the potential for advancing concussion evaluation through automated, data-driven approaches.
-          </p>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-bold mb-2">CamCussion</h3>
+            <p className="text-sm mb-4">
+              Utilized OpenCV to develop a real-time eye-tracking system that analyzes pupil dilation and saccadic eye movements...
+            </p>
+          </div>
+          <Link 
+            to="/projects/camcussion"
+            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+          >
+            More Info
+          </Link>
         </div>
       </div>
 
@@ -482,11 +566,19 @@ function MainPage() {
             <p className="text-purple-200">Autonomous Nav</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
-          <p className="text-sm">
-            Engineered an autonomous navigation system by integrating LIDAR, radar, and camera inputs to generate real-time 3D maps. Applied YOLO for rapid obstacle detection and used reinforcement learning algorithms to refine path planning in dynamic urban environments.
-          </p>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
+            <p className="text-sm mb-4">
+              Engineered an autonomous navigation system by integrating LIDAR, radar, and camera inputs to generate real-time 3D maps...
+            </p>
+          </div>
+          <Link 
+            to="/projects/self-driving"
+            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+          >
+            More Info
+          </Link>
         </div>
       </div>
 
@@ -503,17 +595,26 @@ function MainPage() {
             <p className="text-purple-200">Crash Detection</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
-          <p className="text-sm">
-            Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time. Employed a custom CNN model alongside sensor fusion algorithms to trigger precise geolocation-based alerts, dramatically reducing emergency response times.
-          </p>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
+            <p className="text-sm mb-4">
+              Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time...
+            </p>
+          </div>
+          <Link 
+            to="/projects/car-accident"
+            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+          >
+            More Info
+          </Link>
         </div>
       </div>
 
     </div>
   </div>
 </FadeInSection>
+
 
 
 
@@ -603,31 +704,329 @@ function AccentureDetail() {
 function CarAccidentDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-     I engineered a real-time embedded system designed to detect vehicle collisions using a combination of accelerometers, gyroscopes, and computer vision techniques. The system utilizes a fusion algorithm implemented in Python that aggregates sensor data and processes video streams using OpenCV. A custom deep learning model—trained on thousands of simulated accident scenarios—detects impact events and triggers an immediate alert, complete with geolocation data retrieved via GPS modules. The backend, developed in Node.js, communicates with emergency services and dispatches notifications to a mobile application within seconds. This project required meticulous calibration of sensor fusion parameters and optimization of convolutional neural networks (CNNs) to balance accuracy with latency.
+      <div className="flex flex-col md:flex-row md:space-x-12">
+        {/* Left: Text Content */}
+        <div className="md:w-1/2 space-y-6">
+          <h2 className="text-xl font-semibold">Real-Time Car Accident Alert System</h2>
+
+          <h3 className="text-lg font-semibold">Overview:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Developed an embedded system for automatic accident detection and emergency alerting.</li>
+            <li>Implemented using Raspberry Pi 3B+ with MPU6050 accelerometer/gyroscope and SIM7000C 4G/GPS module.</li>
+            <li>Reduces emergency response time by automatically notifying authorities with precise location data.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Key Features:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Multi-sensor fusion detects impacts using threshold algorithms for acceleration (0.75g) and angular velocity (10°/s).</li>
+            <li>15-second manual override window prevents false alerts with physical button interrupt.</li>
+            <li>Automated SMS alerts with Google Maps links sent to hospitals, police, and emergency contacts.</li>
+            <li>JSON-based database system for dynamically locating nearest emergency services.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Technical Highlights:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Python-based sensor fusion algorithm processes MPU6050 data via I²C at 400kHz.</li>
+            <li>AT command scripting for SIM7000C module handles GPS fix acquisition and SMS transmission.</li>
+            <li>Hardware-optimized design with 15W power requirements and fail-safe shutdown protocols.</li>
+            <li>Geopy library calculates nearest facilities using geodesic distance on geographic coordinates.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Impact:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Potential to reduce accident fatalities by 6% per minute of improved response time.</li>
+            <li>Cost-effective solution deployable in existing vehicles without CAN bus integration.</li>
+            <li>Published at IC-TELCON-2021 conference with future 5G upgrade path.</li>
+          </ul>
+        </div>
+
+        {/* Right: Image */}
+        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          <img
+  src={require('./media/Alert.png')}
+  alt="Accident Alert System Diagram"
+  className="rounded shadow-lg max-w-sm h-auto"
+/>
+
+        </div>
+      </div>
+      {/* GitHub button */}
+      <div className="flex justify-center mt-12">
+        <a
+          href="https://github.com/iyervijay21/car-accident-alert-system"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200 hover:bg-purple-600 hover:text-white transition"
+        >
+          <svg
+            className="w-5 h-5 mr-2 fill-current"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ... (shortened) ..." />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
     </div>
   );
 }
+
 function SelfDrivingDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      For the autonomous navigation project, I developed a robust computer vision system that integrates data from LIDAR, radar, and high-resolution cameras to construct detailed 3D environmental maps in real time. I implemented sensor fusion algorithms that merge disparate data sources into a unified spatial model, using techniques such as Kalman filtering and point cloud processing. A deep learning model based on YOLO (You Only Look Once) was integrated to identify obstacles and dynamic objects, while reinforcement learning algorithms optimized navigation decisions under uncertain conditions. The project also involved significant work on simulation environments, where I used MATLAB and Python to validate the system under varying conditions and improve model accuracy. The outcome was a self-driving prototype capable of autonomous navigation in complex urban settings, demonstrating state-of-the-art performance in obstacle detection and path planning.
+      <div className="flex flex-col md:flex-row md:space-x-12">
+        {/* Left: Text Content */}
+        <div className="md:w-1/2 space-y-6">
+          <h2 className="text-xl font-semibold">LIDAR-Based Self-Driving Car with Solar Charging</h2>
+
+          <h3 className="text-lg font-semibold">Overview:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Prototype autonomous vehicle using LIDAR for obstacle detection and navigation.</li>
+            <li>Implemented on Arduino Uno with custom 3D-printed chassis and solar charging system.</li>
+            <li>Designed as cost-effective alternative to commercial autonomous vehicle sensor suites.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Key Features:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>360° LIDAR scanning with 2m range and 0.14sec/60° rotation speed for real-time mapping.</li>
+            <li>Solar-powered 2200mAh Li-ion battery system with 3.7V nominal voltage and 2C discharge rate.</li>
+            <li>Differential drive system using BO motors (150RPM, 0.5Kg-cm torque) with L298P motor shield.</li>
+            <li>Weather filtering algorithms distinguish obstacles from rain/snow using point cloud analysis.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Technical Highlights:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>I²C-based LIDAR communication with Arduino at 100kHz clock speed.</li>
+            <li>Custom PWM control for MG995 servo (2.5kgf-cm torque) handling LIDAR rotation.</li>
+            <li>Voltage regulation circuit maintains stable 5V output from solar panel input.</li>
+            <li>CorelDraw-designed chassis optimized for sensor placement and weight distribution.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Impact:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Demonstrated 90% obstacle detection accuracy in prototype testing.</li>
+            <li>Proposed as scalable solution for last-mile delivery robots and urban micro-mobility.</li>
+            <li>Published at IC-TELCON-2021 with future radar/LIDAR fusion research direction.</li>
+          </ul>
+        </div>
+
+        {/* Right: Image */}
+        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          <img
+  src={require('./media/lidar.png')}
+  alt="LIDAR Car Prototype"
+  className="rounded shadow-lg w-64 h-auto" // sets width to 16rem, height adjusts automatically
+/>
+
+        </div>
+      </div>
+      {/* GitHub button */}
+      <div className="flex justify-center mt-12">
+        <a
+          href="https://github.com/iyervijay21/3d-object-detection-using-LIDAR-for-self-driving-car"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200 hover:bg-purple-600 hover:text-white transition"
+        >
+          <svg
+            className="w-5 h-5 mr-2 fill-current"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ... (shortened) ..." />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
     </div>
   );
 }
 function CamCussionDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      In collaboration with the Zeiss Innovation Hub, I developed an eye tracking solution to aid in the diagnosis of concussions. Using OpenCV, I built a system that captures real-time video of a subject’s face and employs advanced feature detection to track pupil movement and saccadic behavior. The software incorporates a custom machine learning model that analyzes these metrics to provide early indicators of concussion. This project involved optimizing video processing pipelines for real-time analysis and integrating statistical methods to ensure robust performance under varied lighting conditions. The results have the potential to transform how concussions are diagnosed, making the process faster and more reliable.
+      <div className="flex flex-col md:flex-row md:space-x-12">
+        {/* Left: Text Content */}
+        <div className="md:w-1/2 space-y-6">
+          <h2 className="text-xl font-semibold">CamCussion: Real-Time Eye Tracking for Concussion Diagnosis</h2>
+
+          <h3 className="text-lg font-semibold">Overview:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Developed in collaboration with the Zeiss Innovation Hub to aid in early concussion detection.</li>
+            <li>Real-time video capture and pupil tracking implemented using <code>OpenCV</code>.</li>
+            <li>Optimized video processing pipeline achieves low latency for live analysis.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Key Features:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Advanced feature detection tracks pupil movement and saccadic eye behavior.</li>
+            <li>Custom machine learning model analyzes extracted eye metrics to flag potential concussions.</li>
+            <li>Temporal feature extraction pipeline measures saccade amplitude, velocity, and fixation patterns.</li>
+            <li>Robust performance under varying lighting conditions using adaptive histogram equalization and filtering.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Technical Highlights:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Used <code>Haar cascades</code> and gradient-based methods for precise eye region localization.</li>
+            <li>Kalman filter applied to stabilize pupil tracking and reduce noise from occlusions.</li>
+            <li>Machine learning pipeline built with <code>scikit-learn</code>, trained on annotated saccadic datasets.</li>
+            <li>Modular visualization dashboard displays real-time gaze heatmaps and dynamic plots for clinicians.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Impact:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Faster, data-driven concussion diagnosis in sports and clinical settings.</li>
+            <li>Extensible architecture ready for integration with multimodal physiological sensors.</li>
+          </ul>
+        </div>
+
+        {/* Right: Image */}
+        <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          <img
+  src={require('./media/usecase.png')}
+  alt="Use Case"
+  className="rounded shadow-lg max-w-full h-auto"
+  style={{ transform: 'scaleY(0.5)', transformOrigin: 'top' }}
+/>
+
+        </div>
+      </div>
+
+      {/* GitHub button */}
+      <div className="flex justify-center mt-12">
+        <a
+          href="https://github.com/iyervijay21/iyervijay21-Camcussion-eye-tracking-software-for-concussion-diagnosis-"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200 hover:bg-purple-600 hover:text-white transition"
+        >
+          <svg
+            className="w-5 h-5 mr-2 fill-current"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ... (shortened) ..." />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
     </div>
   );
 }
+
+
+
 function DeepFakeDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">
-      Currently under development, this project focuses on creating a robust system to detect deepfakes by analyzing subtle facial cues. The system employs remote photoplethysmography (rPPG) to capture minute variations in facial blood flow—a signal that deepfake algorithms often fail to replicate accurately. Using a combination of attention-based neural networks and multi-region analysis, the system processes video inputs and flags inconsistencies that indicate tampering. I’ve experimented with several deep learning architectures and loss functions to fine-tune the detection accuracy. The project aims to provide a critical tool for digital media security, ensuring authenticity in an era of increasingly sophisticated manipulation techniques.
+      <div className="flex flex-col md:flex-row md:space-x-12">
+        {/* Left: Info Section */}
+        <div className="md:w-1/2 space-y-6">
+          <h2 className="text-xl font-semibold">DeepFake Detection System Overview</h2>
+
+          <h3 className="text-lg font-semibold">Video Data Processing:</h3>
+          <p>Videos are stored in .avi format at 30 fps with 1920×1080 resolution.</p>
+          <p>Frames are extracted using OpenCV’s VideoCapture, converted from BGR to RGB.</p>
+          <p>Videos are subdivided into non-overlapping 10-second windows (300 frames each).</p>
+          <p>
+            Each window <code>W<sub>k</sub> = &#123; F<sub>t</sub> : (k−1)×300+1 ≤ t ≤ k×300 &#125;</code> is processed independently.
+          </p>
+
+          <h3 className="text-lg font-semibold">Detection and Tracking Workflow:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Convert each frame <code>F<sub>t</sub></code> to grayscale <code>G<sub>t</sub></code>.</li>
+            <li>Use Dlib’s frontal-face detector on <code>G<sub>t</sub></code> to obtain bounding boxes <code>B<sub>t</sub>(i)</code>.</li>
+            <li>Extract 81 facial landmarks <code>p<sub>t,j</sub>(i)</code> using Dlib’s shape predictor.</li>
+            <li>Perform full landmark detection every 6 frames; use Dlib’s correlation tracker for intermediate frames, matching faces via IoU.</li>
+            <li>Store landmark arrays <code>P<sub>t</sub>(i) ∈ ℝ<sup>81×2</sup></code> for ROI extraction.</li>
+            <li>Define three primary ROI areas on each face: forehead, left cheek, and right cheek, subdivided into smaller subregions to capture localized physiological signals.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">rPPG Signal Extraction:</h3>
+          <p>
+            For each subregion <code>R<sub>s</sub></code> in window <code>W<sub>k</sub></code>, compute spatial average RGB channels:
+          </p>
+          <p className="italic">
+            <code>¯C<sub>s</sub>(t) = (1/|R<sub>s</sub>|) ∑<sub>(x,y) ∈ R<sub>s</sub></sub> F<sub>t</sub>(x,y) ∈ ℝ<sup>3</sup>, t ∈ W<sub>k</sub></code>
+          </p>
+          <p>Sequences of length 300 RGB triplets per subregion are stored using Python deque.</p>
+          <p>
+            Raw rPPG signals are extracted using the POS algorithm by concatenating 14 subregion RGB traces into matrix <code>C ∈ ℝ<sup>14W×3</sup></code>.
+          </p>
+
+          <h3 className="text-lg font-semibold">POS Algorithm Steps:</h3>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Normalization: Normalize each color channel <code>c ∈ &#123;R, G, B&#125;</code> by its mean <code>μ<sub>c</sub></code>.</li>
+            <li>Projection: Use projection matrix <code>P = [[0, 1, -1], [-2, 1, 1]]</code> to compute signals <code>S = PC′<sup>T</sup> ∈ ℝ<sup>2×14W</sup></code>.</li>
+            <li>Signal Combination: Compute raw rPPG trace <code>h</code> by combining two signals with standard deviation scaling and mean-centering.</li>
+            <li>Subregion Accumulation: Split <code>h</code> into 14 segments and sum to get composite signal <code>H<sub>k</sub>(t)</code>.</li>
+            <li>Filtering: Apply detrending and a 4th-order Butterworth bandpass filter (0.8–3 Hz) to <code>H<sub>k</sub>(t)</code>.</li>
+          </ul>
+
+          <h3 className="text-lg font-semibold">Neural Network Architecture:</h3>
+          <h4 className="font-semibold">CNN Encoder (HeatmapNet):</h4>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Input: 2-channel heatmap (B, 2, 256, 256).</li>
+            <li>Three convolutional blocks with increasing channels (2 → 16 → 32 → 64), ReLU activations, max-pooling, and adaptive average pooling.</li>
+            <li>Output: Flattened 64-dimensional latent vector <code>f<sub>CNN</sub></code>.</li>
+          </ul>
+
+          <h4 className="font-semibold">Vision Transformer (ViT) Encoder:</h4>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>Input: Same 2-channel heatmap, partitioned into 16×16 patches (256 patches).</li>
+            <li>Each patch projected to 768-dimensional embedding with positional embeddings and prepended [CLS] token.</li>
+            <li>Processed by 12 Transformer encoder blocks with multi-head self-attention (8 heads), LayerNorm, MLP, and residual connections.</li>
+            <li>Output: Final [CLS] embedding <code>f<sub>ViT</sub> ∈ ℝ<sup>768</sup></code>.</li>
+          </ul>
+
+          <h4 className="font-semibold">Fusion Head:</h4>
+          <p>
+            Concatenate <code>f<sub>CNN</sub></code> and <code>f<sub>ViT</sub></code> into an 832-dimensional vector. Apply dropout, LayerNorm, linear layers, ReLU, and sigmoid to output logit <code>p<sub>k</sub></code>.
+          </p>
+
+          <h3 className="text-lg font-semibold">Classification Threshold:</h3>
+          <p>
+            Predict <code>fake</code> if <code>p<sub>k</sub> ≥ 0.5</code>, otherwise <code>real</code>.
+          </p>
+        </div>
+
+        {/* Right: Images Section */}
+        <div className="md:w-1/2 flex flex-col space-y-6 mt-10 md:mt-0">
+          <img
+            src={require('./media/pipeline.png')}
+            alt="Pipeline Overview"
+            className="rounded shadow-lg max-w-full h-auto"
+          />
+          <img
+            src={require('./media/architecture.png')}
+            alt="Architecture Overview"
+            className="rounded shadow-lg max-w-full h-auto"
+          />
+        </div>
+        
+      </div>
+      {/* GitHub button at the end */}
+      <div className="flex justify-center mt-12">
+        <a
+          href="https://github.com/iyervijay21/Deepfake_Detection"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200 hover:bg-purple-600 hover:text-white transition"
+        >
+          {/* GitHub icon (replace with your own if needed) */}
+          <svg
+            className="w-5 h-5 mr-2 fill-current"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 ... (shortened) ..." />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
     </div>
   );
 }
+
+
+
+
 function EducationDetail() {
   return (
     <div className="container mx-auto px-6 py-20 text-purple-200">

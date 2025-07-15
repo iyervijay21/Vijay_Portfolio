@@ -456,7 +456,7 @@ function MainPage() {
           />
           <div>
             <h3 className="text-xl font-bold text-white">Accenture</h3>
-            <p className="text-purple-200">ASE(Feb 2022 – Apr 2022)</p>
+            <p className="text-purple-200">Associate SE(Feb 2022 – Apr 2022)</p>
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">

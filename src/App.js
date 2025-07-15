@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState, useRef, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+
 
 // FadeInSection: Re-triggers fade/slide animation each time its content enters the viewport.
 function FadeInSection({ children, className = "" }) {
@@ -1016,7 +1017,7 @@ function EducationDetail() {
 function AppRouter() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <Router basename="/Vijay_portfolio">
+    <Router>
       <div className="bg-gray-900 min-h-screen">
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>
@@ -1035,6 +1036,5 @@ function AppRouter() {
     </Router>
   );
 }
-
 
 export default AppRouter;

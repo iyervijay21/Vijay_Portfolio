@@ -356,144 +356,153 @@ function MainPage() {
     <h2 className="text-3xl font-bold mb-8 text-purple-300">Work Experience</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-start">
 
-
-            {/* FZI */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      {/* FZI */}
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
-  src={require('./media/1524.png')}
-  alt="FZI Logo"
-  className="h-20 w-20 rounded bg-white object-contain"
-/>
+            src={require('./media/1524.png')}
+            alt="FZI Logo"
+            className="h-20 w-20 rounded bg-white object-contain"
+          />
           <div>
             <h3 className="text-xl font-bold text-white">FZI</h3>
             <p className="text-purple-200">Research Assistant (Sept 2025 – Dec 2025)</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">FZI</h3>
           <p className="text-sm">
-  <strong>Key Contributions:</strong>
-  <ul className="list-disc list-inside mt-2">
-    <li>Enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment.</li>
-    <li>Develop an interactive user interface that visualizes multiple ROIs, emphasizing regions with elevated artifact energy concentrations.</li>
-    <li>Rigorously fine-tune and cross-validate the methodology across diverse DeepFake detection techniques to ensure robustness and generalizability.</li>
-    <li>Contribute significantly to academic discourse through a subsequent research publication.</li>
-  </ul>
-</p>
-
+            <strong>Key Contributions:</strong>
+            <ul className="list-disc list-inside mt-2">
+              <li>Enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment.</li>
+              <li>Develop an interactive user interface that visualizes multiple ROIs, emphasizing regions with elevated artifact energy concentrations.</li>
+              <li>Rigorously fine-tune and cross-validate the methodology across diverse DeepFake detection techniques to ensure robustness and generalizability.</li>
+              <li>Contribute significantly to academic discourse through a subsequent research publication.</li>
+            </ul>
+          </p>
         </div>
       </div>
-      
+
       {/* TecoLab */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
-  src={require('./media/teco_trans.png')}
-  alt="TecoLab Logo"
-  className="h-20 w-20 rounded bg-white object-contain"
-/>
+            src={require('./media/teco_trans.png')}
+            alt="TecoLab Logo"
+            className="h-20 w-20 rounded bg-white object-contain"
+          />
           <div>
             <h3 className="text-xl font-bold text-white">TecoLab</h3>
             <p className="text-purple-200">Working Student (Mar 2023 – Sept 2025)</p>
           </div>
         </div>
-        {/* Hover overlay with max height and scrolling */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">TecoLab</h3>
           <p className="text-sm">
-  <strong>Key Contributions:</strong>
-  <ul className="list-disc list-inside mt-2">
-    <li>Worked on ML4Print project to analyze and classify printed documents based on printer-specific characteristics and paper substrate type to identify fake documents.</li>
-    <li>Worked on a heat simulation project, utilizing machine learning to simulate the thermal behavior of liquids within industrial valves, enhancing predictive maintenance capabilities.</li>
-    <li>Sensor optimization for open-earables with edgeML.</li>
-    <li>Built and optimized websites using Jekyll and WordPress, focusing on performance improvements and SEO optimization.</li>
-  </ul>
-</p>
-
+            <strong>Key Contributions:</strong>
+            <ul className="list-disc list-inside mt-2">
+              <li>Worked on ML4Print project to analyze and classify printed documents based on printer-specific characteristics and paper substrate type to identify fake documents.</li>
+              <li>Worked on a heat simulation project, utilizing machine learning to simulate the thermal behavior of liquids within industrial valves, enhancing predictive maintenance capabilities.</li>
+              <li>Sensor optimization for open-earables with edgeML.</li>
+              <li>Built and optimized websites using Jekyll and WordPress, focusing on performance improvements and SEO optimization.</li>
+            </ul>
+          </p>
         </div>
       </div>
-      
+
       {/* Access@KIT */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
-  src={require('./media/6379_access@kit_rgb_dt.png')}
-  alt="Access@KIT Logo"
-  className="h-20 w-20 rounded bg-white object-contain"
-/>
+            src={require('./media/6379_access@kit_rgb_dt.png')}
+            alt="Access@KIT Logo"
+            className="h-20 w-20 rounded bg-white object-contain"
+          />
           <div>
             <h3 className="text-xl font-bold text-white">Access@KIT</h3>
             <p className="text-purple-200">Working Student (Mar 2023 – May 2023)</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
           <p className="text-sm">
-  <strong>Key Contribution:</strong>
-  <ul className="list-disc list-inside mt-2">
-    <li>Designed and trained a custom bi-directional RNN for text-to-speech conversion for acoustic modeling, enhancing digital content accessibility for visually impaired users on the web application by understanding contextual relationships.</li>
-  </ul>
-</p>
-
+            <strong>Key Contribution:</strong>
+            <ul className="list-disc list-inside mt-2">
+              <li>Designed and trained a custom bi-directional RNN for text-to-speech conversion for acoustic modeling, enhancing digital content accessibility for visually impaired users on the web application by understanding contextual relationships.</li>
+            </ul>
+          </p>
         </div>
       </div>
-      
+
       {/* Accenture */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
-  src={require('./media/Accenture.webp')}
-  alt="Accenture Logo"
-  className="h-20 w-20 rounded bg-white object-contain"
-/>
+            src={require('./media/Accenture.webp')}
+            alt="Accenture Logo"
+            className="h-20 w-20 rounded bg-white object-contain"
+          />
           <div>
             <h3 className="text-xl font-bold text-white">Accenture India</h3>
             <p className="text-purple-200">Associate Software Engineer (Feb 2022 – Apr 2022)</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Accenture India</h3>
           <p className="text-sm">
-  <strong>Key Contribution:</strong>
-  <ul className="list-disc list-inside mt-2">
-    <li>Maintained critical IBM Mainframe systems through custom COBOL scripts and proactive monitoring tools. Collaborated with cross-functional teams to diagnose performance bottlenecks, ensuring 99.9% uptime and efficient legacy system integration with modern technologies.</li>
-  </ul>
-</p>
-
+            <strong>Key Contribution:</strong>
+            <ul className="list-disc list-inside mt-2">
+              <li>Maintained critical IBM Mainframe systems through custom COBOL scripts and proactive monitoring tools. Collaborated with cross-functional teams to diagnose performance bottlenecks, ensuring 99.9% uptime and efficient legacy system integration with modern technologies.</li>
+            </ul>
+          </p>
         </div>
       </div>
 
       {/* Accur Digitus */}
-<div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
-  <div className="flex items-center space-x-4">
-    <img
-  src={require('./media/accur_digitus_logo.jpg')}
-  alt="Accur Digitus Logo"
-  className="h-20 w-20 rounded bg-white object-contain"
-/>
-    <div>
-      <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
-      <p className="text-purple-200">Web Developer Intern (Jan 2020 – May 2020)</p>
-    </div>
-  </div>
-  <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
-    <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
-    <p className="text-sm">
-  <strong>Key Contributions:</strong>
-  <ul className="list-disc list-inside mt-2">
-    <li>Engineered responsive web applications using React and Tailwind CSS.</li>
-    <li>Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components.</li>
-    <li>Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.</li>
-  </ul>
-</p>
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
+        <div className="flex items-center space-x-4">
+          <img
+            src={require('./media/accur_digitus_logo.jpg')}
+            alt="Accur Digitus Logo"
+            className="h-20 w-20 rounded bg-white object-contain"
+          />
+          <div>
+            <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
+            <p className="text-purple-200">Web Developer Intern (Jan 2020 – May 2020)</p>
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+          <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
+          <p className="text-sm">
+            <strong>Key Contributions:</strong>
+            <ul className="list-disc list-inside mt-2">
+              <li>Engineered responsive web applications using React and Tailwind CSS.</li>
+              <li>Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components.</li>
+              <li>Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
 
-  </div>
-</div>
-      
     </div>
   </div>
 </FadeInSection>
+
 
 {/* PROJECTS SECTION */}
 <FadeInSection className="py-20">
@@ -502,7 +511,10 @@ function MainPage() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
       {/* DeepFake Detection */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
             src={require('./media/DEEP.jpg')}
@@ -514,7 +526,7 @@ function MainPage() {
             <p className="text-purple-200">rPPG Analysis</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
           <div>
             <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
             <p className="text-sm mb-4">
@@ -522,15 +534,16 @@ function MainPage() {
             </p>
           </div>
           <Link to="/projects/deepfake" className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
-  More Info
-</Link>
-
-      
+            More Info
+          </Link>
         </div>
       </div>
 
       {/* CamCussion */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
             src={require('./media/CCS.jpg')}
@@ -542,7 +555,7 @@ function MainPage() {
             <p className="text-purple-200">Eye Tracking</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
           <div>
             <h3 className="text-xl font-bold mb-2">CamCussion</h3>
             <p className="text-sm mb-4">
@@ -559,7 +572,10 @@ function MainPage() {
       </div>
 
       {/* Self-Driving Car */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
             src={require('./media/LiDAR-Technology.png')}
@@ -571,7 +587,7 @@ function MainPage() {
             <p className="text-purple-200">Autonomous Nav</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
           <div>
             <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
             <p className="text-sm mb-4">
@@ -588,7 +604,10 @@ function MainPage() {
       </div>
 
       {/* Real-Time Car Accident Alert System */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        style={{ minHeight: '320px', maxHeight: '320px' }}
+      >
         <div className="flex items-center space-x-4">
           <img
             src={require('./media/RTC.png')}
@@ -600,7 +619,7 @@ function MainPage() {
             <p className="text-purple-200">Crash Detection</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
           <div>
             <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
             <p className="text-sm mb-4">
@@ -619,6 +638,7 @@ function MainPage() {
     </div>
   </div>
 </FadeInSection>
+
 
 
 

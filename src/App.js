@@ -198,7 +198,7 @@ function MainPage() {
             <div className="flex flex-wrap justify-evenly gap-6">
             <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">python</p>
+                <p className="text-purple-300 font-semibold">Python</p>
               </div>
             <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" className="w-16 h-16 mb-2" />
@@ -235,56 +235,66 @@ function MainPage() {
             </div>
           </div>
           
-          {/* Web Development */}
           <div className="mb-12 p-4 border rounded border-gray-700">
-            <h3 className="text-2xl font-bold text-purple-200 mb-4">Web Development</h3>
-            <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">HTML5</p>
-              </div>
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">CSS3</p>
-              </div>
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Bootstrap</p>
-              </div>
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">React</p>
-              </div>
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">JavaScript</p>
-              </div>
-            </div>
-          </div>
+  <h3 className="text-2xl font-bold text-purple-200 mb-4">Web Development</h3>
+  <div className="flex flex-wrap justify-evenly gap-6">
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">HTML</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">CSS</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">Bootstrap</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">React.JS</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">JavaScript</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">Node.js</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">MySQL</p>
+    </div>
+  </div>
+</div>
           
           {/* Tools */}
-          <div className="p-4 border rounded border-gray-700">
-            <h3 className="text-2xl font-bold text-purple-200 mb-4">Tools</h3>
-            <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Git</p>
-              </div>
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Linux</p>
-              </div>
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Docker</p>
-              </div>
-              <div className="flex flex-col items-center hover-glow">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Matlab</p>
-              </div>
-              
-            </div>
-          </div>
+ <div className="p-4 border rounded border-gray-700">
+  <h3 className="text-2xl font-bold text-purple-200 mb-4">Tools</h3>
+  <div className="flex flex-wrap justify-evenly gap-6">
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">Git</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">Linux</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">Docker</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">Matlab</p>
+    </div>
+    <div className="flex flex-col items-center hover-glow">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="LaTeX" className="w-16 h-16 mb-2" />
+      <p className="text-purple-300 font-semibold">LaTeX</p>
+    </div>
+  </div>
+</div>
         </div>
       </FadeInSection>
 

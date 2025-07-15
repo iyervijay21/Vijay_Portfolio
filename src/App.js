@@ -159,7 +159,7 @@ function MainPage() {
             <div className="w-full md:w-1/2 text-align: justify;">
               
               <p className="text-xl md:text-2xl mb-6 text-purple-200">
-              Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities.  I mix creativity with code, teaching machines to interpret the visual world in fun, unexpected ways. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
+              Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities.  I mix creativity with code, teaching machines to interpret the visual world in fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
             
               </p>
               
@@ -624,7 +624,7 @@ function MainPage() {
         <div id="contact" className="w-full bg-gray-800 shadow-md mb-8 p-6">
           <h2 className="text-3xl font-bold mb-4 text-purple-300">Contact Me</h2>
           <p className="text-purple-200 mb-6">
-          I'm always up for a wild brainstorming session where we turn pixels into pure magic—let’s chat if you're as excited about playful AI, ML, and computer vision adventures as I am!
+          I'm always up for a wild brainstorming session where we turn pixels into pure magic. Let’s chat if you're as excited about computer vision adventures as I am!
           </p>
           <div className="space-y-3">
             <div>

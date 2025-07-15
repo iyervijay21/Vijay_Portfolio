@@ -455,8 +455,8 @@ function MainPage() {
             className="h-20 w-20 rounded bg-white object-contain"
           />
           <div>
-            <h3 className="text-xl font-bold text-white">Accenture India</h3>
-            <p className="text-purple-200">Associate Software Engineer (Feb 2022 – Apr 2022)</p>
+            <h3 className="text-xl font-bold text-white">Accenture</h3>
+            <p className="text-purple-200">ASE(Feb 2022 – Apr 2022)</p>
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
@@ -483,7 +483,7 @@ function MainPage() {
           />
           <div>
             <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
-            <p className="text-purple-200">Web Developer Intern (Jan 2020 – May 2020)</p>
+            <p className="text-purple-200">Web Dev Intern (Jan 2020 – May 2020)</p>
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">

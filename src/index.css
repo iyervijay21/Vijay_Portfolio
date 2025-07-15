@@ -11,15 +11,22 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Firefox scrollbar styling */
+/* Scrollbar styling for Firefox */
 .overlay-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: rgba(155, 89, 182, 0.8) transparent;
+  
+  /* Always enable scrolling to prevent layout shifts */
+  overflow-y: auto !important;
+  
+  /* Momentum scrolling for iOS/macOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Scrollbar styling for WebKit browsers */
 .overlay-scrollbar::-webkit-scrollbar {
   width: 6px;
+  background: transparent;
 }
 
 .overlay-scrollbar::-webkit-scrollbar-track {
@@ -31,14 +38,36 @@
   border-radius: 3px;
 }
 
-/* Momentum scrolling and hide scrollbar on iOS/macOS Safari */
+/* Hide scrollbar on iOS/macOS Safari but keep scrolling */
 @supports (-webkit-overflow-scrolling: touch) {
   .overlay-scrollbar {
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE 10+ */
   }
   .overlay-scrollbar::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* Optional: fix grid item alignment on Mac */
+/* Apply to your grid items if needed */
+.grid > div {
+  min-width: 280px;
+  align-self: start;
+}
+
+/* Smooth opacity transition for overlay hover */
+/* Assume overlays have class 'absolute' inside .group */
+.relative.group > div.absolute {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 16rem; /* max-h-64 */
+  overflow-y: auto !important;
+}
+
+/* Show overlay on hover */
+.relative.group:hover > div.absolute {
+  opacity: 1;
+  pointer-events: auto;
 }

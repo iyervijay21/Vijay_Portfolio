@@ -248,10 +248,6 @@ function MainPage() {
       <p className="text-purple-300 font-semibold">CSS</p>
     </div>
     <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">Bootstrap</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16 mb-2" />
       <p className="text-purple-300 font-semibold">React.JS</p>
     </div>

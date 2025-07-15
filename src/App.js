@@ -286,10 +286,6 @@ function MainPage() {
       <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="w-16 h-16 mb-2" />
       <p className="text-purple-300 font-semibold">Matlab</p>
     </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="LaTeX" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">LaTeX</p>
-    </div>
   </div>
 </div>
         </div>
@@ -513,7 +509,7 @@ function MainPage() {
       {/* DeepFake Detection */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '320px', maxHeight: '320px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -542,7 +538,7 @@ function MainPage() {
       {/* CamCussion */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '320px', maxHeight: '320px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -574,7 +570,7 @@ function MainPage() {
       {/* Self-Driving Car */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '320px', maxHeight: '320px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -606,7 +602,7 @@ function MainPage() {
       {/* Real-Time Car Accident Alert System */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '320px', maxHeight: '320px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img

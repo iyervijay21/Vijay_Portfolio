@@ -358,7 +358,8 @@ function MainPage() {
 <FadeInSection className="py-20">
   <div id="experience" className="w-full bg-gray-800 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-8 text-purple-300">Work Experience</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-start">
+
 
             {/* FZI */}
       <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer">
@@ -493,9 +494,6 @@ function MainPage() {
 
   </div>
 </div>
-
-      
-
       
     </div>
   </div>

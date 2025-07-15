@@ -751,11 +751,14 @@ function CarAccidentDetail() {
 
         {/* Right: Image */}
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <img
-  src={require('./media/Alert.png')}
-  alt="Accident Alert System Diagram"
-  className="rounded shadow-lg max-w-sm h-auto"
-/>
+          <a href={require('./media/Alert.png')} target="_blank" rel="noopener noreferrer">
+  <img
+    src={require('./media/Alert.png')}
+    alt="Accident Alert System Diagram"
+    className="rounded shadow-lg max-w-xs h-auto"
+  />
+</a>
+
 
         </div>
       </div>
@@ -820,11 +823,13 @@ function SelfDrivingDetail() {
 
         {/* Right: Image */}
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <img
-  src={require('./media/lidar.png')}
-  alt="LIDAR Car Prototype"
-  className="rounded shadow-lg w-64 h-auto" // sets width to 16rem, height adjusts automatically
-/>
+         <a href={require('./media/lidar.png')} target="_blank" rel="noopener noreferrer">
+  <img
+    src={require('./media/lidar.png')}
+    alt="LIDAR Car Prototype"
+    className="rounded shadow-lg w-64 h-auto"
+  />
+</a>
 
         </div>
       </div>
@@ -888,12 +893,15 @@ function CamCussionDetail() {
 
         {/* Right: Image */}
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-          <img
-  src={require('./media/usecase.png')}
-  alt="Use Case"
-  className="rounded shadow-lg max-w-full h-auto"
-  style={{ transform: 'scaleY(0.5)', transformOrigin: 'top' }}
-/>
+         <a href={require('./media/usecase.png')} target="_blank" rel="noopener noreferrer">
+  <img
+    src={require('./media/usecase.png')}
+    alt="Use Case"
+    className="rounded shadow-lg max-w-full h-auto"
+  />
+</a>
+
+
 
         </div>
       </div>
@@ -929,88 +937,54 @@ function DeepFakeDetail() {
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-xl font-semibold">DeepFake Detection System Overview</h2>
 
-          <h3 className="text-lg font-semibold">Video Data Processing:</h3>
-          <p>Videos are stored in .avi format at 30 fps with 1920×1080 resolution.</p>
-          <p>Frames are extracted using OpenCV’s VideoCapture, converted from BGR to RGB.</p>
-          <p>Videos are subdivided into non-overlapping 10-second windows (300 frames each).</p>
-          <p>
-            Each window <code>W<sub>k</sub> = &#123; F<sub>t</sub> : (k−1)×300+1 ≤ t ≤ k×300 &#125;</code> is processed independently.
-          </p>
+          <h3 className="text-lg font-semibold">Video Processing</h3>
+          <p>• Videos (.avi, 30 fps, 1920×1080) are split into 10-second windows (300 frames each).</p>
+          <p>• Frames converted BGR→RGB using OpenCV; processed as windows <code>W<sub>k</sub></code>.</p>
 
-          <h3 className="text-lg font-semibold">Detection and Tracking Workflow:</h3>
+          <h3 className="text-lg font-semibold">Face Detection & Tracking</h3>
           <ul className="list-disc ml-6 space-y-1">
-            <li>Convert each frame <code>F<sub>t</sub></code> to grayscale <code>G<sub>t</sub></code>.</li>
-            <li>Use Dlib’s frontal-face detector on <code>G<sub>t</sub></code> to obtain bounding boxes <code>B<sub>t</sub>(i)</code>.</li>
-            <li>Extract 81 facial landmarks <code>p<sub>t,j</sub>(i)</code> using Dlib’s shape predictor.</li>
-            <li>Perform full landmark detection every 6 frames; use Dlib’s correlation tracker for intermediate frames, matching faces via IoU.</li>
-            <li>Store landmark arrays <code>P<sub>t</sub>(i) ∈ ℝ<sup>81×2</sup></code> for ROI extraction.</li>
-            <li>Define three primary ROI areas on each face: forehead, left cheek, and right cheek, subdivided into smaller subregions to capture localized physiological signals.</li>
+            <li>Convert frames to grayscale <code>G<sub>t</sub></code>.</li>
+            <li>Detect faces with Dlib; extract 81 landmarks every 6 frames, track in between using correlation tracker.</li>
+            <li>Define ROIs: forehead, left cheek, right cheek, subdivided into subregions.</li>
           </ul>
 
-          <h3 className="text-lg font-semibold">rPPG Signal Extraction:</h3>
-          <p>
-            For each subregion <code>R<sub>s</sub></code> in window <code>W<sub>k</sub></code>, compute spatial average RGB channels:
-          </p>
-          <p className="italic">
-            <code>¯C<sub>s</sub>(t) = (1/|R<sub>s</sub>|) ∑<sub>(x,y) ∈ R<sub>s</sub></sub> F<sub>t</sub>(x,y) ∈ ℝ<sup>3</sup>, t ∈ W<sub>k</sub></code>
-          </p>
-          <p>Sequences of length 300 RGB triplets per subregion are stored using Python deque.</p>
-          <p>
-            Raw rPPG signals are extracted using the POS algorithm by concatenating 14 subregion RGB traces into matrix <code>C ∈ ℝ<sup>14W×3</sup></code>.
-          </p>
+          <h3 className="text-lg font-semibold">rPPG Extraction</h3>
+          <p>• Compute mean RGB per subregion <code>¯C<sub>s</sub>(t)</code>.</p>
+          <p>• Concatenate 14 subregion traces → matrix <code>C ∈ ℝ<sup>14W×3</sup></code>.</p>
 
-          <h3 className="text-lg font-semibold">POS Algorithm Steps:</h3>
+          <h4 className="font-semibold">POS Algorithm</h4>
           <ul className="list-disc ml-6 space-y-1">
-            <li>Normalization: Normalize each color channel <code>c ∈ &#123;R, G, B&#125;</code> by its mean <code>μ<sub>c</sub></code>.</li>
-            <li>Projection: Use projection matrix <code>P = [[0, 1, -1], [-2, 1, 1]]</code> to compute signals <code>S = PC′<sup>T</sup> ∈ ℝ<sup>2×14W</sup></code>.</li>
-            <li>Signal Combination: Compute raw rPPG trace <code>h</code> by combining two signals with standard deviation scaling and mean-centering.</li>
-            <li>Subregion Accumulation: Split <code>h</code> into 14 segments and sum to get composite signal <code>H<sub>k</sub>(t)</code>.</li>
-            <li>Filtering: Apply detrending and a 4th-order Butterworth bandpass filter (0.8–3 Hz) to <code>H<sub>k</sub>(t)</code>.</li>
+            <li>Normalize each channel by mean.</li>
+            <li>Project with matrix <code>P = [[0,1,-1], [-2,1,1]]</code>.</li>
+            <li>Combine signals to get raw trace <code>h</code>, then sum segments → composite <code>H<sub>k</sub>(t)</code>.</li>
+            <li>Filter with detrending & 4th-order Butterworth (0.8–3 Hz).</li>
           </ul>
 
-          <h3 className="text-lg font-semibold">Neural Network Architecture:</h3>
-          <h4 className="font-semibold">CNN Encoder (HeatmapNet):</h4>
-          <ul className="list-disc ml-6 space-y-1">
-            <li>Input: 2-channel heatmap (B, 2, 256, 256).</li>
-            <li>Three convolutional blocks with increasing channels (2 → 16 → 32 → 64), ReLU activations, max-pooling, and adaptive average pooling.</li>
-            <li>Output: Flattened 64-dimensional latent vector <code>f<sub>CNN</sub></code>.</li>
-          </ul>
+          <h3 className="text-lg font-semibold">Neural Network</h3>
+          <h4 className="font-semibold">CNN Encoder (HeatmapNet)</h4>
+          <p>• Input: 2-channel heatmap → conv layers → 64-dim latent <code>f<sub>CNN</sub></code>.</p>
 
-          <h4 className="font-semibold">Vision Transformer (ViT) Encoder:</h4>
-          <ul className="list-disc ml-6 space-y-1">
-            <li>Input: Same 2-channel heatmap, partitioned into 16×16 patches (256 patches).</li>
-            <li>Each patch projected to 768-dimensional embedding with positional embeddings and prepended [CLS] token.</li>
-            <li>Processed by 12 Transformer encoder blocks with multi-head self-attention (8 heads), LayerNorm, MLP, and residual connections.</li>
-            <li>Output: Final [CLS] embedding <code>f<sub>ViT</sub> ∈ ℝ<sup>768</sup></code>.</li>
-          </ul>
+          <h4 className="font-semibold">ViT Encoder</h4>
+          <p>• Input: same heatmap split into 16×16 patches → 12 Transformer blocks → <code>f<sub>ViT</sub> ∈ ℝ<sup>768</sup></code>.</p>
 
-          <h4 className="font-semibold">Fusion Head:</h4>
-          <p>
-            Concatenate <code>f<sub>CNN</sub></code> and <code>f<sub>ViT</sub></code> into an 832-dimensional vector. Apply dropout, LayerNorm, linear layers, ReLU, and sigmoid to output logit <code>p<sub>k</sub></code>.
-          </p>
-
-          <h3 className="text-lg font-semibold">Classification Threshold:</h3>
-          <p>
-            Predict <code>fake</code> if <code>p<sub>k</sub> ≥ 0.5</code>, otherwise <code>real</code>.
-          </p>
+          <h4 className="font-semibold">Fusion & Classification</h4>
+          <p>• Concatenate features (832-dim) → dropout, LayerNorm, linear → sigmoid → <code>p<sub>k</sub></code>.</p>
+          <p>• Classify as <code>fake</code> if <code>p<sub>k</sub> ≥ 0.5</code>.</p>
         </div>
 
-        {/* Right: Images Section */}
+        {/* Right: Image Section */}
         <div className="md:w-1/2 flex flex-col space-y-6 mt-10 md:mt-0">
-          <img
-            src={require('./media/pipeline.png')}
-            alt="Pipeline Overview"
-            className="rounded shadow-lg max-w-full h-auto"
-          />
-          <img
-            src={require('./media/architecture.png')}
-            alt="Architecture Overview"
-            className="rounded shadow-lg max-w-full h-auto"
-          />
+          <a href={require('./media/pipeline.png')} target="_blank" rel="noopener noreferrer">
+  <img
+    src={require('./media/pipeline.png')}
+    alt="Pipeline Overview"
+    className="rounded shadow-lg max-w-full h-auto"
+  />
+</a>
         </div>
-        
       </div>
-      {/* GitHub button at the end */}
+
+      {/* GitHub button */}
       <div className="flex justify-center mt-12">
         <a
           href="https://github.com/iyervijay21/Deepfake_Detection"
@@ -1018,11 +992,7 @@ function DeepFakeDetail() {
           rel="noopener noreferrer"
           className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200 hover:bg-purple-600 hover:text-white transition"
         >
-          {/* GitHub icon (replace with your own if needed) */}
-          <svg
-            className="w-5 h-5 mr-2 fill-current"
-            viewBox="0 0 24 24"
-          >
+          <svg className="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">
             <path d="M12 .297c-6.63 0-12 5.373-12 12 ... (shortened) ..." />
           </svg>
           View on GitHub

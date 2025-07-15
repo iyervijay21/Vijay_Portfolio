@@ -370,8 +370,7 @@ function MainPage() {
             <p className="text-purple-200">Research Assistant (Sept 2025 – Dec 2025)</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 max-h-64 overlay-scrollbar"
->
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">FZI</h3>
           <p className="text-sm">
   <strong>Key Contributions:</strong>
@@ -400,7 +399,7 @@ function MainPage() {
           </div>
         </div>
         {/* Hover overlay with max height and scrolling */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 max-h-64 overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">TecoLab</h3>
           <p className="text-sm">
   <strong>Key Contributions:</strong>
@@ -428,7 +427,7 @@ function MainPage() {
             <p className="text-purple-200">Working Student (Mar 2023 – May 2023)</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 max-h-64 overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
           <p className="text-sm">
   <strong>Key Contribution:</strong>
@@ -453,7 +452,7 @@ function MainPage() {
             <p className="text-purple-200">Associate Software Engineer (Feb 2022 – Apr 2022)</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 max-h-64 overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Accenture India</h3>
           <p className="text-sm">
   <strong>Key Contribution:</strong>
@@ -478,7 +477,7 @@ function MainPage() {
       <p className="text-purple-200">Web Developer Intern (Jan 2020 – May 2020)</p>
     </div>
   </div>
-  <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 max-h-64 overlay-scrollbar">
+  <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-hidden group-hover:overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-64 overlay-scrollbar">
     <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
     <p className="text-sm">
   <strong>Key Contributions:</strong>

@@ -233,6 +233,10 @@ function MainPage() {
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" className="w-16 h-16 mb-2" />
                 <p className="text-purple-300 font-semibold">Matplotlib</p>
               </div>
+              <div className="flex flex-col items-center hover-glow">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="w-16 h-16 mb-2" />
+  <p className="text-purple-300 font-semibold">C++</p>
+</div>
             </div>
           </div>
           

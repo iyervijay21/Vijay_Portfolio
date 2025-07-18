@@ -470,7 +470,7 @@ function MainPage() {
             className="h-20 w-20 rounded bg-white object-contain"
           />
           <div>
-            <h3 className="text-xl font-bold text-white">Accenture</h3>
+            <h3 className="text-xl font-bold text-white">Accenture India</h3>
             <p className="text-purple-200">Associate SE(Feb 2022 – Apr 2022)</p>
           </div>
         </div>

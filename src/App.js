@@ -384,7 +384,7 @@ function MainPage() {
           />
           <div>
             <h3 className="text-xl font-bold text-white">FZI</h3>
-            <p className="text-purple-200">Research Assistant (Sept 2025 – Dec 2025)</p>
+            <p className="text-purple-200">Research Assistant (Aug 2025 – Nov 2025)</p>
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">

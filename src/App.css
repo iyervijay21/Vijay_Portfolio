@@ -1,12 +1,16 @@
 .App {
   text-align: center;
+  background-color: transparent; /* transparent background */
+  color: #a288e3; /* light purple text */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: clamp(100px, 40vmin, 300px);
   pointer-events: none;
+  will-change: transform;
 }
 
+/* Animation stays the same */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,18 +18,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: transparent; /* transparent header */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #a288e3; /* light purple */
 }
 
 .App-link {
-  color: #61dafb;
+  color: #c4a5f3; /* lighter purple for links */
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +46,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Optional: add a subtle purple background gradient to the body */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, rgba(194, 151, 255, 0.1), rgba(225, 198, 255, 0.1));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

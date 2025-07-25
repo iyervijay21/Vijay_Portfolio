@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 
-
 // FadeInSection: Re-triggers fade/slide animation each time its content enters the viewport.
 function FadeInSection({ children, className = "" }) {
   const domRef = useRef();
@@ -29,9 +28,6 @@ function FadeInSection({ children, className = "" }) {
     </div>
   );
 }
-
-
-
 
 function Navbar({ menuOpen, setMenuOpen }) {
   const location = useLocation();
@@ -61,7 +57,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
   const menuToShow = isHomePage ? fullMenuItems : homeOnlyMenu;
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 fixed w-full top-0 z-20 bg-black bg-opacity-80 backdrop-blur">
+    <nav className="flex items-center justify-between px-6 py-4 fixed w-full top-0 z-20 bg-purple-900 bg-opacity-80 backdrop-blur">
       <div className="text-2xl font-bold text-white">Vijay Mohanram Iyer</div>
 
       {/* Hamburger button */}
@@ -105,7 +101,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <ul className="flex flex-col space-y-4 bg-black bg-opacity-90 absolute top-full left-0 w-full p-6 md:hidden">
+        <ul className="flex flex-col space-y-4 bg-purple-900 bg-opacity-90 absolute top-full left-0 w-full p-6 md:hidden">
           {menuToShow.map(({ label, hash }) => (
             <li key={label}>
               {isHomePage ? (
@@ -131,14 +127,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
     </nav>
   );
 }
-
-
-
-
-
-
-
-
 
 // ToolsIcons: Renders tool icons using regular image URLs.
 function ToolsIcons() {
@@ -167,508 +155,482 @@ function MainPage() {
     <div>
       {/* HERO SECTION */}
       <FadeInSection className="pt-24 pb-20">
-      <div id="Hero" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-
+        <div id="Hero" className="w-full bg-purple-900 bg-opacity-20 shadow-md mb-8 p-6">
           <section id="home" className="flex flex-col-reverse md:flex-row items-center">
             <div className="w-full md:w-1/2 text-align: justify;">
-              
-              <p className="text-xl md:text-2xl mb-6 text-purple-200">
-              Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities.  I mix creativity with code, teaching machines to interpret the visual world in fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
-            
+              <p className="text-xl md:text-2xl mb-6 text-purple-100">
+                Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities.  I mix creativity with code, teaching machines to interpret the visual world in fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
               </p>
-              
               <button
-  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-  className="bg-purple-600 text-white hover-glow px-4 py-2 rounded font-bold"
->
-  Contact Me
-</button>
-
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-purple-600 text-white hover-glow px-4 py-2 rounded font-bold"
+              >
+                Contact Me
+              </button>
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-            <img
-  src={require('./media/vijay.jpg')}
-  alt="Hero"
-  className="w-80 h-80 object-cover rounded-full"
-/>
-
-
-
-</div>
-
+              <img
+                src={require('./media/vijay.jpg')}
+                alt="Hero"
+                className="w-80 h-80 object-cover rounded-full"
+              />
+            </div>
           </section>
         </div>
       </FadeInSection>
 
       {/* SKILLS SECTION */}
       <FadeInSection className="py-20">
-      <div id="skills" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-
-          <h2 className="text-3xl font-bold mb-6 text-purple-300 text-center">My Tech Stack</h2>
-          
-          
+        <div id="skills" className="w-full bg-purple-900 bg-opacity-20 shadow-md mb-8 p-6">
+          <h2 className="text-3xl font-bold mb-6 text-white text-center">My Tech Stack</h2>
           
           {/* Language/Frameworks */}
-          <div className="mb-12 p-4 border rounded border-gray-700">
-            <h3 className="text-2xl font-bold text-purple-200 mb-4">Language/Frameworks</h3>
+          <div className="mb-12 p-4 border border-purple-500 border-opacity-30 rounded">
+            <h3 className="text-2xl font-bold text-white mb-4">Language/Frameworks</h3>
             <div className="flex flex-wrap justify-evenly gap-6">
-            <div className="flex flex-col items-center hover-glow">
+              <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Python</p>
+                <p className="text-white font-semibold">Python</p>
               </div>
-            <div className="flex flex-col items-center hover-glow">
+              <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">OpenCV</p>
+                <p className="text-white font-semibold">OpenCV</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" alt="qt" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">qt</p>
+                <p className="text-white font-semibold">qt</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">TensorFlow</p>
+                <p className="text-white font-semibold">TensorFlow</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">PyTorch</p>
+                <p className="text-white font-semibold">PyTorch</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">NumPy</p>
+                <p className="text-white font-semibold">NumPy</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Pandas</p>
+                <p className="text-white font-semibold">Pandas</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">scikit‑learn</p>
+                <p className="text-white font-semibold">scikit‑learn</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" className="w-16 h-16 mb-2" />
-                <p className="text-purple-300 font-semibold">Matplotlib</p>
+                <p className="text-white font-semibold">Matplotlib</p>
               </div>
               <div className="flex flex-col items-center hover-glow">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="w-16 h-16 mb-2" />
-  <p className="text-purple-300 font-semibold">C++</p>
-</div>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">C++</p>
+              </div>
             </div>
           </div>
           
-          <div className="mb-12 p-4 border rounded border-gray-700">
-  <h3 className="text-2xl font-bold text-purple-200 mb-4">Web Development</h3>
-  <div className="flex flex-wrap justify-evenly gap-6">
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">HTML</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">CSS</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">React.JS</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">JavaScript</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">Node.js</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">MySQL</p>
-    </div>
-  </div>
-</div>
+          <div className="mb-12 p-4 border border-purple-500 border-opacity-30 rounded">
+            <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
+            <div className="flex flex-wrap justify-evenly gap-6">
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">HTML</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">CSS</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">React.JS</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">JavaScript</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">Node.js</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">MySQL</p>
+              </div>
+            </div>
+          </div>
           
           {/* Tools */}
- <div className="p-4 border rounded border-gray-700">
-  <h3 className="text-2xl font-bold text-purple-200 mb-4">Tools</h3>
-  <div className="flex flex-wrap justify-evenly gap-6">
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">Git</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">Linux</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">Docker</p>
-    </div>
-    <div className="flex flex-col items-center hover-glow">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="w-16 h-16 mb-2" />
-      <p className="text-purple-300 font-semibold">Matlab</p>
-    </div>
-  </div>
-</div>
+          <div className="p-4 border border-purple-500 border-opacity-30 rounded">
+            <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
+            <div className="flex flex-wrap justify-evenly gap-6">
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">Git</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">Linux</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">Docker</p>
+              </div>
+              <div className="flex flex-col items-center hover-glow">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="w-16 h-16 mb-2" />
+                <p className="text-white font-semibold">Matlab</p>
+              </div>
+            </div>
+          </div>
         </div>
       </FadeInSection>
 
-    {/* EDUCATION SECTION */}
-<FadeInSection className="py-20">
-  <div id="education" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-6 text-purple-300 text-left">
-      Education
-    </h2>
-    <div className="flex flex-col md:flex-row justify-evenly gap-8">
-      <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
-      <img
-        src={require('./media/KIT.webp')}
-        alt="KIT Logo"
-        className="h-20 w-20 rounded bg-white object-contain"
-      />
-       <div>
-        <h3 className="text-xl font-bold mb-2 text-white">
-          Karlsruhe Institute of Technology
-        </h3>
-        <p className="text-white">
-          M.Sc. in Electrical Engineering and Information Technology
-        </p>
-        <p className="text-sm text-purple-200 mt-2">
-          May 2022 – July 2025
-          <br />
-          GPA: 2.3
-        </p>
-      </div>
-      </div>
-      <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
-      <img
-        src={require('./media/MU.png')}
-        alt="MU logo"
-        className="h-20 w-20 rounded bg-white object-contain"
-      />
-      <div>
-<h3 className="text-xl font-bold mb-2 text-white">
-          University of Mumbai
-        </h3>
-        <p className="text-white">
-          B.Eng. in Electronics Engineering
-        </p>
-        <p className="text-sm text-purple-200 mt-2">
-          Aug 2017 – May 2021
-          <br />
-          GPA: 2.8
-        </p>
-      </div>
-        
-      </div>
-    </div>
-  </div>
-</FadeInSection>
-
-
-
-
-{/* WORK EXPERIENCE SECTION */}
-<FadeInSection className="py-20">
-  <div id="experience" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-8 text-purple-300">Work Experience</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-start">
-
-      {/* FZI */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/1524.png')}
-            alt="FZI Logo"
-            className="h-20 w-20 rounded bg-white object-contain"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">FZI</h3>
-            <p className="text-purple-200">Research Assistant (Aug 2025 – Nov 2025)</p>
+      {/* EDUCATION SECTION */}
+      <FadeInSection className="py-20">
+        <div id="education" className="w-full bg-purple-900 bg-opacity-20 shadow-md mb-8 p-6">
+          <h2 className="text-3xl font-bold mb-6 text-white text-left">
+            Education
+          </h2>
+          <div className="flex flex-col md:flex-row justify-evenly gap-8">
+            <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
+              <img
+                src={require('./media/KIT.webp')}
+                alt="KIT Logo"
+                className="h-20 w-20 rounded bg-white object-contain"
+              />
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-white">
+                  Karlsruhe Institute of Technology
+                </h3>
+                <p className="text-white">
+                  M.Sc. in Electrical Engineering and Information Technology
+                </p>
+                <p className="text-sm text-purple-100 mt-2">
+                  May 2022 – July 2025
+                  <br />
+                  GPA: 2.3
+                </p>
+              </div>
+            </div>
+            <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
+              <img
+                src={require('./media/MU.png')}
+                alt="MU logo"
+                className="h-20 w-20 rounded bg-white object-contain"
+              />
+              <div>
+                <h3 className="text-xl font-bold mb-2 text-white">
+                  University of Mumbai
+                </h3>
+                <p className="text-white">
+                  B.Eng. in Electronics Engineering
+                </p>
+                <p className="text-sm text-purple-100 mt-2">
+                  Aug 2017 – May 2021
+                  <br />
+                  GPA: 2.8
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">FZI</h3>
-          <p className="text-sm">
-            <strong>Key Contributions:</strong>
-            <ul className="list-disc list-inside mt-2">
-              <li>Enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment.</li>
-              <li>Develop an interactive user interface that visualizes multiple ROIs, emphasizing regions with elevated artifact energy concentrations.</li>
-              <li>Rigorously fine-tune and cross-validate the methodology across diverse DeepFake detection techniques to ensure robustness and generalizability.</li>
-              <li>Contribute significantly to academic discourse through a subsequent research publication.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
+      </FadeInSection>
 
-      {/* TecoLab */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/teco_trans.png')}
-            alt="TecoLab Logo"
-            className="h-20 w-20 rounded bg-white object-contain"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">TecoLab</h3>
-            <p className="text-purple-200">Working Student (Mar 2023 – Sept 2025)</p>
+      {/* WORK EXPERIENCE SECTION */}
+      <FadeInSection className="py-20">
+        <div id="experience" className="w-full bg-purple-900 bg-opacity-20 shadow-md mb-8 p-6">
+          <h2 className="text-3xl font-bold mb-8 text-white">Work Experience</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-start">
+            {/* FZI */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/1524.png')}
+                  alt="FZI Logo"
+                  className="h-20 w-20 rounded bg-white object-contain"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">FZI</h3>
+                  <p className="text-purple-100">Research Assistant (Aug 2025 – Nov 2025)</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+                <h3 className="text-xl font-bold mb-2">FZI</h3>
+                <p className="text-sm">
+                  <strong>Key Contributions:</strong>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment.</li>
+                    <li>Develop an interactive user interface that visualizes multiple ROIs, emphasizing regions with elevated artifact energy concentrations.</li>
+                    <li>Rigorously fine-tune and cross-validate the methodology across diverse DeepFake detection techniques to ensure robustness and generalizability.</li>
+                    <li>Contribute significantly to academic discourse through a subsequent research publication.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            {/* TecoLab */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/teco_trans.png')}
+                  alt="TecoLab Logo"
+                  className="h-20 w-20 rounded bg-white object-contain"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">TecoLab</h3>
+                  <p className="text-purple-100">Working Student (Mar 2023 – Sept 2025)</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+                <h3 className="text-xl font-bold mb-2">TecoLab</h3>
+                <p className="text-sm">
+                  <strong>Key Contributions:</strong>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Worked on ML4Print project to analyze and classify printed documents based on printer-specific characteristics and paper substrate type to identify fake documents.</li>
+                    <li>Worked on a heat simulation project, utilizing machine learning to simulate the thermal behavior of liquids within industrial valves, enhancing predictive maintenance capabilities.</li>
+                    <li>Sensor optimization for open-earables with edgeML.</li>
+                    <li>Built and optimized websites using Jekyll and WordPress, focusing on performance improvements and SEO optimization.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            {/* Access@KIT */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/6379_access@kit_rgb_dt.png')}
+                  alt="Access@KIT Logo"
+                  className="h-20 w-20 rounded bg-white object-contain"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">Access@KIT</h3>
+                  <p className="text-purple-100">Working Student (Mar 2023 – May 2023)</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+                <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
+                <p className="text-sm">
+                  <strong>Key Contribution:</strong>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Designed and trained a custom bi-directional RNN for text-to-speech conversion for acoustic modeling, enhancing digital content accessibility for visually impaired users on the web application by understanding contextual relationships.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            {/* Accenture */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/Accenture.webp')}
+                  alt="Accenture Logo"
+                  className="h-20 w-20 rounded bg-white object-contain"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">Accenture India</h3>
+                  <p className="text-purple-100">Associate SE(Feb 2022 – Apr 2022)</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+                <h3 className="text-xl font-bold mb-2">Accenture India</h3>
+                <p className="text-sm">
+                  <strong>Key Contribution:</strong>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Maintained critical IBM Mainframe systems through custom COBOL scripts and proactive monitoring tools. Collaborated with cross-functional teams to diagnose performance bottlenecks, ensuring 99.9% uptime and efficient legacy system integration with modern technologies.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+
+            {/* Accur Digitus */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/accur_digitus_logo.jpg')}
+                  alt="Accur Digitus Logo"
+                  className="h-20 w-20 rounded bg-white object-contain"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
+                  <p className="text-purple-100">Web Dev Intern (Jan 2020 – May 2020)</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+                <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
+                <p className="text-sm">
+                  <strong>Key Contributions:</strong>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Engineered responsive web applications using React and Tailwind CSS.</li>
+                    <li>Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components.</li>
+                    <li>Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">TecoLab</h3>
-          <p className="text-sm">
-            <strong>Key Contributions:</strong>
-            <ul className="list-disc list-inside mt-2">
-              <li>Worked on ML4Print project to analyze and classify printed documents based on printer-specific characteristics and paper substrate type to identify fake documents.</li>
-              <li>Worked on a heat simulation project, utilizing machine learning to simulate the thermal behavior of liquids within industrial valves, enhancing predictive maintenance capabilities.</li>
-              <li>Sensor optimization for open-earables with edgeML.</li>
-              <li>Built and optimized websites using Jekyll and WordPress, focusing on performance improvements and SEO optimization.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
+      </FadeInSection>
 
-      {/* Access@KIT */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/6379_access@kit_rgb_dt.png')}
-            alt="Access@KIT Logo"
-            className="h-20 w-20 rounded bg-white object-contain"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">Access@KIT</h3>
-            <p className="text-purple-200">Working Student (Mar 2023 – May 2023)</p>
+      {/* PROJECTS SECTION */}
+      <FadeInSection className="py-20">
+        <div id="projects" className="w-full bg-purple-900 bg-opacity-20 shadow-md mb-8 p-6">
+          <h2 className="text-3xl font-bold mb-6 text-white">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {/* DeepFake Detection */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/DEEP.jpg')}
+                  alt="DeepFake Logo"
+                  className="h-20 w-20 object-cover rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">DeepFake Detection (FZI-2025)</h3>
+                  <p className="text-purple-100">rPPG Analysis</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
+                  <p className="text-sm mb-4">
+                    This Master’s thesis focused on designing and evaluating a DeepFake detection system leveraging remote photoplethysmography (rPPG) signals...
+                  </p>
+                </div>
+                <Link to="/projects/deepfake" className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
+                  More Info
+                </Link>
+              </div>
+            </div>
+
+            {/* CamCussion */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/CCS.jpg')}
+                  alt="CCS Logo"
+                  className="h-20 w-20 object-cover rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">CamCussion (Zeiss Innovation Hub-2024)</h3>
+                  <p className="text-purple-100">Eye Tracking</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">CamCussion</h3>
+                  <p className="text-sm mb-4">
+                    Utilized OpenCV to develop a real-time eye-tracking system that analyzes pupil dilation and saccadic eye movements...
+                  </p>
+                </div>
+                <Link 
+                  to="/projects/camcussion"
+                  className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+                >
+                  More Info
+                </Link>
+              </div>
+            </div>
+
+            {/* Self-Driving Car */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/LiDAR-Technology.png')}
+                  alt="LiDAR Logo"
+                  className="h-20 w-20 object-cover rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">Self-Driving Car using LIDAR (2022)</h3>
+                  <p className="text-purple-100">Autonomous Nav</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
+                  <p className="text-sm mb-4">
+                    Engineered an autonomous navigation system by integrating LIDAR, radar, and camera inputs to generate real-time 3D maps...
+                  </p>
+                </div>
+                <Link 
+                  to="/projects/self-driving"
+                  className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+                >
+                  More Info
+                </Link>
+              </div>
+            </div>
+
+            {/* Real-Time Car Accident Alert System */}
+            <div
+              className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+              style={{ minHeight: '200px', maxHeight: '200px' }}
+            >
+              <div className="flex items-center space-x-4">
+                <img
+                  src={require('./media/RTC.png')}
+                  alt="RTC Logo"
+                  className="h-20 w-20 object-cover rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">Real Time Car Accident Alert System (2021)</h3>
+                  <p className="text-purple-100">Crash Detection</p>
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-purple-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
+                  <p className="text-sm mb-4">
+                    Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time...
+                  </p>
+                </div>
+                <Link 
+                  to="/projects/car-accident"
+                  className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+                >
+                  More Info
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
-          <p className="text-sm">
-            <strong>Key Contribution:</strong>
-            <ul className="list-disc list-inside mt-2">
-              <li>Designed and trained a custom bi-directional RNN for text-to-speech conversion for acoustic modeling, enhancing digital content accessibility for visually impaired users on the web application by understanding contextual relationships.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-
-      {/* Accenture */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/Accenture.webp')}
-            alt="Accenture Logo"
-            className="h-20 w-20 rounded bg-white object-contain"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">Accenture India</h3>
-            <p className="text-purple-200">Associate SE(Feb 2022 – Apr 2022)</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">Accenture India</h3>
-          <p className="text-sm">
-            <strong>Key Contribution:</strong>
-            <ul className="list-disc list-inside mt-2">
-              <li>Maintained critical IBM Mainframe systems through custom COBOL scripts and proactive monitoring tools. Collaborated with cross-functional teams to diagnose performance bottlenecks, ensuring 99.9% uptime and efficient legacy system integration with modern technologies.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-
-      {/* Accur Digitus */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/accur_digitus_logo.jpg')}
-            alt="Accur Digitus Logo"
-            className="h-20 w-20 rounded bg-white object-contain"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
-            <p className="text-purple-200">Web Dev Intern (Jan 2020 – May 2020)</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
-          <p className="text-sm">
-            <strong>Key Contributions:</strong>
-            <ul className="list-disc list-inside mt-2">
-              <li>Engineered responsive web applications using React and Tailwind CSS.</li>
-              <li>Developed scalable RESTful API integrations and implemented Redux for state management, streamlining data flow across components.</li>
-              <li>Collaborated closely with designers to create a pixel-perfect user experience that increased engagement by over 30%.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</FadeInSection>
-
-
-{/* PROJECTS SECTION */}
-<FadeInSection className="py-20">
-  <div id="projects" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-6 text-purple-300">Projects</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-
-      {/* DeepFake Detection */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/DEEP.jpg')}
-            alt="DeepFake Logo"
-            className="h-20 w-20 object-cover rounded-full"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">DeepFake Detection (FZI-2025)</h3>
-            <p className="text-purple-200">rPPG Analysis</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
-            <p className="text-sm mb-4">
-              This Master’s thesis focused on designing and evaluating a DeepFake detection system leveraging remote photoplethysmography (rPPG) signals...
-            </p>
-          </div>
-          <Link to="/projects/deepfake" className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
-            More Info
-          </Link>
-        </div>
-      </div>
-
-      {/* CamCussion */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/CCS.jpg')}
-            alt="CCS Logo"
-            className="h-20 w-20 object-cover rounded-full"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">CamCussion (Zeiss Innovation Hub-2024)</h3>
-            <p className="text-purple-200">Eye Tracking</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-bold mb-2">CamCussion</h3>
-            <p className="text-sm mb-4">
-              Utilized OpenCV to develop a real-time eye-tracking system that analyzes pupil dilation and saccadic eye movements...
-            </p>
-          </div>
-          <Link 
-            to="/projects/camcussion"
-            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
-          >
-            More Info
-          </Link>
-        </div>
-      </div>
-
-      {/* Self-Driving Car */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/LiDAR-Technology.png')}
-            alt="LiDAR Logo"
-            className="h-20 w-20 object-cover rounded-full"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">Self-Driving Car using LIDAR (2022)</h3>
-            <p className="text-purple-200">Autonomous Nav</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
-            <p className="text-sm mb-4">
-              Engineered an autonomous navigation system by integrating LIDAR, radar, and camera inputs to generate real-time 3D maps...
-            </p>
-          </div>
-          <Link 
-            to="/projects/self-driving"
-            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
-          >
-            More Info
-          </Link>
-        </div>
-      </div>
-
-      {/* Real-Time Car Accident Alert System */}
-      <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
-      >
-        <div className="flex items-center space-x-4">
-          <img
-            src={require('./media/RTC.png')}
-            alt="RTC Logo"
-            className="h-20 w-20 object-cover rounded-full"
-          />
-          <div>
-            <h3 className="text-xl font-bold text-white">Real Time Car Accident Alert System (2021)</h3>
-            <p className="text-purple-200">Crash Detection</p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
-            <p className="text-sm mb-4">
-              Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time...
-            </p>
-          </div>
-          <Link 
-            to="/projects/car-accident"
-            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
-          >
-            More Info
-          </Link>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</FadeInSection>
-
-
-
-
-
+      </FadeInSection>
 
       {/* CONTACT SECTION */}
       <FadeInSection className="py-20">
-        <div id="contact" className="w-full bg-gray-800 shadow-md mb-8 p-6">
-          <h2 className="text-3xl font-bold mb-4 text-purple-300">Contact Me</h2>
-          <p className="text-purple-200 mb-6">
-          I'm always up for a wild brainstorming session where we turn pixels into pure magic. Let’s chat if you're as excited about computer vision adventures as I am!
+        <div id="contact" className="w-full bg-purple-900 bg-opacity-20 shadow-md mb-8 p-6">
+          <h2 className="text-3xl font-bold mb-4 text-white">Contact Me</h2>
+          <p className="text-purple-100 mb-6">
+            I'm always up for a wild brainstorming session where we turn pixels into pure magic. Let’s chat if you're as excited about computer vision adventures as I am!
           </p>
           <div className="space-y-3">
             <div>
-              <a href="mailto:iyervijay99@gmail.com" className="flex items-center space-x-2 text-purple-300 hover-glow">
+              <a href="mailto:iyervijay99@gmail.com" className="flex items-center space-x-2 text-purple-100 hover-glow">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
                   <polyline points="3,6 12,13 21,6" />
@@ -677,7 +639,7 @@ function MainPage() {
               </a>
             </div>
             <div>
-              <a href="tel:+4917667345305" className="flex items-center space-x-2 text-purple-300 hover-glow">
+              <a href="tel:+4917667345305" className="flex items-center space-x-2 text-purple-100 hover-glow">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.81 19.81 0 01-8.63-3.19 19.5 19.5 0 01-5.82-5.82 19.81 19.81 0 01-3.19-8.63A2 2 0 014.08 2h3a2 2 0 012 1.72c.14.72.37 1.42.68 2.08a2 2 0 01-.45 2.11L8.09 8.09a16.06 16.06 0 005.82 5.82l1.18-1.18a2 2 0 012.11-.45c.66.31 1.36.54 2.08.68A2 2 0 0122 16.92z" />
                 </svg>
@@ -689,7 +651,7 @@ function MainPage() {
                 href="https://www.google.com/maps/search/?api=1&query=Tennesseeallee%2020%2C%20Karlsruhe%2C%2076149%2C%20Germany"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-purple-300 hover-glow"
+                className="flex items-center space-x-2 text-purple-100 hover-glow"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z" />
@@ -704,7 +666,7 @@ function MainPage() {
 
       {/* FOOTER */}
       <footer className="text-center py-4">
-        <p className="text-purple-200">
+        <p className="text-purple-100">
           &copy; {new Date().getFullYear()} Vijay Mohanram Iyer. All rights reserved.
         </p>
       </footer>

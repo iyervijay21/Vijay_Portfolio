@@ -353,8 +353,8 @@ function MainPage() {
 <FadeInSection className="py-20">
   <div id="experience" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-8 text-white">Work Experience</h2>
-    <div className="grid grid-cols-2 gap-8 items-start">
-      
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+
       {/* FZI */}
       <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
         <div className="flex items-center space-x-4">
@@ -513,7 +513,7 @@ function MainPage() {
 <FadeInSection className="py-20">
   <div id="projects" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-6 text-white">Projects</h2>
-    <div className="grid grid-cols-2 gap-8 items-start">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
       
       {/* DeepFake Detection */}

@@ -485,7 +485,7 @@ function MainPage() {
           </div>
         </div>
         <div className="flex flex-wrap mt-2 gap-1">
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">React.Js</span>
+          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">React.JS</span>
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Tailwind</span>
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Redux</span>
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">HTML</span>
@@ -496,7 +496,7 @@ function MainPage() {
           <p className="text-sm">
             <strong>Key Contributions:</strong>
             <ul className="list-disc list-inside mt-2">
-              <li>Developed responsive apps using React & Tailwind CSS.</li>
+              <li>Developed responsive apps using React.JS & Tailwind CSS.</li>
               <li>Integrated scalable RESTful APIs & Redux for state management.</li>
               <li>Enhanced user experience leading to >30% engagement increase.</li>
             </ul>

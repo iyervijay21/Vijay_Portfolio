@@ -356,7 +356,7 @@ function MainPage() {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
       {/* FZI */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/1524.png')} alt="FZI Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -391,7 +391,7 @@ function MainPage() {
       </div>
 
       {/* TecoLab */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/teco_trans.png')} alt="TecoLab Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -426,7 +426,7 @@ function MainPage() {
       </div>
 
       {/* Access@KIT */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/6379_access@kit_rgb_dt.png')} alt="Access@KIT Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -451,7 +451,7 @@ function MainPage() {
       </div>
 
       {/* Accenture */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/Accenture.webp')} alt="Accenture Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -476,7 +476,7 @@ function MainPage() {
       </div>
 
       {/* Accur Digitus */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/accur_digitus_logo.jpg')} alt="Accur Digitus Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -519,7 +519,7 @@ function MainPage() {
       {/* DeepFake Detection */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
+        style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -560,7 +560,7 @@ function MainPage() {
       {/* CamCussion */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
+        style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -601,7 +601,7 @@ function MainPage() {
       {/* Self-Driving Car */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
+        style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -640,7 +640,7 @@ function MainPage() {
       {/* Real-Time Car Accident Alert System */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '200px', maxHeight: '200px' }}
+        style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
           <img

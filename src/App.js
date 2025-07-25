@@ -740,30 +740,27 @@ function MainPage() {
       </div>
       <div>
         <a
-          href="https://www.google.com/maps/search/?api=1&query=Tennesseeallee%2020%2C%20Karlsruhe%2C%2076149%2C%20Germany"
+          href="https://www.linkedin.com/in/iyer-vijay/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-purple-100 hover-glow rounded-full px-4 py-2"
-
         >
           <svg
             className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
+            fill="currentColor"
             viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
           >
-            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z" />
-            <circle cx="12" cy="10" r="3" />
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
           </svg>
-          <span>Tennesseeallee 20, Karlsruhe, 76149, Germany</span>
+          <span>LinkedIn</span>
         </a>
       </div>
     </div>
   </div>
 </FadeInSection>
+
+
 
     
       {/* FOOTER */}

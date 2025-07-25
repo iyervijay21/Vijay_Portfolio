@@ -65,6 +65,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
           MSc. Electrical Engineering & Information Technology @ KIT
         </div>
       </div>
+      
 
       {/* Hamburger button */}
       <div className="md:hidden">
@@ -531,7 +532,9 @@ function MainPage() {
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-1">
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Python</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Signal Processing (filtering, FFT, CWT)</span>
+              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">filtering</span>
+              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">FFT</span>
+              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">CWT</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">OpenCV</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">2D-conv</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Transformers</span>

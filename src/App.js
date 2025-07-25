@@ -168,29 +168,38 @@ function MainPage() {
           <section id="home" className="flex flex-col-reverse md:flex-row items-center">
             <div className="w-full md:w-1/2 text-align: justify;">
               <p className="text-xl md:text-2xl mb-6 text-purple-100 text-justify">
-  Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
-</p>
+                Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
+              </p>
 
-              <button
-  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-  className="bg-black-600 text-white hover-glow px-4 py-2 rounded-full font-bold border border-purple-500"
->
-  Contact Me
-</button>
+              <div className="flex gap-4 mt-4">
+                <button
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-black-600 text-white hover-glow px-4 py-2 rounded-full font-bold border border-purple-500"
+                >
+                  Contact Me
+                </button>
 
+                <a
+                  href={require('./media/Vijay_CV.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black-600 text-white hover-glow px-4 py-2 rounded-full font-bold border border-purple-500"
+                >
+                  My Resume
+                </a>
+              </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
               <img
-  src={require('./media/vijay.jpg')}
-  alt="Hero"
-  className="w-80 h-80 object-cover rounded-full aura-glow"
-/>
-
+                src={require('./media/vijay.jpg')}
+                alt="Hero"
+                className="w-80 h-80 object-cover rounded-full aura-glow"
+              />
             </div>
           </section>
         </div>
       </FadeInSection>
-
+ 
       {/* SKILLS SECTION */}
       <FadeInSection className="py-20">
         <div id="skills" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">

@@ -368,8 +368,7 @@ function MainPage() {
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Python</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Signal Processing</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">OpenCV</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">2D-conv</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Transformers</span>
+<span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Linux</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Docker</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Git</span>
@@ -536,8 +535,7 @@ function MainPage() {
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">FFT</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">CWT</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">OpenCV</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">2D-conv</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Transformers</span>
+              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Linux</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Docker</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Git</span>

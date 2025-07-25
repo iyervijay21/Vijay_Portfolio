@@ -353,10 +353,10 @@ function MainPage() {
 <FadeInSection className="py-20">
   <div id="experience" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-8 text-white">Work Experience</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-start">
+    <div className="grid grid-cols-2 gap-8 items-start">
       
       {/* FZI */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '250px', maxHeight: '250px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/1524.png')} alt="FZI Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -391,7 +391,7 @@ function MainPage() {
       </div>
 
       {/* TecoLab */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '250px', maxHeight: '250px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/teco_trans.png')} alt="TecoLab Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -426,7 +426,7 @@ function MainPage() {
       </div>
 
       {/* Access@KIT */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '250px', maxHeight: '250px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/6379_access@kit_rgb_dt.png')} alt="Access@KIT Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -451,7 +451,7 @@ function MainPage() {
       </div>
 
       {/* Accenture */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '250px', maxHeight: '250px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/Accenture.webp')} alt="Accenture Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -476,7 +476,7 @@ function MainPage() {
       </div>
 
       {/* Accur Digitus */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '250px', maxHeight: '250px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '200px', maxHeight: '200px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/accur_digitus_logo.jpg')} alt="Accur Digitus Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -513,12 +513,13 @@ function MainPage() {
 <FadeInSection className="py-20">
   <div id="projects" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-6 text-white">Projects</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div className="grid grid-cols-2 gap-8 items-start">
+
       
       {/* DeepFake Detection */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '250px', maxHeight: '250px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -559,7 +560,7 @@ function MainPage() {
       {/* CamCussion */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '250px', maxHeight: '250px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -600,7 +601,7 @@ function MainPage() {
       {/* Self-Driving Car */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '250px', maxHeight: '250px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img
@@ -639,7 +640,7 @@ function MainPage() {
       {/* Real-Time Car Accident Alert System */}
       <div
         className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
-        style={{ minHeight: '250px', maxHeight: '250px' }}
+        style={{ minHeight: '200px', maxHeight: '200px' }}
       >
         <div className="flex items-center space-x-4">
           <img

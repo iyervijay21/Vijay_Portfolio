@@ -548,7 +548,7 @@ function MainPage() {
           <div>
             <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
             <p className="text-sm mb-4">
-              This Master’s thesis focused on designing and evaluating a DeepFake detection system leveraging remote photoplethysmography (rPPG) signals...
+             This Master Thesis aimed to design an end to end pipeline to evaluate the artifacts using rPPG signals. Designed a Fusion Model, concatenating the features from Vision Transformer and CNN for local and long-range dependencies with a custom Fusion-Head for DeepFake classification. Benchmark results under different environmental conditions.
             </p>
           </div>
           <Link to="/projects/deepfake" className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
@@ -586,7 +586,7 @@ function MainPage() {
           <div>
             <h3 className="text-xl font-bold mb-2">CamCussion</h3>
             <p className="text-sm mb-4">
-              Utilized OpenCV to develop a real-time eye-tracking system that analyzes pupil dilation and saccadic eye movements...
+              Utilized computer-vision to analyze pupil dilation and saccadic eye movements in real time to track and assess eye behavior, contributing to accurate concussion diagnosis.
             </p>
           </div>
           <Link 
@@ -625,7 +625,7 @@ function MainPage() {
           <div>
             <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
             <p className="text-sm mb-4">
-              Engineered an autonomous navigation system by integrating LIDAR, radar, and camera inputs to generate real-time 3D maps...
+              Developed a solar-powered autonomous vehicle prototype using 360° LIDAR for reliable obstacle detection and safe navigation. Implemented on Arduino with custom chassis and differential drive, aimed at enhancing safety in urban mobility applications.
             </p>
           </div>
           <Link 
@@ -664,7 +664,7 @@ function MainPage() {
           <div>
             <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
             <p className="text-sm mb-4">
-              Developed an embedded system integrating accelerometer, gyroscope, and video data streams to detect collisions in real time...
+              Developed an embedded vehicle accident warning system to automatically detect crashes, send precise location data, and alert emergency services, family, and friends to improve response times.
             </p>
           </div>
           <Link 

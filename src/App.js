@@ -168,7 +168,7 @@ function MainPage() {
           <section id="home" className="flex flex-col-reverse md:flex-row items-center">
             <div className="w-full md:w-1/2 text-align: justify;">
               <p className="text-xl md:text-2xl mb-6 text-purple-100 text-justify">
-  Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world in fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
+  Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
 </p>
 
               <button

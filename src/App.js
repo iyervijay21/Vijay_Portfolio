@@ -109,7 +109,8 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <ul className="flex flex-col space-y-4 bg-purple-900 bg-opacity-90 absolute top-full left-0 w-full p-6 md:hidden text-sm">
+        <ul className="flex flex-col space-y-4 bg-purple-900 bg-opacity-90 absolute left-0 w-full p-6 md:hidden text-sm" style={{ top: '56px' }}>
+
           {menuToShow.map(({ label, hash }) => (
             <li key={label}>
               {isHomePage ? (

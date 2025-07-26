@@ -38,9 +38,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
     if (isHomePage) {
       const element = document.querySelector(hash);
       if (element) {
-        const yOffset = -120; // Adjust this value to your navbar height
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
     setMenuOpen(false);
@@ -67,6 +65,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
           MSc. Electrical Engineering & Information Technology @ KIT
         </div>
       </div>
+      
 
       {/* Hamburger button */}
       <div className="md:hidden">
@@ -91,6 +90,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
               <button
                 onClick={() => handleClick(hash)}
                 className="text-white hover-glow rounded-full px-3 py-1"
+
               >
                 {label}
               </button>
@@ -199,7 +199,7 @@ function MainPage() {
  
       {/* SKILLS SECTION */}
       <FadeInSection className="py-20">
-        <div id="skills" className="scroll-mt-20 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
+        <div id="skills" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
           <h2 className="text-3xl font-bold mb-6 text-white text-center">My Tech Stack</h2>
           
           {/* Language/Frameworks */}
@@ -306,7 +306,7 @@ function MainPage() {
 
       {/* EDUCATION SECTION */}
       <FadeInSection className="py-20">
-        <div id="education" className="scroll-mt-20 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
+        <div id="education" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
           <h2 className="text-3xl font-bold mb-6 text-white text-left">
             Education
           </h2>
@@ -357,7 +357,7 @@ function MainPage() {
 
      {/* WORK EXPERIENCE SECTION */}
 <FadeInSection className="py-20">
-  <div id="experience" className="scroll-mt-20 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
+  <div id="experience" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-8 text-white">Work Experience</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
@@ -517,7 +517,7 @@ function MainPage() {
 
    {/* PROJECTS SECTION */}
 <FadeInSection className="py-20">
-  <div id="projects" className="scroll-mt-20 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
+  <div id="projects" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-6 text-white">Projects</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
@@ -690,7 +690,7 @@ function MainPage() {
 
  {/* CONTACT SECTION */}
 <FadeInSection className="py-20">
-  <div id="contact" className="scroll-mt-20 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
+  <div id="contact" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-4 text-white">Contact Me</h2>
     <p className="text-purple-100 mb-6">
       I'm always up for a wild brainstorming session where we turn pixels into pure magic. Let’s chat if you're as excited about computer vision adventures as I am!

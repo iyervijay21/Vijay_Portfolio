@@ -111,3 +111,7 @@
     opacity: 0.3;
   }
 }
+/* Custom scroll margin top to offset fixed navbar height (120px) */
+.scroll-offset {
+  scroll-margin-top: 120px;
+}

@@ -507,7 +507,7 @@ function MainPage() {
             <ul className="list-disc list-inside mt-2">
               <li>Developed responsive apps using React.JS & Tailwind CSS.</li>
               <li>Integrated scalable RESTful APIs & Redux for state management.</li>
-              <li>Enhanced user experience leading to >30% engagement increase.</li>
+              <li>Enhanced user experience leading to more than 30% engagement increase.</li>
             </ul>
           </p>
         </div>
@@ -753,7 +753,7 @@ function MainPage() {
             <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
             <circle cx="4" cy="4" r="2" />
           </svg>
-          <span>LinkedIn</span>
+          <span>Vijay Iyer</span>
         </a>
       </div>
     </div>

@@ -172,12 +172,7 @@ function MainPage() {
               </p>
 
               <div className="flex gap-4 mt-4">
-                <button
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-black-600 text-white hover-glow px-4 py-2 rounded-full font-bold border border-purple-500"
-                >
-                  Contact Me
-                </button>
+                
 
                 <a
                   href={require('./media/Vijay_CV.pdf')}
@@ -691,74 +686,66 @@ function MainPage() {
 
       
 
-     {/* CONTACT SECTION */}
+ {/* CONTACT SECTION */}
 <FadeInSection className="py-20">
-  <div id="contact" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
+  <div id="contact" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6 text-center">
     <h2 className="text-3xl font-bold mb-4 text-white">Contact Me</h2>
     <p className="text-purple-100 mb-6">
       I'm always up for a wild brainstorming session where we turn pixels into pure magic. Let’s chat if you're as excited about computer vision adventures as I am!
     </p>
-    <div className="space-y-3">
-      <div>
-        <a
-          href="mailto:iyervijay99@gmail.com"
-          className="inline-flex items-center space-x-2 text-purple-100 hover-glow rounded-full px-4 py-2"
+    <div className="flex justify-center space-x-6">
+      <a
+        href="mailto:iyervijay99@gmail.com"
+        className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors shadow-lg"
+      >
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
-            <polyline points="3,6 12,13 21,6" />
-          </svg>
-          <span>iyervijay99@gmail.com</span>
-        </a>
-      </div>
-      <div>
-        <a
-          href="tel:+4917667345305"
-          className="inline-flex items-center space-x-2 text-purple-100 hover-glow rounded-full px-4 py-2"
+          <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+          <polyline points="3,6 12,13 21,6" />
+        </svg>
+      </a>
+      <a
+        href="tel:+4917667345305"
+        className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors shadow-lg"
+      >
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.81 19.81 0 01-8.63-3.19 19.5 19.5 0 01-5.82-5.82 19.81 19.81 0 01-3.19-8.63A2 2 0 014.08 2h3a2 2 0 012 1.72c.14.72.37 1.42.68 2.08a2 2 0 01-.45 2.11L8.09 8.09a16.06 16.06 0 005.82 5.82l1.18-1.18a2 2 0 012.11-.45c.66.31 1.36.54 2.08.68A2 2 0 0122 16.92z" />
-          </svg>
-          <span>+49-17667345305</span>
-        </a>
-      </div>
-      <div>
-        <a
-          href="https://www.linkedin.com/in/iyer-vijay/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center space-x-2 text-purple-100 hover-glow rounded-full px-4 py-2"
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.81 19.81 0 01-8.63-3.19 19.5 19.5 0 01-5.82-5.82 19.81 19.81 0 01-3.19-8.63A2 2 0 014.08 2h3a2 2 0 012 1.72c.14.72.37 1.42.68 2.08a2 2 0 01-.45 2.11L8.09 8.09a16.06 16.06 0 005.82 5.82l1.18-1.18a2 2 0 012.11-.45c.66.31 1.36.54 2.08.68A2 2 0 0122 16.92z" />
+        </svg>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/iyer-vijay/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors shadow-lg"
+      >
+        <svg
+          className="w-8 h-8 text-white"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          <svg
-            className="w-5 h-5"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
-          <span>Vijay Iyer</span>
-        </a>
-      </div>
+          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+      </a>
     </div>
   </div>
 </FadeInSection>
+
 
 
 

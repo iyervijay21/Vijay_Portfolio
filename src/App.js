@@ -169,9 +169,10 @@ function MainPage() {
 
 
             <div className="w-full md:w-1/2 text-align: justify;">
-              <p className="text-xl md:text-2xl mb-6 text-purple-100 text-justify">
-                Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
-              </p>
+             <p className="text-xl md:text-2xl mb-6 text-purple-100 md:text-justify">
+  Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
+</p>
+
 
               <div className="flex gap-4 mt-4">
                 

@@ -696,7 +696,7 @@ function MainPage() {
     <div className="flex justify-center space-x-6">
       <a
         href="mailto:iyervijay99@gmail.com"
-        className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors shadow-lg"
+        className="bg-black-600 text-white hover-glow p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
       >
         <svg
           className="w-8 h-8 text-white"
@@ -713,7 +713,8 @@ function MainPage() {
       </a>
       <a
         href="tel:+4917667345305"
-        className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors shadow-lg"
+        className="bg-black-600 text-white hover-glow p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
+
       >
         <svg
           className="w-8 h-8 text-white"
@@ -731,7 +732,8 @@ function MainPage() {
         href="https://www.linkedin.com/in/iyer-vijay/"
         target="_blank"
         rel="noopener noreferrer"
-        className="p-4 rounded-full bg-purple-800 hover:bg-purple-700 transition-colors shadow-lg"
+        className="bg-black-600 text-white hover-glow p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
+
       >
         <svg
           className="w-8 h-8 text-white"

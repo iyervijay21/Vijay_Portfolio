@@ -38,7 +38,9 @@ function Navbar({ menuOpen, setMenuOpen }) {
     if (isHomePage) {
       const element = document.querySelector(hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -120; // Adjust this value to your navbar height
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
     setMenuOpen(false);
@@ -65,7 +67,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
           MSc. Electrical Engineering & Information Technology @ KIT
         </div>
       </div>
-      
 
       {/* Hamburger button */}
       <div className="md:hidden">
@@ -90,7 +91,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
               <button
                 onClick={() => handleClick(hash)}
                 className="text-white hover-glow rounded-full px-3 py-1"
-
               >
                 {label}
               </button>
@@ -109,8 +109,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <ul className="flex flex-col space-y-4 bg-purple-900 bg-opacity-90 absolute left-0 w-full p-6 md:hidden text-sm" style={{ top: '56px' }}>
-
+        <ul className="flex flex-col space-y-4 bg-purple-900 bg-opacity-90 absolute top-full left-0 w-full p-6 md:hidden text-sm">
           {menuToShow.map(({ label, hash }) => (
             <li key={label}>
               {isHomePage ? (

@@ -15,16 +15,16 @@
 .aura-effect:hover {
   cursor: pointer;
   box-shadow:
-    0 0 3px 0px #BC82F3,
-    0 0 5px 0px #F5B9EA,
-    0 0 6px 0px #8D9FFF,
-    0 0 7px 0px #AA6EEE,
-    0 0 8px 0px #FF6778,
-    0 0 9px 0px #FFBA71;
+    0 0 3px 1px #BC82F3,
+    0 0 5px 1px #F5B9EA,
+    0 0 6px 1px #8D9FFF,
+    0 0 7px 1px #AA6EEE,
+    0 0 8px 1px #FF6778,
+    0 0 9px 1px #FFBA71;
 }
 
-/* Create the animated border with a pseudo-element */
-.aura-effect:hover::before {
+.aura-effect:hover::before,
+.always-aura::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -32,7 +32,7 @@
   right: -3px;
   bottom: -3px;
   border-radius: inherit;
-  padding: 2px; /* Same as border width */
+  padding: 2px;
   background: linear-gradient(
     270deg,
     #BC82F3,
@@ -45,9 +45,10 @@
     #BC82F3
   );
   background-size: 1400% 1400%;
-  animation: aura-flow 3s linear infinite;
+  background-repeat: repeat;
+  animation: aura-flow 6s linear infinite;
   -webkit-mask:
-    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
@@ -62,53 +63,32 @@
   background-clip: padding-box;
   cursor: pointer;
   box-shadow:
-    0 0 3px 0px #BC82F3,
-    0 0 5px 0px #F5B9EA,
-    0 0 6px 0px #8D9FFF,
-    0 0 7px 0px #AA6EEE,
-    0 0 8px 0px #FF6778,
-    0 0 9px 0px #FFBA71;
+    0 0 3px 2px #BC82F3,
+    0 0 5px 1px #F5B9EA,
+    0 0 6px 2px #8D9FFF,
+    0 0 7px 1px #AA6EEE,
+    0 0 8px 2px #FF6778,
+    0 0 9px 2px #FFBA71;
   z-index: 0;
   overflow: visible;
 }
 
-.always-aura::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: inherit; /* very important */
-  padding: 2px;
-  background: linear-gradient(
-    270deg,
-    #BC82F3,
-    #F5B9EA,
-    #8D9FFF,
-    #AA6EEE,
-    #FF6778,
-    #FFBA71,
-    #C686FF,
-    #BC82F3
-  );
-  background-size: 1400% 1400%;
-  animation: aura-flow 5s linear infinite;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1;
-}
-
+/* Keyframes: forward then backward smoothly */
 @keyframes aura-flow {
   0% {
     background-position: 0% 50%;
   }
-  100% {
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
     background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -131,7 +111,7 @@
 }
 
 .overlay-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(186, 138, 245, 0.8); /* purple */
+  background-color: rgba(186, 138, 245, 0.8);
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -141,4 +121,3 @@
 .scroll-offset {
   scroll-margin-top: 120px;
 }
-

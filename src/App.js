@@ -30,6 +30,7 @@ function FadeInSection({ children, className = "" }) {
 }
 
 
+
 function Navbar({ menuOpen, setMenuOpen }) {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -53,10 +54,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
     { label: "Contact", hash: "#contact" },
   ];
 
-  const homeOnlyMenu = [{ label: "Home", hash: "#home" }];
-
-  const menuToShow = isHomePage ? fullMenuItems : homeOnlyMenu;
-
   return (
     <nav className="flex items-center justify-between px-6 py-2 fixed w-full top-0 z-20 bg-black-900 bg-opacity-99 backdrop-blur">
       <div>
@@ -65,7 +62,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
           MSc. Electrical Engineering & Information Technology @ KIT
         </div>
       </div>
-      
 
       {/* Hamburger button */}
       <div className="md:hidden">
@@ -84,13 +80,12 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
       {/* Desktop menu */}
       <ul className="hidden md:flex space-x-4 text-sm md:text-base">
-        {menuToShow.map(({ label, hash }) => (
+        {fullMenuItems.map(({ label, hash }) => (
           <li key={label}>
             {isHomePage ? (
               <button
                 onClick={() => handleClick(hash)}
                 className="text-white aura-effect rounded-full px-3 py-1"
-
               >
                 {label}
               </button>
@@ -110,7 +105,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
       {/* Mobile menu */}
       {menuOpen && (
         <ul className="flex flex-col space-y-4 bg-[#0a0c10] bg-opacity-90 absolute top-full left-0 w-full p-6 md:hidden text-sm">
-          {menuToShow.map(({ label, hash }) => (
+          {fullMenuItems.map(({ label, hash }) => (
             <li key={label}>
               {isHomePage ? (
                 <button
@@ -137,6 +132,8 @@ function Navbar({ menuOpen, setMenuOpen }) {
 }
 
 
+
+
 // ToolsIcons: Renders tool icons using regular image URLs.
 function ToolsIcons() {
   const tools = [
@@ -160,46 +157,51 @@ function ToolsIcons() {
 
 // MainPage: Contains HERO, SKILLS, EDUCATION, EXPERIENCE, PROJECTS, and CONTACT sections.
 function MainPage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        // Scroll smoothly after DOM renders
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 0);
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       {/* HERO SECTION */}
       <FadeInSection className="pt-24 pb-20">
         <div id="Hero" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
           <section id="home" className="flex flex-col-reverse md:flex-row items-center scroll-mt-40">
-
-
             <div className="w-full md:w-1/2 text-align: justify;">
               <p className="text-xl md:text-2xl mb-6 text-purple-100 text-justify">
                 Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
               </p>
 
-               <div className="flex gap-4 mt-4">
-                
-
-           <a
-  href={require('./media/Vijay_CV.pdf')}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full px-6 py-3 aura-effect always-aura bg-black-600 text-white font-bold border border-purple-500 transition-shadow duration-300 ease-in-out"
->
-  My Resume
-</a>
-
-
-
-
+              <div className="flex gap-4 mt-4">
+                <a
+                  href={require('./media/Vijay_CV.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full px-6 py-3 aura-effect always-aura bg-black-600 text-white font-bold border border-purple-500 transition-shadow duration-300 ease-in-out"
+                >
+                  My Resume
+                </a>
               </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-  <div className="always-aura rounded-full w-80 h-80 overflow-visible">
-    <img
-      src={require('./media/vijay.jpg')}
-      alt="Hero"
-      className="w-full h-full object-cover rounded-full"
-    />
-  </div>
-</div>
-
+              <div className="always-aura rounded-full w-80 h-80 overflow-visible">
+                <img
+                  src={require('./media/vijay.jpg')}
+                  alt="Hero"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
           </section>
         </div>
       </FadeInSection>
@@ -448,9 +450,9 @@ function MainPage() {
           </div>
         </div>
         <div className="flex flex-wrap mt-2 gap-1">
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded">TTS</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded">Deep Learning</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded">Accessibility</span>
+          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">TTS</span>
+          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
+          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Accessibility</span>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
           <h3 className="text-xl font-bold mb-2">Access@KIT</h3>

@@ -321,7 +321,8 @@ function MainPage() {
             Education
           </h2>
           <div className="flex flex-col md:flex-row justify-evenly gap-8">
-            <div className="bg-transparent p-6 shadow aura-effect w-full md:w-1/3 rounded-none flex items-center space-x-4">
+            <div className="bg-transparent p-6 shadow aura-effect w-full md:w-1/3 flex items-center space-x-4">
+
               <img
                 src={require('./media/KIT.webp')}
                 alt="KIT Logo"
@@ -341,7 +342,8 @@ function MainPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent p-6 shadow aura-effect w-full md:w-1/3 rounded-none flex items-center space-x-4">
+            <div className="bg-transparent p-6 shadow aura-effect w-full md:w-1/3 flex items-center space-x-4">
+
               <img
                 src={require('./media/MU.png')}
                 alt="MU logo"

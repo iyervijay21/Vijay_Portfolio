@@ -17,10 +17,21 @@
   cursor: pointer;
   box-shadow:
    0 0 4px 0px #A33FF5,
-   0 0 8px 0px #5D7CFF,
-   0 0 6px 0px #9D40F0,
-   0 0 8px 0px #FF3A5E,
-   0 0 10px 0px #FF9A33;
+0 0 8px 0px #5D7CFF,
+0 0 8px 0px #F5B9EA,
+0 0 6px 0px #9D40F0,
+0 0 8px 0px #FF3A5E,
+0 0 8px 0px #F5B9EA,
+0 0 10px 0px #FF9A33,
+0 0 6px 0px #BC82F3,
+0 0 8px 0px #F5B9EA,
+0 0 6px 0px #8D9FFF,
+0 0 8px 0px #AA6EEE,
+0 0 8px 0px #F5B9EA,
+0 0 8px 0px #FF6778,
+0 0 10px 0px #FFBA71,
+0 0 6px 0px #C686FF;
+
 }
 
 .aura-effect:hover::before,
@@ -35,16 +46,27 @@
   padding: 4px;   /* padding inside to show gradient nicely */
  background: linear-gradient(
   270deg,
-  #A33FF5,  /* vivid violet */
-  #5D7CFF,  /* deeper blue */
-  #9D40F0,  /* richer purple */
-  #FF3A5E,  /* vivid red-pink */
-  #FF9A33   /* stronger orange */
+ #A33FF5,  /* vivid violet */
+#5D7CFF,  /* deeper blue */
+#F5B9EA,  /* pale pink */
+#9D40F0,  /* richer purple */
+#FF3A5E,  /* vivid red-pink */
+#FF9A33,  /* strong orange */
+#F5B9EA,  /* pale pink */
+#BC82F3,  /* soft lilac purple */
+#F5B9EA,  /* pale pink */
+#8D9FFF,  /* calm periwinkle */
+#AA6EEE,  /* medium lavender */
+#F5B9EA,  /* pale pink */
+#FF6778,  /* coral pink */
+#FFBA71,  /* warm peach */
+#C686FF   /* bright lavender */
+
 );
 
   background-size: 1400% 1400%;
   background-repeat: repeat;
-  animation: aura-flow 6s linear infinite;
+  animation: aura-flow 10s linear infinite;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -62,12 +84,22 @@
   background-clip: padding-box;
   cursor: pointer;
   box-shadow:
-       0 0 4px 4px #A33FF5,
-       0 0 6px 4px #FF8CDC,
-       0 0 8px 4px #5D7CFF,
-       0 0 6px 4px #9D40F0,
-       0 0 8px 4px #FF3A5E,
-       0 0 10px 4px #FF9A33;
+       0 0 4px 0px #A33FF5,
+0 0 8px 0px #5D7CFF,
+#F5B9EA,  /* pale pink */
+0 0 6px 0px #9D40F0,
+0 0 8px 0px #FF3A5E,
+0 0 10px 0px #FF9A33,
+#F5B9EA,  /* pale pink */
+0 0 6px 0px #BC82F3,
+0 0 8px 0px #F5B9EA,
+0 0 6px 0px #8D9FFF,
+0 0 8px 0px #AA6EEE,
+#F5B9EA,  /* pale pink */
+0 0 8px 0px #FF6778,
+0 0 10px 0px #FFBA71,
+0 0 6px 0px #C686FF;
+
   z-index: 0;
   overflow: visible;
 }

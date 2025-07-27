@@ -89,7 +89,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
             {isHomePage ? (
               <button
                 onClick={() => handleClick(hash)}
-                className="text-white hover-glow rounded-full px-3 py-1"
+                className="text-white aura-effect rounded-full px-3 py-1"
 
               >
                 {label}
@@ -97,7 +97,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
             ) : (
               <Link
                 to={`/#${hash.slice(1)}`}
-                className="text-white hover-glow rounded-full px-3 py-1"
+                className="text-white aura-effect rounded-full px-3 py-1"
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
@@ -115,14 +115,14 @@ function Navbar({ menuOpen, setMenuOpen }) {
               {isHomePage ? (
                 <button
                   onClick={() => handleClick(hash)}
-                  className="text-white hover-glow rounded-full px-3 py-1"
+                  className="text-white aura-effect rounded-full px-3 py-1"
                 >
                   {label}
                 </button>
               ) : (
                 <Link
                   to={`/#${hash.slice(1)}`}
-                  className="text-white hover-glow rounded-full px-3 py-1"
+                  className="text-white aura-effect rounded-full px-3 py-1"
                   onClick={() => setMenuOpen(false)}
                 >
                   {label}
@@ -149,7 +149,7 @@ function ToolsIcons() {
   return (
     <div className="flex flex-wrap justify-evenly gap-6">
       {tools.map((tool) => (
-        <div key={tool.key} className="flex flex-col items-center hover-glow">
+        <div key={tool.key} className="flex flex-col items-center aura-effect">
           <img src={tool.src} alt={tool.label} className="w-16 h-16 mb-2" />
           <span className="mt-2 text-sm font-medium text-white">{tool.label}</span>
         </div>
@@ -173,26 +173,31 @@ function MainPage() {
                 Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
               </p>
 
-              <div className="flex gap-4 mt-4">
+               <div className="flex gap-4 mt-4">
                 
 
-                <a
-                  href={require('./media/Vijay_CV.pdf')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black-600 text-white hover-glow px-4 py-2 rounded-full font-bold border border-purple-500"
-                >
-                  My Resume
-                </a>
+               <a
+  href={require('./media/Vijay_CV.pdf')}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-black-600 text-white aura-effect always-aura px-4 py-2 rounded-full font-bold border border-purple-500"
+>
+  My Resume
+</a>
+
+
               </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-              <img
-                src={require('./media/vijay.jpg')}
-                alt="Hero"
-                className="w-80 h-80 object-cover rounded-full aura-glow"
-              />
-            </div>
+  <div className="always-aura rounded-full w-80 h-80 overflow-visible">
+    <img
+      src={require('./media/vijay.jpg')}
+      alt="Hero"
+      className="w-full h-full object-cover rounded-full"
+    />
+  </div>
+</div>
+
           </section>
         </div>
       </FadeInSection>
@@ -206,43 +211,43 @@ function MainPage() {
           <div className="mb-12 p-4 rounded">
             <h3 className="text-2xl font-bold text-white mb-4">Language/Frameworks</h3>
             <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Python</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">OpenCV</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" alt="qt" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">qt</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">TensorFlow</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">PyTorch</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">NumPy</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Pandas</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">scikit‑learn</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Matplotlib</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">C++</p>
               </div>
@@ -252,27 +257,27 @@ function MainPage() {
           <div className="mb-12 p-4 rounded">
             <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
             <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">HTML</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">CSS</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">React.JS</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">JavaScript</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Node.js</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">MySQL</p>
               </div>
@@ -283,19 +288,19 @@ function MainPage() {
           <div className="mb-12 p-4 rounded">
             <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
             <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Git</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Linux</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Docker</p>
               </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-600/60">
+              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="w-16 h-16 mb-2" />
                 <p className="text-white font-semibold">Matlab</p>
               </div>
@@ -311,7 +316,7 @@ function MainPage() {
             Education
           </h2>
           <div className="flex flex-col md:flex-row justify-evenly gap-8">
-            <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
+            <div className="bg-transparent p-6 shadow aura-effect w-full md:w-1/3 rounded-none flex items-center space-x-4">
               <img
                 src={require('./media/KIT.webp')}
                 alt="KIT Logo"
@@ -331,7 +336,7 @@ function MainPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-transparent p-6 shadow hover-glow w-full md:w-1/3 rounded-none flex items-center space-x-4">
+            <div className="bg-transparent p-6 shadow aura-effect w-full md:w-1/3 rounded-none flex items-center space-x-4">
               <img
                 src={require('./media/MU.png')}
                 alt="MU logo"
@@ -362,7 +367,7 @@ function MainPage() {
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
       {/* FZI */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/1524.png')} alt="FZI Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -397,7 +402,7 @@ function MainPage() {
       </div>
 
       {/* TecoLab */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/teco_trans.png')} alt="TecoLab Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -432,7 +437,7 @@ function MainPage() {
       </div>
 
       {/* Access@KIT */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/6379_access@kit_rgb_dt.png')} alt="Access@KIT Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -457,7 +462,7 @@ function MainPage() {
       </div>
 
       {/* Accenture */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/Accenture.webp')} alt="Accenture Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -482,7 +487,7 @@ function MainPage() {
       </div>
 
       {/* Accur Digitus */}
-      <div className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
+      <div className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer" style={{ minHeight: '230px', maxHeight: '230px' }}>
         <div className="flex items-center space-x-4">
           <img src={require('./media/accur_digitus_logo.jpg')} alt="Accur Digitus Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
@@ -524,7 +529,7 @@ function MainPage() {
       
       {/* DeepFake Detection */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
@@ -565,7 +570,7 @@ function MainPage() {
 
       {/* CamCussion */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
@@ -606,7 +611,7 @@ function MainPage() {
 
       {/* Self-Driving Car */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
@@ -645,7 +650,7 @@ function MainPage() {
 
       {/* Real-Time Car Accident Alert System */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow hover-glow cursor-pointer"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
@@ -698,7 +703,7 @@ function MainPage() {
     <div className="flex justify-center space-x-6">
       <a
         href="mailto:iyervijay99@gmail.com"
-        className="bg-black-600 text-white hover-glow p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
+        className="bg-black-600 text-white aura-effect p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
       >
         <svg
           className="w-8 h-8 text-white"
@@ -715,7 +720,7 @@ function MainPage() {
       </a>
       <a
         href="tel:+4917667345305"
-        className="bg-black-600 text-white hover-glow p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
+        className="bg-black-600 text-white aura-effect p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
 
       >
         <svg
@@ -734,7 +739,7 @@ function MainPage() {
         href="https://www.linkedin.com/in/iyer-vijay/"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-black-600 text-white hover-glow p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
+        className="bg-black-600 text-white aura-effect p-4 rounded-full font-bold border border-purple-500 flex items-center justify-center"
 
       >
         <svg

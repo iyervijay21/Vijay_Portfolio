@@ -16,11 +16,11 @@
 .aura-effect:hover {
   cursor: pointer;
   box-shadow:
-   0 0 4px 4px #A33FF5,
-   0 0 8px 4px #5D7CFF,
-   0 0 6px 4px #9D40F0,
-   0 0 8px 4px #FF3A5E,
-   0 0 10px 4px #FF9A33;
+   0 0 4px 0px #A33FF5,
+   0 0 8px 0px #5D7CFF,
+   0 0 6px 0px #9D40F0,
+   0 0 8px 0px #FF3A5E,
+   0 0 10px 0px #FF9A33;
 }
 
 .aura-effect:hover::before,

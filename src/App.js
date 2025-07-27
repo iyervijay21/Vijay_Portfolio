@@ -183,15 +183,17 @@ function MainPage() {
               </p>
 
               <div className="flex gap-4 mt-4">
-                <a
-                  href={require('./media/Vijay_CV.pdf')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full px-6 py-3 aura-effect always-aura bg-black-600 text-white font-bold border border-purple-500 transition-shadow duration-300 ease-in-out"
-                >
-                  My Resume
-                </a>
-              </div>
+  <a
+    href={require('./media/Vijay_CV.pdf')}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-[16px] px-6 py-3 aura-effect always-aura bg-black-600 text-white font-bold border border-purple-500 transition-shadow duration-300 ease-in-out"
+  >
+    My Resume
+  </a>
+</div>
+
+
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
   <div className="always-aura circular-aura w-80 h-80 overflow-visible">

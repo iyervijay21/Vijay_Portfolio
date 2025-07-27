@@ -571,18 +571,16 @@ function MainPage() {
             <p className="text-purple-100 mt-2">rPPG Analysis</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px] flex flex-col">
+  <div>
+    <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
+    <p className="text-sm mb-4"> This Master Thesis aimed to design an end to end pipeline to evaluate the artifacts using rPPG signals. Designed a Fusion Model, concatenating the features from Vision Transformer and CNN for local and long-range dependencies with a custom Fusion-Head for DeepFake classification. Benchmark results under different environmental conditions. </p>
+  </div>
+  <Link to="/projects/deepfake" className="mt-auto self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
+    More Info
+  </Link>
+</div>
 
-          <div>
-            <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
-            <p className="text-sm mb-4">
-             This Master Thesis aimed to design an end to end pipeline to evaluate the artifacts using rPPG signals. Designed a Fusion Model, concatenating the features from Vision Transformer and CNN for local and long-range dependencies with a custom Fusion-Head for DeepFake classification. Benchmark results under different environmental conditions.
-            </p>
-          </div>
-          <Link to="/projects/deepfake" className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
-            More Info
-          </Link>
-        </div>
       </div>
 
       {/* CamCussion */}
@@ -610,21 +608,19 @@ function MainPage() {
             <p className="text-purple-100 mt-2">Eye Tracking</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px] flex flex-col">
+  <div className="flex-1 overflow-y-auto">
+    <h3 className="text-xl font-bold mb-2">CamCussion</h3>
+    <p className="text-sm mb-4"> Utilized computer-vision to analyze pupil dilation and saccadic eye movements in real time to track and assess eye behavior, contributing to accurate concussion diagnosis. </p>
+  </div>
+  <Link 
+    to="/projects/camcussion"
+    className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+  >
+    More Info
+  </Link>
+</div>
 
-          <div>
-            <h3 className="text-xl font-bold mb-2">CamCussion</h3>
-            <p className="text-sm mb-4">
-              Utilized computer-vision to analyze pupil dilation and saccadic eye movements in real time to track and assess eye behavior, contributing to accurate concussion diagnosis.
-            </p>
-          </div>
-          <Link 
-            to="/projects/camcussion"
-            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
-          >
-            More Info
-          </Link>
-        </div>
       </div>
 
       {/* Self-Driving Car */}
@@ -650,12 +646,11 @@ function MainPage() {
             <p className="text-purple-100 mt-2">Autonomous Nav</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
-
-          <div>
-            <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
-            <p className="text-sm mb-4">
-              Developed a solar-powered autonomous vehicle prototype using 360° LIDAR for reliable obstacle detection and safe navigation. Implemented on Arduino with custom chassis and differential drive, aimed at enhancing safety in urban mobility applications.
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px] flex flex-col">
+  <div className="flex-1 overflow-y-auto">
+    <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
+    <p className="text-sm mb-4">
+      Developed a solar-powered autonomous vehicle prototype using 360° LIDAR for reliable obstacle detection and safe navigation. Implemented on Arduino with custom chassis and differential drive, aimed at enhancing safety in urban mobility applications.
             </p>
           </div>
           <Link 
@@ -690,21 +685,21 @@ function MainPage() {
             <p className="text-purple-100 mt-2">Crash Detection</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px] flex flex-col">
+  <div className="flex-1 overflow-y-auto">
+    <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
+    <p className="text-sm mb-4">
+      Developed an embedded vehicle accident warning system to automatically detect crashes, send precise location data, and alert emergency services, family, and friends to improve response times.
+    </p>
+  </div>
+  <Link 
+    to="/projects/car-accident"
+    className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+  >
+    More Info
+  </Link>
+</div>
 
-          <div>
-            <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
-            <p className="text-sm mb-4">
-              Developed an embedded vehicle accident warning system to automatically detect crashes, send precise location data, and alert emergency services, family, and friends to improve response times.
-            </p>
-          </div>
-          <Link 
-            to="/projects/car-accident"
-            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
-          >
-            More Info
-          </Link>
-        </div>
       </div>
 
     </div>
@@ -1099,7 +1094,7 @@ function DeepFakeDetail() {
           href="https://github.com/iyervijay21/Deepfake_Detection"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200  hover:text-white transition always-aura"
+          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200 hover:bg-purple-600 hover:text-white transition always-aura"
 
         >
           <svg className="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">

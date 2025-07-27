@@ -16,11 +16,11 @@
 .aura-effect:hover {
   cursor: pointer;
   box-shadow:
-   0 0 4px 7px #A33FF5,
-   0 0 8px 7px #5D7CFF,
-   0 0 6px 7px #9D40F0,
-   0 0 8px 7px #FF3A5E,
-   0 0 10px 7px #FF9A33;
+   0 0 4px 3px #A33FF5,
+   0 0 8px 3px #5D7CFF,
+   0 0 6px 3px #9D40F0,
+   0 0 8px 3px #FF3A5E,
+   0 0 10px 3px #FF9A33;
 }
 
 .aura-effect:hover::before,
@@ -33,17 +33,15 @@
   bottom: -4px;
   border-radius: inherit;  /* Use same rounding as parent */
   padding: 4px;   /* padding inside to show gradient nicely */
-  background: linear-gradient(
-    270deg,
-    #A33FF5,  /* vivid violet */
-    #FF8CDC,  /* bright pink */
-    #5D7CFF,  /* deeper blue */
-    #9D40F0,  /* richer purple */
-    #FF3A5E,  /* vivid red-pink */
-    #FF9A33,  /* stronger orange */
-    #B24CFF,  /* punchy purple */
-    #A33FF5   /* loop back to vivid violet */
-  );
+ background: linear-gradient(
+  270deg,
+  #A33FF5,  /* vivid violet */
+  #5D7CFF,  /* deeper blue */
+  #9D40F0,  /* richer purple */
+  #FF3A5E,  /* vivid red-pink */
+  #FF9A33   /* stronger orange */
+);
+
   background-size: 1400% 1400%;
   background-repeat: repeat;
   animation: aura-flow 6s linear infinite;
@@ -64,12 +62,12 @@
   background-clip: padding-box;
   cursor: pointer;
   box-shadow:
-       0 0 4px 0px #A33FF5,
-       0 0 6px 0px #FF8CDC,
-       0 0 8px 0px #5D7CFF,
-       0 0 6px 0px #9D40F0,
-       0 0 8px 0px #FF3A5E,
-       0 0 10px 0px #FF9A33;
+       0 0 4px 3px #A33FF5,
+       0 0 6px 3px #FF8CDC,
+       0 0 8px 3px #5D7CFF,
+       0 0 6px 3px #9D40F0,
+       0 0 8px 3px #FF3A5E,
+       0 0 10px 3px #FF9A33;
   z-index: 0;
   overflow: visible;
 }

@@ -485,6 +485,7 @@ function MainPage() {
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
 
+          <h3 className="text-xl font-bold mb-2">Accenture India</h3>
           <p className="text-sm">
             <strong>Key Contribution:</strong>
             <ul className="list-disc list-inside mt-2">

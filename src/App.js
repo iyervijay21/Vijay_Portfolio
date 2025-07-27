@@ -1094,7 +1094,7 @@ function DeepFakeDetail() {
           href="https://github.com/iyervijay21/Deepfake_Detection"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200 hover:bg-purple-600 hover:text-white transition always-aura"
+          className="inline-flex items-center px-5 py-3 border border-purple-400 rounded-xl text-purple-200  hover:text-white transition always-aura"
 
         >
           <svg className="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24">

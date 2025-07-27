@@ -15,12 +15,12 @@
 .aura-effect:hover {
   cursor: pointer;
   box-shadow:
-    0 0 5px 0.5px #BC82F3,   /* purple */
-    0 0 8px 1px #F5B9EA,     /* pink */
-    0 0 10px 1.5px #8D9FFF,  /* blue */
-    0 0 12px 1.5px #AA6EEE,  /* violet */
-    0 0 15px 2px #FF6778,    /* coral */
-    0 0 18px 2.5px #FFBA71;  /* warm yellow */
+    0 0 3px 0px #BC82F3,
+    0 0 5px 0px #F5B9EA,
+    0 0 6px 0px #8D9FFF,
+    0 0 7px 0px #AA6EEE,
+    0 0 8px 0px #FF6778,
+    0 0 9px 0px #FFBA71;
 }
 
 /* Create the animated border with a pseudo-element */
@@ -55,19 +55,19 @@
   z-index: -1;
 }
 
-/* New: Always-on aura effect */
+/* Always-on aura effect */
 .always-aura {
   position: relative;
   border: 0px solid transparent;
   background-clip: padding-box;
   cursor: pointer;
   box-shadow:
-    0 0 5px 0.5px #BC82F3,
-    0 0 8px 1px #F5B9EA,
-    0 0 10px 1.5px #8D9FFF,
-    0 0 12px 1.5px #AA6EEE,
-    0 0 15px 2px #FF6778,
-    0 0 18px 2.5px #FFBA71;
+    0 0 3px 0px #BC82F3,
+    0 0 5px 0px #F5B9EA,
+    0 0 6px 0px #8D9FFF,
+    0 0 7px 0px #AA6EEE,
+    0 0 8px 0px #FF6778,
+    0 0 9px 0px #FFBA71;
   z-index: 0;
   overflow: visible;
 }
@@ -103,7 +103,6 @@
   z-index: -1;
 }
 
-
 @keyframes aura-flow {
   0% {
     background-position: 0% 50%;
@@ -113,12 +112,15 @@
   }
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling - always purple, cross-browser */
+
+/* Firefox */
 .overlay-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: rgba(74, 144, 226, 0.8) transparent;
+  scrollbar-color: rgba(186, 138, 245, 0.8) transparent;
 }
 
+/* WebKit browsers: Chrome, Edge, Safari, Opera */
 .overlay-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -129,7 +131,7 @@
 }
 
 .overlay-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(74, 144, 226, 0.8);
+  background-color: rgba(186, 138, 245, 0.8); /* purple */
   border-radius: 10px;
   border: 2px solid transparent;
   background-clip: content-box;
@@ -139,3 +141,4 @@
 .scroll-offset {
   scroll-margin-top: 120px;
 }
+

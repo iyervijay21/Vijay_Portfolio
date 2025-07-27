@@ -176,14 +176,16 @@ function MainPage() {
                <div className="flex gap-4 mt-4">
                 
 
-               <a
+           <a
   href={require('./media/Vijay_CV.pdf')}
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-black-600 text-white aura-effect always-aura px-4 py-2 rounded-full font-bold border border-purple-500"
+  className="rounded-full px-6 py-3 aura-effect always-aura bg-black-600 text-white font-bold border border-purple-500 transition-shadow duration-300 ease-in-out"
 >
   My Resume
 </a>
+
+
 
 
               </div>

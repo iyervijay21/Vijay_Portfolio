@@ -6,6 +6,7 @@
 .aura-effect {
   position: relative;
   border: 2px solid transparent;
+  border-radius: 16px; /* Rounded corners for normal elements */
   transition: box-shadow 0.3s ease;
   background-clip: padding-box;
   z-index: 0;
@@ -16,23 +17,21 @@
   cursor: pointer;
   box-shadow:
        0 0 4px 3px #A33FF5,    /* vivid violet */
-    0 0 6px 3px #FF8CDC,    /* bright pink */
-    0 0 8px 3px #5D7CFF,    /* deeper blue */
-    0 0 6px 3px #9D40F0,    /* richer purple */
-    0 0 8px 3px #FF3A5E,    /* vivid red-pink */
-    0 0 10px 3px #FF9A33;   /* stronger orange */
-
+       0 0 8px 3px #5D7CFF,    /* deeper blue */
+       0 0 6px 3px #9D40F0,    /* richer purple */
+       0 0 8px 3px #FF3A5E,    /* vivid red-pink */
+       0 0 10px 3px #FF9A33;   /* stronger orange */
 }
 
 .aura-effect:hover::before,
 .always-aura::before {
   content: "";
   position: absolute;
-   top: -4px;     /* fully extend beyond 2px border */
+  top: -4px;     /* fully extend beyond 2px border */
   left: -4px;
   right: -4px;
   bottom: -4px;
-  border-radius: inherit;
+  border-radius: inherit;  /* Use same rounding as parent */
   padding: 4px;   /* padding inside to show gradient nicely */
   background: linear-gradient(
     270deg,
@@ -60,18 +59,28 @@
 /* Always-on aura effect */
 .always-aura {
   position: relative;
+  border-radius: 16px;  /* Rounded corners for normal elements */
   border: 0px solid transparent;
   background-clip: padding-box;
   cursor: pointer;
   box-shadow:
        0 0 4px 0px #A33FF5,
-    0 0 6px 0px #FF8CDC,
-    0 0 8px 0px #5D7CFF,
-    0 0 6px 0px #9D40F0,
-    0 0 8px 0px #FF3A5E,
-    0 0 10px 0px #FF9A33;
+       0 0 6px 0px #FF8CDC,
+       0 0 8px 0px #5D7CFF,
+       0 0 6px 0px #9D40F0,
+       0 0 8px 0px #FF3A5E,
+       0 0 10px 0px #FF9A33;
   z-index: 0;
   overflow: visible;
+}
+
+/* Circular aura modifier for circular images */
+.circular-aura {
+  border-radius: 50% !important;
+}
+
+.circular-aura::before {
+  border-radius: 50% !important;
 }
 
 /* Keyframes: forward then backward smoothly */

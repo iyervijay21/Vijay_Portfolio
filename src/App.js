@@ -194,14 +194,15 @@ function MainPage() {
               </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-              <div className="always-aura rounded-full w-80 h-80 overflow-visible">
-                <img
-                  src={require('./media/vijay.jpg')}
-                  alt="Hero"
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-            </div>
+  <div className="always-aura circular-aura w-80 h-80 overflow-visible">
+    <img
+      src={require('./media/vijay.jpg')}
+      alt="Hero"
+      className="w-full h-full object-cover rounded-full"
+    />
+  </div>
+</div>
+
           </section>
         </div>
       </FadeInSection>
@@ -391,7 +392,8 @@ function MainPage() {
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">rPPG</span>
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">3D-Geometric Facemesh</span>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <h3 className="text-xl font-bold mb-2">FZI</h3>
           <p className="text-sm">
             <strong>Key Contributions:</strong>
@@ -426,7 +428,8 @@ function MainPage() {
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Jekyll</span>
           
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <h3 className="text-xl font-bold mb-2">TecoLab</h3>
           <p className="text-sm">
             <strong>Key Contributions:</strong>
@@ -454,7 +457,8 @@ function MainPage() {
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Accessibility</span>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <h3 className="text-xl font-bold mb-2">Access@KIT</h3>
           <p className="text-sm">
             <strong>Key Contribution:</strong>
@@ -479,8 +483,8 @@ function MainPage() {
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Mainframe</span>
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Legacy Systems</span>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
-          <h3 className="text-xl font-bold mb-2">Accenture India</h3>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <p className="text-sm">
             <strong>Key Contribution:</strong>
             <ul className="list-disc list-inside mt-2">
@@ -506,7 +510,8 @@ function MainPage() {
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">HTML</span>
           <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">CSS</span>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <h3 className="text-xl font-bold mb-2">Accur Digitus</h3>
           <p className="text-sm">
             <strong>Key Contributions:</strong>
@@ -559,7 +564,8 @@ function MainPage() {
             <p className="text-purple-100 mt-2">rPPG Analysis</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <div>
             <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
             <p className="text-sm mb-4">
@@ -597,7 +603,8 @@ function MainPage() {
             <p className="text-purple-100 mt-2">Eye Tracking</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <div>
             <h3 className="text-xl font-bold mb-2">CamCussion</h3>
             <p className="text-sm mb-4">
@@ -636,7 +643,8 @@ function MainPage() {
             <p className="text-purple-100 mt-2">Autonomous Nav</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <div>
             <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
             <p className="text-sm mb-4">
@@ -675,7 +683,8 @@ function MainPage() {
             <p className="text-purple-100 mt-2">Crash Detection</p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar flex flex-col justify-between">
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-lg">
+
           <div>
             <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
             <p className="text-sm mb-4">

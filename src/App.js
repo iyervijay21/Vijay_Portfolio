@@ -85,14 +85,15 @@ function Navbar({ menuOpen, setMenuOpen }) {
             {isHomePage ? (
               <button
                 onClick={() => handleClick(hash)}
-                className="text-white aura-effect rounded-full px-3 py-1"
+                className="text-white aura-effect rounded-full px-3 py-1 border border-transparent inline-flex items-center justify-center"
+
               >
                 {label}
               </button>
             ) : (
               <Link
                 to={`/#${hash.slice(1)}`}
-                className="text-white aura-effect rounded-full px-3 py-1"
+                className="text-white aura-effect rounded-full px-3 py-1 border border-transparent inline-flex items-center justify-center"
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
@@ -110,14 +111,14 @@ function Navbar({ menuOpen, setMenuOpen }) {
               {isHomePage ? (
                 <button
                   onClick={() => handleClick(hash)}
-                  className="text-white aura-effect rounded-full px-3 py-1"
+                  className="text-white aura-effect rounded-full px-3 py-1 border border-transparent inline-flex items-center justify-center"
                 >
                   {label}
                 </button>
               ) : (
                 <Link
                   to={`/#${hash.slice(1)}`}
-                  className="text-white aura-effect rounded-full px-3 py-1"
+                  className="text-white aura-effect rounded-full px-3 py-1 border border-transparent inline-flex items-center justify-center"
                   onClick={() => setMenuOpen(false)}
                 >
                   {label}
@@ -187,7 +188,7 @@ function MainPage() {
     href={require('./media/Vijay_CV.pdf')}
     target="_blank"
     rel="noopener noreferrer"
-    className="rounded-[16px] px-6 py-3 aura-effect always-aura bg-black-600 text-white font-bold border border-purple-500 transition-shadow duration-300 ease-in-out"
+    className="rounded-[16px] px-6 py-3 aura-effect always-aura bg-black-600 text-purple-300 font-bold border border-purple-500 transition-shadow duration-300 ease-in-out"
   >
     My Resume
   </a>
@@ -1153,7 +1154,7 @@ function AppRouter() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-b from-purple-950 via-[#1a0028] to-purple-950">
+      <div className="min-h-screen bg-gradient-to-b from-black via-[#1a0028] to-purple-950">
 
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>

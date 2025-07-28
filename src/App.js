@@ -345,7 +345,7 @@ function MainPage() {
 
         {/* Hover Overlay for KIT */}
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">
-          <h3 className="text-lg font-bold mb-2">Technical Competency Summary</h3>
+          <h3 className="text-lg font-bold mb-2">Technical Competency</h3>
           <ul className="list-disc list-inside text-sm space-y-1">
             <li><strong>Software Engineering:</strong> Structured software architecture, SDLC methodologies, agile and DevOps integration</li>
             <li><strong>Machine Learning:</strong> Neural network modeling, computer vision, and deep learning optimization techniques</li>
@@ -380,7 +380,7 @@ function MainPage() {
 
         {/* Hover Overlay for MU */}
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">
-          <h3 className="text-lg font-bold mb-2">Technical Competency Summary</h3>
+          <h3 className="text-lg font-bold mb-2">Technical Competency</h3>
           <ul className="list-disc list-inside text-sm space-y-1">
             <li><strong>Signal Processing:</strong> Core understanding of analog/digital signal processing, including filter design and spectral analysis</li>
             <li><strong>Communication Systems:</strong> Modulation schemes, error detection/correction, and telecom fundamentals</li>

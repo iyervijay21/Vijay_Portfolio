@@ -317,59 +317,85 @@ function MainPage() {
       </FadeInSection>
 
       {/* EDUCATION SECTION */}
-      <FadeInSection className="py-20">
-        <div id="education" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-          <h2 className="text-3xl font-bold mb-6 text-white text-left">
-            Education
-          </h2>
-          <div className="flex flex-col md:flex-row justify-evenly gap-8">
-            <div className="bg-transparent p-6 shadow aura-effect rounded-[16px] w-full md:w-1/3 flex items-center space-x-4">
-
-
-              <img
-                src={require('./media/KIT.webp')}
-                alt="KIT Logo"
-                className="h-20 w-20 rounded bg-white object-contain"
-              />
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-white">
-                  Karlsruhe Institute of Technology
-                </h3>
-                <p className="text-white">
-                  M.Sc. in Electrical Engineering and Information Technology
-                </p>
-                <p className="text-sm text-purple-100 mt-2">
-                  May 2022 – July 2025
-                  <br />
-                  GPA: 2.3
-                </p>
-              </div>
-            </div>
-            <div className="bg-transparent p-6 shadow aura-effect rounded-[16px] w-full md:w-1/3 flex items-center space-x-4">
-
-
-              <img
-                src={require('./media/MU.png')}
-                alt="MU logo"
-                className="h-20 w-20 rounded bg-white object-contain"
-              />
-              <div>
-                <h3 className="text-xl font-bold mb-2 text-white">
-                  University of Mumbai
-                </h3>
-                <p className="text-white">
-                  B.Eng. in Electronics Engineering
-                </p>
-                <p className="text-sm text-purple-100 mt-2">
-                  Aug 2017 – May 2021
-                  <br />
-                  GPA: 2.8
-                </p>
-              </div>
-            </div>
-          </div>
+<FadeInSection className="py-20">
+  <div id="education" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
+    <h2 className="text-3xl font-bold mb-6 text-white text-left">Education</h2>
+    <div className="flex flex-col md:flex-row justify-evenly gap-8">
+      
+      {/* KIT Card */}
+      <div className="relative group bg-transparent p-6 shadow aura-effect rounded-[16px] w-full md:w-1/3 flex items-center space-x-4 min-h-[200px] max-h-[240px] cursor-pointer">
+        <img
+          src={require('./media/KIT.webp')}
+          alt="KIT Logo"
+          className="h-20 w-20 rounded bg-white object-contain"
+        />
+        <div>
+          <h3 className="text-xl font-bold mb-2 text-white">
+            Karlsruhe Institute of Technology
+          </h3>
+          <p className="text-white">
+            M.Sc. in Electrical Engineering and Information Technology
+          </p>
+          <p className="text-sm text-purple-100 mt-2">
+            May 2022 – July 2025
+            <br />
+            GPA: 2.3
+          </p>
         </div>
-      </FadeInSection>
+
+        {/* Hover Overlay for KIT */}
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">
+          <h3 className="text-lg font-bold mb-2">Technical Competency Summary</h3>
+          <ul className="list-disc list-inside text-sm space-y-1">
+            <li><strong>Software Engineering:</strong> Structured software architecture, SDLC methodologies, agile and DevOps integration</li>
+            <li><strong>Machine Learning:</strong> Neural network modeling, computer vision, and deep learning optimization techniques</li>
+            <li><strong>Networked Systems:</strong> Digital communication protocols, layered network architectures, and QoS assurance</li>
+            <li><strong>Control & Optimization:</strong> Model-based dynamic system optimization, predictive control, and state estimation</li>
+            <li><strong>Embedded Systems:</strong> Real-time embedded architectures, microcontroller programming, and system integration in energy and autonomous domains</li>
+            <li><strong>Rapid Prototyping & Innovation:</strong> Full-cycle system prototyping, HCI-driven interface design, and technology incubation under entrepreneurial frameworks</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* University of Mumbai Card */}
+      <div className="relative group bg-transparent p-6 shadow aura-effect rounded-[16px] w-full md:w-1/3 flex items-center space-x-4 min-h-[200px] max-h-[240px] cursor-pointer">
+        <img
+          src={require('./media/MU.png')}
+          alt="MU Logo"
+          className="h-20 w-20 rounded bg-white object-contain"
+        />
+        <div>
+          <h3 className="text-xl font-bold mb-2 text-white">
+            University of Mumbai
+          </h3>
+          <p className="text-white">
+            B.Eng. in Electronics Engineering
+          </p>
+          <p className="text-sm text-purple-100 mt-2">
+            Aug 2017 – May 2021
+            <br />
+            GPA: 2.8
+          </p>
+        </div>
+
+        {/* Hover Overlay for MU */}
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">
+          <h3 className="text-lg font-bold mb-2">Technical Competency Summary</h3>
+          <ul className="list-disc list-inside text-sm space-y-1">
+            <li><strong>Signal Processing:</strong> Core understanding of analog/digital signal processing, including filter design and spectral analysis</li>
+            <li><strong>Communication Systems:</strong> Modulation schemes, error detection/correction, and telecom fundamentals</li>
+            <li><strong>Microelectronics:</strong> Semiconductor theory, logic design, and integrated circuit layout principles</li>
+            <li><strong>Embedded Systems:</strong> Basics of embedded C, sensor interfacing, and microcontroller-based projects</li>
+            <li><strong>Control Systems:</strong> Classical and modern control techniques, PID tuning, and simulation in MATLAB</li>
+            <li><strong>Project Work:</strong> Hands-on academic projects in robotics, automation, and IoT frameworks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</FadeInSection>
+
+
 
      {/* WORK EXPERIENCE SECTION */}
 <FadeInSection className="py-20">

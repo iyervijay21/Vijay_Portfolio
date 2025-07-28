@@ -5,9 +5,17 @@ const ScrollToTopButton = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) setVisible(true);
-      else setVisible(false);
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+
+      if (scrollTop + windowHeight >= docHeight - 100) {  // adjust 100px threshold as needed
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
     };
+    
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
@@ -27,7 +35,7 @@ const ScrollToTopButton = () => {
         backgroundColor: 'transparent',
         color: 'white',
         borderRadius: '9999px',
-        padding: '10px', // smaller padding
+        padding: '10px',
         border: '2px solid #7e22ce',
         cursor: 'pointer',
         display: 'flex',
@@ -41,7 +49,7 @@ const ScrollToTopButton = () => {
       onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
     >
       <svg
-        style={{ width: '24px', height: '24px' }} // smaller icon
+        style={{ width: '24px', height: '24px' }}
         fill="none"
         stroke="currentColor"
         strokeWidth="2"

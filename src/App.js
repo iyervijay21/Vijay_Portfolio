@@ -568,8 +568,7 @@ function MainPage() {
   </div>
 </FadeInSection>
 
-{/* Scroll To Top Button */}
-  <ScrollToTopButton />
+
 
    {/* PROJECTS SECTION */}
 <FadeInSection className="py-20">
@@ -805,7 +804,8 @@ function MainPage() {
   </div>
 </FadeInSection>
 
-
+{/* Scroll To Top Button */}
+  <ScrollToTopButton />
 
 
     

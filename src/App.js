@@ -712,7 +712,7 @@ function MainPage() {
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px] flex flex-col">
-  <div className="flex-1 overflow-y-auto">
+  <div>
     <h3 className="text-xl font-bold mb-2">Self-Driving Car using LIDAR</h3>
     <p className="text-sm mb-4">
       Developed a solar-powered autonomous vehicle prototype using 360° LIDAR for reliable obstacle detection and safe navigation. Implemented on Arduino with custom chassis and differential drive, aimed at enhancing safety in urban mobility applications.
@@ -752,7 +752,7 @@ function MainPage() {
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px] flex flex-col">
-  <div className="flex-1 overflow-y-auto">
+  <div>
     <h3 className="text-xl font-bold mb-2">Real-Time Car Accident Alert System</h3>
     <p className="text-sm mb-4">
       Developed an embedded vehicle accident warning system to automatically detect crashes, send precise location data, and alert emergency services, family, and friends to improve response times.

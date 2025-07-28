@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import ScrollToTopButton from './ScrollToTopButton';
-
+import { FaCat } from 'react-icons/fa'; // FontAwesome Cat icon
 
 // FadeInSection: Re-triggers fade/slide animation each time its content enters the viewport.
 function FadeInSection({ children, className = "" }) {
@@ -351,10 +351,9 @@ function MainPage() {
 
         {/* Hover me button in bottom right */}
         
-  <button
-  className="absolute bottom-2 right-2 bg-transparent border-2 border-purple-700 text-white px-3 py-1.5 rounded-full text-xs hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)] group-hover:opacity-0"
->
-  🐱 Hover me
+  <button className="absolute bottom-2 right-2 bg-transparent border-2 border-purple-700 text-white px-3 py-1.5 rounded-full text-xs hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)] group-hover:opacity-0 flex items-center">
+  <FaCat className="w-4 h-4 mr-1" />
+  Hover me
 </button>
 
 

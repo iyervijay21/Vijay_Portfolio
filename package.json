@@ -4,6 +4,7 @@
   "homepage": "https://iyervijay21.github.io/Vijay_Portfolio",
   "private": true,
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@icon/devicons": "^1.8.0-alpha.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

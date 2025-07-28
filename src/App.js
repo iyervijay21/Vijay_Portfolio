@@ -4,7 +4,6 @@ import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-ro
 import ScrollToTopButton from './ScrollToTopButton';
 
 
-
 // FadeInSection: Re-triggers fade/slide animation each time its content enters the viewport.
 function FadeInSection({ children, className = "" }) {
   const domRef = useRef();
@@ -353,10 +352,11 @@ function MainPage() {
         {/* Hover me button in bottom right */}
         
   <button
-    className="absolute bottom-2 right-2 bg-transparent border-2 border-purple-700 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)] group-hover:opacity-0"
-  >
-    🐱 Hover me
-  </button>
+  className="absolute bottom-2 right-2 bg-transparent border-2 border-purple-700 text-white px-3 py-1.5 rounded-full text-xs hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)] group-hover:opacity-0"
+>
+  🐱 Hover me
+</button>
+
 
         {/* Hover Overlay for KIT */}
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">

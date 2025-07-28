@@ -674,7 +674,7 @@ function MainPage() {
           </div>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px] flex flex-col">
-  <div className="flex-1 overflow-y-auto">
+  <div>
     <h3 className="text-xl font-bold mb-2">CamCussion</h3>
     <p className="text-sm mb-4"> Utilized computer-vision to analyze pupil dilation and saccadic eye movements in real time to track and assess eye behavior, contributing to accurate concussion diagnosis. </p>
   </div>

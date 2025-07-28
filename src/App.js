@@ -320,32 +320,43 @@ function MainPage() {
         </div>
       </FadeInSection>
 
-      {/* EDUCATION SECTION */}
+{/* EDUCATION SECTION */}
 <FadeInSection className="py-20">
   <div id="education" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-6 text-white text-left">Education</h2>
     <div className="flex flex-col md:flex-row justify-evenly gap-8">
       
       {/* KIT Card */}
-      <div className="relative group bg-transparent p-6 shadow aura-effect rounded-[16px] w-full md:w-1/3 flex items-center space-x-4 min-h-[200px] max-h-[240px] cursor-pointer">
-        <img
-          src={require('./media/KIT.webp')}
-          alt="KIT Logo"
-          className="h-20 w-20 rounded bg-white object-contain"
-        />
-        <div>
-          <h3 className="text-xl font-bold mb-2 text-white">
-            Karlsruhe Institute of Technology
-          </h3>
-          <p className="text-white">
-            M.Sc. in Electrical Engineering and Information Technology
-          </p>
-          <p className="text-sm text-purple-100 mt-2">
-            May 2022 – July 2025
-            <br />
-            GPA: 2.3
-          </p>
+      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer">
+        {/* Inner content with padding */}
+        <div className="flex items-center space-x-4 p-6">
+          <img
+            src={require('./media/KIT.webp')}
+            alt="KIT Logo"
+            className="h-20 w-20 rounded bg-white object-contain"
+          />
+          <div>
+            <h3 className="text-xl font-bold mb-2 text-white">
+              Karlsruhe Institute of Technology
+            </h3>
+            <p className="text-white">
+              M.Sc. in Electrical Engineering and Information Technology
+            </p>
+            <p className="text-sm text-purple-100 mt-2">
+              May 2022 – July 2025
+              <br />
+              GPA: 2.3
+            </p>
+          </div>
         </div>
+
+        {/* Hover me button in bottom right */}
+        
+  <button
+    className="absolute bottom-2 right-2 bg-transparent border-2 border-purple-700 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)] group-hover:opacity-0"
+  >
+    🐱 Hover me
+  </button>
 
         {/* Hover Overlay for KIT */}
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">
@@ -361,25 +372,27 @@ function MainPage() {
         </div>
       </div>
 
-      {/* University of Mumbai Card */}
-      <div className="relative group bg-transparent p-6 shadow aura-effect rounded-[16px] w-full md:w-1/3 flex items-center space-x-4 min-h-[200px] max-h-[240px] cursor-pointer">
-        <img
-          src={require('./media/MU.png')}
-          alt="MU Logo"
-          className="h-20 w-20 rounded bg-white object-contain"
-        />
-        <div>
-          <h3 className="text-xl font-bold mb-2 text-white">
-            University of Mumbai
-          </h3>
-          <p className="text-white">
-            B.Eng. in Electronics Engineering
-          </p>
-          <p className="text-sm text-purple-100 mt-2">
-            Aug 2017 – May 2021
-            <br />
-            GPA: 2.8
-          </p>
+      {/* University of Mumbai Card (no button) */}
+      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer">
+        <div className="flex items-center space-x-4 p-6">
+          <img
+            src={require('./media/MU.png')}
+            alt="MU Logo"
+            className="h-20 w-20 rounded bg-white object-contain"
+          />
+          <div>
+            <h3 className="text-xl font-bold mb-2 text-white">
+              University of Mumbai
+            </h3>
+            <p className="text-white">
+              B.Eng. in Electronics Engineering
+            </p>
+            <p className="text-sm text-purple-100 mt-2">
+              Aug 2017 – May 2021
+              <br />
+              GPA: 2.8
+            </p>
+          </div>
         </div>
 
         {/* Hover Overlay for MU */}
@@ -395,9 +408,13 @@ function MainPage() {
           </ul>
         </div>
       </div>
+
     </div>
   </div>
 </FadeInSection>
+
+
+
 
 
 

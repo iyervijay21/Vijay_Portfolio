@@ -610,7 +610,7 @@ function MainPage() {
     <h3 className="text-xl font-bold mb-2">DeepFake Detection System</h3>
     <p className="text-sm mb-4"> This Master Thesis aimed to design an end to end pipeline to evaluate the artifacts using rPPG signals. Designed a Fusion Model, concatenating the features from Vision Transformer and CNN for local and long-range dependencies with a custom Fusion-Head for DeepFake classification. Benchmark results under different environmental conditions. </p>
   </div>
-  <Link to="/projects/deepfake" className="mt-auto self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition">
+  <Link to="/projects/deepfake" className="mt-auto self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]">
     More Info
   </Link>
 </div>
@@ -649,7 +649,7 @@ function MainPage() {
   </div>
   <Link 
     to="/projects/camcussion"
-    className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+    className="mt-2 self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
   >
     More Info
   </Link>
@@ -689,7 +689,8 @@ function MainPage() {
           </div>
           <Link 
             to="/projects/self-driving"
-            className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+            className="mt-2 self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
+
           >
             More Info
           </Link>
@@ -728,7 +729,8 @@ function MainPage() {
   </div>
   <Link 
     to="/projects/car-accident"
-    className="mt-2 self-start bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700 transition"
+    className="mt-2 self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
+
   >
     More Info
   </Link>

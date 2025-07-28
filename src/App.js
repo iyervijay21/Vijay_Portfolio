@@ -441,7 +441,7 @@ function MainPage() {
             <strong>Key Contributions:</strong>
             <ul className="list-disc list-inside mt-2">
               <li>ML4Print: Classification based on printer-specific characteristics and paper substrate type using feature extraction and supervised ML classifiers.</li>
-              <li>Heat simulation project using ML for predictive maintenance.</li>
+              
               <li>Sensor optimization for open-earables with TinyML and quantized neural networks for on-device inference.</li>
               <li>Heat simulation: utilized regression models and CFD data integration to simulate the thermal behavior of liquids within industrial valves, thereby enhancing predictive maintenance capabilities and system reliability.</li>
             </ul>

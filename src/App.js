@@ -372,7 +372,7 @@ function MainPage() {
       </div>
 
       {/* University of Mumbai Card (no button) */}
-      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer mb-6 md:mb-0">
+      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer">
         <div className="flex items-center space-x-4 p-6">
           <img
             src={require('./media/MU.png')}
@@ -564,7 +564,7 @@ function MainPage() {
 
       {/* Accur Digitus */}
       <div
-  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
@@ -730,7 +730,7 @@ function MainPage() {
 
       {/* Real-Time Car Accident Alert System */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">

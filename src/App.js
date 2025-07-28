@@ -404,9 +404,9 @@ function MainPage() {
           <p className="text-sm">
             <strong>Key Contributions:</strong>
             <ul className="list-disc list-inside mt-2">
-              <li>Enhance the DeepFake detection framework by incorporating dynamic region-of-interest (ROI) tracking to facilitate real-time deployment.</li>
-              <li>Develop an interactive UI that visualizes multiple ROIs, emphasizing regions with elevated artifact energy.</li>
-              <li>Fine-tune and cross-validate across diverse DeepFake detection techniques to ensure robustness.</li>
+              <li>Implement dynamic ROI tracking using 3D geometric facemesh reconstruction and facial landmark localization to improve spatial awareness in DeepFake detection.</li>
+              <li>Design an interactive visualization interface that maps artifact energy across facial regions using image-based feature analysis and temporal coherence cues.</li>
+              <li>Optimize detection models through transfer learning, fine-tuning and ensemble methods to enhance performance on challenging visual manipulations.</li>
               <li>Contribute significantly to academic discourse through a subsequent research publication.</li>
             </ul>
           </p>
@@ -440,10 +440,10 @@ function MainPage() {
           <p className="text-sm">
             <strong>Key Contributions:</strong>
             <ul className="list-disc list-inside mt-2">
-              <li>ML4Print: analyzed and classified printed documents to detect fakes.</li>
+              <li>ML4Print: Classification based on printer-specific characteristics and paper substrate type using feature extraction and supervised ML classifiers.</li>
               <li>Heat simulation project using ML for predictive maintenance.</li>
-              <li>Sensor optimization for open-earables with edgeML.</li>
-              <li>Website performance & SEO optimization using Jekyll & WordPress.</li>
+              <li>Sensor optimization for open-earables with TinyML and quantized neural networks for on-device inference.</li>
+              <li>Heat simulation: utilized regression models and CFD data integration to simulate the thermal behavior of liquids within industrial valves, thereby enhancing predictive maintenance capabilities and system reliability.</li>
             </ul>
           </p>
         </div>
@@ -469,7 +469,9 @@ function MainPage() {
           <p className="text-sm">
             <strong>Key Contribution:</strong>
             <ul className="list-disc list-inside mt-2">
-              <li>Designed and trained a custom bi-directional RNN for text-to-speech conversion, enhancing accessibility for visually impaired users.</li>
+              <li>Designed and implemented a bi-directional LSTM network for text-to-speech synthesis, optimizing acoustic feature prediction to capture temporal dependencies and prosody for natural, intelligible speech.</li>
+              <li>Performed data preprocessing including phoneme alignment and feature extraction, and evaluated model performance with iterative tuning to enhance digital accessibility for visually impaired users.</li>
+
             </ul>
           </p>
         </div>

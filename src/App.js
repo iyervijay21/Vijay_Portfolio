@@ -1154,7 +1154,7 @@ function AppRouter() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-b from-black via-[#1a0028] to-purple-950">
+      <div className="min-h-screen bg-gradient-to-b from-purple-950 via-[#1a0028] to-purple-950">
 
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>

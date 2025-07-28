@@ -1,6 +1,9 @@
 // src/App.js
 import React, { useState, useRef, useEffect } from "react";
 import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import ScrollToTopButton from './ScrollToTopButton';
+
+
 
 // FadeInSection: Re-triggers fade/slide animation each time its content enters the viewport.
 function FadeInSection({ children, className = "" }) {
@@ -398,6 +401,7 @@ function MainPage() {
 
 
 
+    
      {/* WORK EXPERIENCE SECTION */}
 <FadeInSection className="py-20">
   <div id="experience" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
@@ -564,6 +568,8 @@ function MainPage() {
   </div>
 </FadeInSection>
 
+{/* Scroll To Top Button */}
+  <ScrollToTopButton />
 
    {/* PROJECTS SECTION */}
 <FadeInSection className="py-20">
@@ -1154,7 +1160,7 @@ function AppRouter() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-b from-purple-950 via-[#1a0028] to-purple-950">
+      <div className="min-h-screen bg-gradient-to-b from-black via-[#31004d] to-[#190020]">
 
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>

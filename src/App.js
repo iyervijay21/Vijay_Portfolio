@@ -181,7 +181,7 @@ function MainPage() {
         <div id="Hero" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
           <section id="home" className="flex flex-col-reverse md:flex-row items-center scroll-mt-40">
             <div className="w-full md:w-1/2 text-align: justify;">
-              <p className="text-xl md:text-2xl mb-6 text-purple-100 text-justify">
+              <p className="text-xl md:text-2xl mb-8 text-purple-100 text-justify">
                 Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
               </p>
 
@@ -198,7 +198,7 @@ function MainPage() {
 
 
             </div>
-            <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
+            <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
   <div className="always-aura circular-aura w-80 h-80 overflow-visible">
     <img
       src={require('./media/vijay.jpg')}
@@ -215,7 +215,7 @@ function MainPage() {
       {/* SKILLS SECTION */}
       <FadeInSection className="py-20">
         <div id="skills" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-          <h2 className="text-3xl font-bold mb-6 text-white text-center">My Tech Stack</h2>
+          <h2 className="text-3xl font-bold mb-8 text-white text-center">My Tech Stack</h2>
           
           {/* Language/Frameworks */}
           <div className="mb-12 p-4 rounded">
@@ -322,11 +322,11 @@ function MainPage() {
 {/* EDUCATION SECTION */}
 <FadeInSection className="py-20">
   <div id="education" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-6 text-white text-left">Education</h2>
+    <h2 className="text-3xl font-bold mb-8 text-white text-left">Education</h2>
     <div className="flex flex-col md:flex-row justify-evenly gap-8">
       
       {/* KIT Card */}
-      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer mb-6 md:mb-0">
+      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer mb-8 md:mb-0">
         {/* Inner content with padding */}
         <div className="flex items-center space-x-4 p-6">
           <img
@@ -426,7 +426,7 @@ function MainPage() {
 
       {/* FZI */}
       <div
-  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-8 md:mb-0"
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
@@ -465,7 +465,7 @@ function MainPage() {
 
       {/* TecoLab */}
       <div
-  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-8 md:mb-0"
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
@@ -504,7 +504,7 @@ function MainPage() {
 
       {/* Access@KIT */}
       <div
-  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-8 md:mb-0"
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
@@ -535,7 +535,7 @@ function MainPage() {
 
       {/* Accenture */}
       <div
-  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+  className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-8 md:mb-0"
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
@@ -604,13 +604,13 @@ function MainPage() {
    {/* PROJECTS SECTION */}
 <FadeInSection className="py-20">
   <div id="projects" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-6 text-white">Projects</h2>
+    <h2 className="text-3xl font-bold mb-8 text-white">Projects</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
       
       {/* DeepFake Detection */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-8 md:mb-0"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
@@ -650,7 +650,7 @@ function MainPage() {
 
       {/* CamCussion */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-8 md:mb-0"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
@@ -690,7 +690,7 @@ function MainPage() {
 
       {/* Self-Driving Car */}
       <div
-        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-6 md:mb-0"
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer mb-8 md:mb-0"
         style={{ minHeight: '230px', maxHeight: '230px' }}
       >
         <div className="flex items-center space-x-4">
@@ -779,7 +779,7 @@ function MainPage() {
 <FadeInSection className="py-20">
   <div id="contact" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
     <h2 className="text-3xl font-bold mb-4 text-white">Contact Me</h2>
-    <p className="text-purple-100 mb-6">
+    <p className="text-purple-100 mb-8">
       I'm always up for a wild brainstorming session where we turn pixels into pure magic. Let’s chat if you're as excited about computer vision adventures as I am!
     </p>
     <div className="flex justify-center space-x-6">

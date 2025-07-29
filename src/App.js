@@ -181,9 +181,24 @@ function MainPage() {
         <div id="Hero" className="w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
           <section id="home" className="flex flex-col-reverse md:flex-row items-center scroll-mt-40">
             <div className="w-full md:w-1/2 text-align: justify;">
-              <p className="text-xl md:text-2xl mb-8 text-purple-100 text-justify">
-                Hey there<span role="img" aria-label="wave">👋</span>! I'm a pixel wizard who sees the world through a quirky lens turning everyday images into a playground of possibilities. I mix creativity with code, teaching machines to interpret the visual world is fun. Whether it’s health tech or autonomous adventures, I’m here to bring a splash of color to computer vision.
-              </p>
+             <p className="text-xl md:text-2xl mb-8 text-purple-100 text-center md:text-justify">
+  <span
+    className="font-bold text-white"
+    style={{
+      textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
+    }}
+  >
+    Innovating Intelligent&nbsp;
+    <span style={{ whiteSpace: 'nowrap' }}>
+      Safety & Health Solutions
+    </span>
+  </span> — powered by computer vision and machine learning. Skilled in transforming advanced algorithms including deep learning architectures and large language models into practical, user-centered tools that enhance security and promote human well-being.
+</p>
+
+
+
+
+
 
               <div className="flex gap-4 mt-4">
   <a
@@ -199,7 +214,7 @@ function MainPage() {
 
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
-  <div className="always-aura circular-aura w-80 h-80 overflow-visible">
+  <div className="w-80 h-80 overflow-visible rounded-full shadow-[0_0_30px_rgba(255,255,255,0.6)]">
     <img
       src={require('./media/vijay.jpg')}
       alt="Hero"
@@ -207,6 +222,7 @@ function MainPage() {
     />
   </div>
 </div>
+
 
           </section>
         </div>
@@ -220,18 +236,15 @@ function MainPage() {
   >
     <h2 className="text-3xl font-bold mb-8 text-white text-center">My Tech Stack</h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
       
       {/* AI/ML Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_40px_rgba(126,34,206,1)]
- ">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
         <h3 className="text-2xl font-bold text-white mb-4">AI / ML</h3>
-        <div className="flex flex-wrap justify-evenly gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {[
-            // Programming Languages relevant to AI/ML
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", alt: "Python", label: "Python" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", alt: "C++", label: "C++" },
-            // AI frameworks & libraries
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", alt: "TensorFlow", label: "TensorFlow" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", alt: "PyTorch", label: "PyTorch" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg", alt: "OpenCV", label: "OpenCV" },
@@ -240,20 +253,19 @@ function MainPage() {
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg", alt: "Matplotlib", label: "Matplotlib" },
             { src: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg", alt: "scikit-learn", label: "scikit‑learn" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg", alt: "Qt", label: "Qt" },
-            
           ].map(({ src, alt, label }) => (
-            <div key={label} className="flex flex-col items-center rounded-full px-4 py-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60">
+            <div key={label} className="flex flex-col items-center rounded-full p-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60 w-20">
               <img src={src} alt={alt} className="w-8 h-8 mb-1" />
-              <p className="text-white font-semibold text-sm">{label}</p>
+              <p className="text-white font-semibold text-sm text-center">{label}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Web Development Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_40px_rgba(126,34,206,1)]">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
         <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
-        <div className="flex flex-wrap justify-evenly gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {[
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", alt: "JavaScript", label: "JavaScript" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", alt: "React.js", label: "React.js" },
@@ -262,27 +274,27 @@ function MainPage() {
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", alt: "CSS", label: "CSS" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", alt: "MySQL", label: "SQL" },
           ].map(({ src, alt, label }) => (
-            <div key={label} className="flex flex-col items-center rounded-full px-4 py-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60">
+            <div key={label} className="flex flex-col items-center rounded-full p-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60 w-20">
               <img src={src} alt={alt} className="w-8 h-8 mb-1" />
-              <p className="text-white font-semibold text-sm">{label}</p>
+              <p className="text-white font-semibold text-sm text-center">{label}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Tools Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_40px_rgba(126,34,206,1)]">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
         <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
-        <div className="flex flex-wrap justify-evenly gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {[
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", alt: "Git", label: "Git" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker", label: "Docker" },
             { src: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png", alt: "MATLAB", label: "MATLAB" },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", alt: "Linux", label: "Linux" },
           ].map(({ src, alt, label }) => (
-            <div key={label} className="flex flex-col items-center rounded-full px-4 py-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60">
+            <div key={label} className="flex flex-col items-center rounded-full p-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60 w-20">
               <img src={src} alt={alt} className="w-8 h-8 mb-1" />
-              <p className="text-white font-semibold text-sm">{label}</p>
+              <p className="text-white font-semibold text-sm text-center">{label}</p>
             </div>
           ))}
         </div>
@@ -291,6 +303,7 @@ function MainPage() {
     </div>
   </div>
 </FadeInSection>
+
 
 
 

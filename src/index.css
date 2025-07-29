@@ -161,3 +161,10 @@
 .scroll-offset {
   scroll-margin-top: 120px;
 }
+
+/* globals.css */
+@layer utilities {
+  .shadow-purple-glow {
+    box-shadow: 0 0 20px rgba(126, 34, 206, 1);
+  }
+}

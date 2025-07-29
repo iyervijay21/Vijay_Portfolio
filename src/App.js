@@ -212,112 +212,87 @@ function MainPage() {
         </div>
       </FadeInSection>
  
-      {/* SKILLS SECTION */}
-      <FadeInSection className="py-20">
-        <div id="skills" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-          <h2 className="text-3xl font-bold mb-8 text-white text-center">My Tech Stack</h2>
-          
-          {/* Language/Frameworks */}
-          <div className="mb-12 p-4 rounded">
-            <h3 className="text-2xl font-bold text-white mb-4">Language/Frameworks</h3>
-            <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Python</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">OpenCV</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" alt="qt" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">qt</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">TensorFlow</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">PyTorch</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">NumPy</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Pandas</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit-learn" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">scikit‑learn</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Matplotlib</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">C++</p>
-              </div>
+{/* SKILLS SECTION */}
+<FadeInSection className="py-20">
+  <div
+    id="skills"
+    className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6"
+  >
+    <h2 className="text-3xl font-bold mb-8 text-white text-center">My Tech Stack</h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      {/* AI/ML Card */}
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_16px_rgba(126,34,206,0.4)] ">
+        <h3 className="text-2xl font-bold text-white mb-4">AI / ML</h3>
+        <div className="flex flex-wrap justify-evenly gap-4">
+          {[
+            // Programming Languages relevant to AI/ML
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", alt: "Python", label: "Python" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", alt: "C++", label: "C++" },
+            // AI frameworks & libraries
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", alt: "TensorFlow", label: "TensorFlow" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", alt: "PyTorch", label: "PyTorch" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg", alt: "OpenCV", label: "OpenCV" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", alt: "Pandas", label: "Pandas" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", alt: "NumPy", label: "NumPy" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg", alt: "Matplotlib", label: "Matplotlib" },
+            { src: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg", alt: "scikit-learn", label: "scikit‑learn" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg", alt: "Qt", label: "Qt" },
+            
+          ].map(({ src, alt, label }) => (
+            <div key={label} className="flex flex-col items-center rounded-full px-4 py-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60">
+              <img src={src} alt={alt} className="w-8 h-8 mb-1" />
+              <p className="text-white font-semibold text-sm">{label}</p>
             </div>
-          </div>
-          
-          <div className="mb-12 p-4 rounded">
-            <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
-            <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">HTML</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">CSS</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">React.JS</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">JavaScript</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Node.js</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">MySQL</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Tools */}
-          <div className="mb-12 p-4 rounded">
-            <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
-            <div className="flex flex-wrap justify-evenly gap-6">
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Git</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Linux</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Docker</p>
-              </div>
-              <div className="flex flex-col items-center rounded-full px-6 py-3 transition-shadow duration-300 ease-in-out aura-effect hover:shadow-lg hover:shadow-purple-600/60">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="Matlab" className="w-16 h-16 mb-2" />
-                <p className="text-white font-semibold">Matlab</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </FadeInSection>
+      </div>
+
+      {/* Web Development Card */}
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_16px_rgba(126,34,206,0.4)]">
+        <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
+        <div className="flex flex-wrap justify-evenly gap-4">
+          {[
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", alt: "JavaScript", label: "JavaScript" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", alt: "React.js", label: "React.js" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", alt: "Node.js", label: "Node.js" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", alt: "HTML", label: "HTML" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", alt: "CSS", label: "CSS" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", alt: "MySQL", label: "SQL" },
+          ].map(({ src, alt, label }) => (
+            <div key={label} className="flex flex-col items-center rounded-full px-4 py-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60">
+              <img src={src} alt={alt} className="w-8 h-8 mb-1" />
+              <p className="text-white font-semibold text-sm">{label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Tools Card */}
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_16px_rgba(126,34,206,0.4)]">
+        <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
+        <div className="flex flex-wrap justify-evenly gap-4">
+          {[
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", alt: "Git", label: "Git" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker", label: "Docker" },
+            { src: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png", alt: "MATLAB", label: "MATLAB" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", alt: "Linux", label: "Linux" },
+          ].map(({ src, alt, label }) => (
+            <div key={label} className="flex flex-col items-center rounded-full px-4 py-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60">
+              <img src={src} alt={alt} className="w-8 h-8 mb-1" />
+              <p className="text-white font-semibold text-sm">{label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</FadeInSection>
+
+
+
 
 {/* EDUCATION SECTION */}
 <FadeInSection className="py-20">
@@ -444,9 +419,9 @@ function MainPage() {
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Linux</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Docker</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Git</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">DeepFake</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">rPPG</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">3D-Geometric Facemesh</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">DeepFake</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">rPPG</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">3D-Geometric Facemesh</span>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
 
@@ -482,10 +457,10 @@ function MainPage() {
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Docker</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Git</span>
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">EdgeML</span>      
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">C++</span> 
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">C++</span> 
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">OpenEarable</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Jekyll</span>
-          
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Jekyll</span>
+
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
 
@@ -515,9 +490,9 @@ function MainPage() {
           </div>
         </div>
         <div className="flex flex-wrap mt-2 gap-1">
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">TTS</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Accessibility</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">TTS</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Accessibility</span>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
 
@@ -546,9 +521,9 @@ function MainPage() {
           </div>
         </div>
         <div className="flex flex-wrap mt-2 gap-1">
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">COBOL</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Mainframe</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Legacy Systems</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">COBOL</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Mainframe</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Legacy Systems</span>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
 
@@ -575,11 +550,11 @@ function MainPage() {
           </div>
         </div>
         <div className="flex flex-wrap mt-2 gap-1">
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">React.JS</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Tailwind</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">Redux</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">HTML</span>
-          <span className="bg-purple-600 text-white text-xs px-2 py-0.5 rounded-full">CSS</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">React.JS</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Tailwind</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Redux</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">HTML</span>
+          <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">CSS</span>
         </div>
         <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
 

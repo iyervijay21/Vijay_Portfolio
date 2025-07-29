@@ -2,22 +2,33 @@ import React, { useState, useEffect } from 'react';
 
 const ScrollToTopButton = () => {
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // detect if screen width is small (e.g. mobile)
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640); // adjust breakpoint as needed
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
     const toggleVisibility = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
 
-      if (scrollTop + windowHeight >= docHeight - 100) {  // adjust 100px threshold as needed
+      if (scrollTop + windowHeight >= docHeight - 100) {
         setVisible(true);
       } else {
         setVisible(false);
       }
     };
-    
+
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', toggleVisibility);
+    };
   }, []);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -30,7 +41,7 @@ const ScrollToTopButton = () => {
       aria-label="Scroll to top"
       style={{
         position: 'fixed',
-        bottom: '24px',
+        bottom: isMobile ? '70px' : '24px',   // move up on mobile
         right: '24px',
         backgroundColor: 'transparent',
         color: 'white',

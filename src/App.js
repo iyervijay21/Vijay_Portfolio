@@ -223,7 +223,8 @@ function MainPage() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       
       {/* AI/ML Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_16px_rgba(126,34,206,0.4)] ">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_40px_rgba(126,34,206,1)]
+ ">
         <h3 className="text-2xl font-bold text-white mb-4">AI / ML</h3>
         <div className="flex flex-wrap justify-evenly gap-4">
           {[
@@ -250,7 +251,7 @@ function MainPage() {
       </div>
 
       {/* Web Development Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_16px_rgba(126,34,206,0.4)]">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_40px_rgba(126,34,206,1)]">
         <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
         <div className="flex flex-wrap justify-evenly gap-4">
           {[
@@ -270,7 +271,7 @@ function MainPage() {
       </div>
 
       {/* Tools Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_16px_rgba(126,34,206,0.4)]">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-[0_0_40px_rgba(126,34,206,1)]">
         <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
         <div className="flex flex-wrap justify-evenly gap-4">
           {[

@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route, Link, useLocation } from "react-ro
 import ScrollToTopButton from './ScrollToTopButton';
 import { FaCat } from 'react-icons/fa'; // FontAwesome Cat icon
 
+
 // FadeInSection: Re-triggers fade/slide animation each time its content enters the viewport.
 function FadeInSection({ children, className = "" }) {
   const domRef = useRef();
@@ -59,7 +60,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
   return (
     <nav className="flex items-center justify-between px-6 py-2 fixed w-full top-0 z-20 bg-black-900 bg-opacity-99 backdrop-blur">
       <div>
-        <div className="text-xl font-bold text-white">Vijay Mohanram Iyer</div>
+        <div className="text-xl font-bold text-white">Vijay Iyer</div>
         <div className="text-xs md:text-sm text-purple-300 mt-1">
           MSc. Electrical Engineering & Information Technology @ KIT
         </div>
@@ -183,17 +184,16 @@ function MainPage() {
             <div className="w-full md:w-1/2 text-align: justify;">
              <p className="text-xl md:text-2xl mb-8 text-purple-100 text-center md:text-justify">
   <span
-    className="font-bold text-white"
+    className="block font-bold text-white text-2xl md:text-3xl mb-4"
     style={{
       textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
     }}
   >
-    Innovating Intelligent&nbsp;
-    <span style={{ whiteSpace: 'nowrap' }}>
-      Safety & Health Solutions
-    </span>
-  </span> — powered by computer vision and machine learning. Skilled in transforming advanced algorithms including deep learning architectures and large language models into practical, user-centered tools that enhance security and promote human well-being.
+   Designing Intelligent Safety Systems & Health Technologies
+  </span>
+  Blending computer vision, deep learning, and LLM's to build practical, user-focused solutions that enhance safety, enable real-time risk detection, and promote human well-being.
 </p>
+
 
 
 
@@ -285,22 +285,37 @@ function MainPage() {
       </div>
 
       {/* Tools Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
-        <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
-        <div className="flex flex-wrap justify-center gap-4">
-          {[
-            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", alt: "Git", label: "Git" },
-            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker", label: "Docker" },
-            { src: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png", alt: "MATLAB", label: "MATLAB" },
-            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", alt: "Linux", label: "Linux" },
-          ].map(({ src, alt, label }) => (
-            <div key={label} className="flex flex-col items-center rounded-full p-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60 w-20">
-              <img src={src} alt={alt} className="w-8 h-8 mb-1" />
-              <p className="text-white font-semibold text-sm text-center">{label}</p>
-            </div>
-          ))}
-        </div>
+<div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
+  <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
+  <div className="flex flex-wrap justify-center gap-4">
+    {[
+      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", alt: "Git", label: "Git" },
+      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker", label: "Docker" },
+      { src: "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png", alt: "MATLAB", label: "MATLAB" },
+      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", alt: "Linux", label: "Linux" },
+{
+  src: "https://img.icons8.com/ios-filled/50/ffffff/brain--v1.png", // brain with network nodes style
+  alt: "LLM",
+  label: "LLM"
+},
+      { 
+        src: "https://huggingface.co/front/assets/huggingface_logo.svg", 
+        alt: "Hugging Face", 
+        label: "Hugging Face" 
+      },
+      { 
+        src: "https://img.icons8.com/ios-filled/50/ffffff/pencil-tip.png", 
+        alt: "Prompt Engineering", 
+        label: "Prompt Engineering" 
+      },
+    ].map(({ src, alt, label }) => (
+      <div key={label} className="flex flex-col items-center rounded-full p-2 aura-effect hover:shadow-lg hover:shadow-purple-600/60 w-20">
+        <img src={src} alt={alt} className="w-8 h-8 mb-1" />
+        <p className="text-white font-semibold text-sm text-center">{label}</p>
       </div>
+    ))}
+  </div>
+</div>
 
     </div>
   </div>

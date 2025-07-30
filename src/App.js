@@ -665,7 +665,7 @@ function MainPage() {
   </div>
   <Link 
     to="/projects/camcussion"
-    className="mt-2 self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
+    className="mt-auto self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
   >
     More Info
   </Link>
@@ -705,7 +705,7 @@ function MainPage() {
           </div>
           <Link 
             to="/projects/self-driving"
-            className="mt-2 self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
+            className="mt-auto self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
 
           >
             More Info
@@ -745,7 +745,7 @@ function MainPage() {
   </div>
   <Link 
     to="/projects/car-accident"
-    className="mt-2 self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
+    className="mt-auto self-start bg-transparent border-2 border-purple-700 text-white px-3 py-1 rounded-full hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)]"
 
   >
     More Info

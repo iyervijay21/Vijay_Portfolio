@@ -214,7 +214,7 @@ function MainPage() {
 
             </div>
             <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
-  <div className="w-80 h-80 overflow-visible rounded-full shadow-[0_0_30px_rgba(255,255,255,0.6)]">
+  <div className="w-80 h-80 overflow-visible rounded-full shadow-[0_0_40px_rgba(255,255,255,0.6)]">
     <img
       src={require('./media/vijay.jpg')}
       alt="Hero"
@@ -311,25 +311,23 @@ function MainPage() {
 {/* EDUCATION SECTION */}
 <FadeInSection className="py-20">
   <div id="education" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-8 text-white text-left">Education</h2>
-    <div className="flex flex-col md:flex-row justify-evenly gap-8">
+    <h2 className="text-3xl font-bold mb-8 text-white">Education</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
       
       {/* KIT Card */}
-      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer mb-8 md:mb-0">
-        {/* Inner content with padding */}
-        <div className="flex items-center space-x-4 p-6">
+      <div
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
+        style={{ minHeight: '230px', maxHeight: '230px' }}
+      >
+        <div className="flex items-center space-x-4">
           <img
             src={require('./media/KIT.webp')}
             alt="KIT Logo"
             className="h-20 w-20 rounded bg-white object-contain"
           />
           <div>
-            <h3 className="text-xl font-bold mb-2 text-white">
-              Karlsruhe Institute of Technology
-            </h3>
-            <p className="text-white">
-              M.Sc. in Electrical Engineering and Information Technology
-            </p>
+            <h3 className="text-xl font-bold text-white">Karlsruhe Institute of Technology</h3>
+            <p className="text-purple-100">M.Sc. in Electrical Engineering and Information Technology</p>
             <p className="text-sm text-purple-100 mt-2">
               May 2022 – July 2025
               <br />
@@ -337,17 +335,15 @@ function MainPage() {
             </p>
           </div>
         </div>
-
-        {/* Hover me button in bottom right */}
         
-  <button className="absolute bottom-2 right-2 bg-transparent border-2 border-purple-700 text-white px-3 py-1.5 rounded-full text-xs hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)] group-hover:opacity-0 flex items-center">
-  <FaCat className="w-4 h-4 mr-1" />
-  Hover me
-</button>
+         {/* Hover me button */}
+        <button className="absolute bottom-2 right-2 bg-transparent border-2 border-purple-700 text-white px-3 py-1.5 rounded-full text-xs hover:bg-purple-700 transition shadow-[0_0_10px_2px_rgba(126,34,206,0.7)] group-hover:opacity-0 flex items-center">
+          <FaCat className="w-4 h-4 mr-1" />
+          Hover me
+        </button>
 
-
-        {/* Hover Overlay for KIT */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
           <h3 className="text-lg font-bold mb-2">Technical Competency</h3>
           <ul className="list-disc list-inside text-sm space-y-1">
             <li><strong>Software Engineering:</strong> Structured software architecture, SDLC methodologies, agile and DevOps integration</li>
@@ -360,21 +356,20 @@ function MainPage() {
         </div>
       </div>
 
-      {/* University of Mumbai Card (no button) */}
-      <div className="relative group bg-transparent shadow aura-effect rounded-[16px] w-full md:w-1/3 min-h-[200px] max-h-[240px] cursor-pointer">
-        <div className="flex items-center space-x-4 p-6">
+      {/* University of Mumbai Card */}
+      <div
+        className="relative group bg-transparent p-6 rounded shadow aura-effect cursor-pointer"
+        style={{ minHeight: '230px', maxHeight: '230px' }}
+      >
+        <div className="flex items-center space-x-4">
           <img
             src={require('./media/MU.png')}
             alt="MU Logo"
             className="h-20 w-20 rounded bg-white object-contain"
           />
           <div>
-            <h3 className="text-xl font-bold mb-2 text-white">
-              University of Mumbai
-            </h3>
-            <p className="text-white">
-              B.Eng. in Electronics Engineering
-            </p>
+            <h3 className="text-xl font-bold text-white">University of Mumbai</h3>
+            <p className="text-purple-100">B.Eng. in Electronics Engineering</p>
             <p className="text-sm text-purple-100 mt-2">
               Aug 2017 – May 2021
               <br />
@@ -382,9 +377,9 @@ function MainPage() {
             </p>
           </div>
         </div>
-
-        {/* Hover Overlay for MU */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 rounded-[16px] overlay-scrollbar">
+        
+        {/* Hover Overlay */}
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-95 text-white p-4 opacity-0 overflow-y-auto group-hover:opacity-100 transition-all duration-300 max-h-full overlay-scrollbar rounded-[16px]">
           <h3 className="text-lg font-bold mb-2">Technical Competency</h3>
           <ul className="list-disc list-inside text-sm space-y-1">
             <li><strong>Signal Processing:</strong> Core understanding of analog/digital signal processing, including filter design and spectral analysis</li>
@@ -400,6 +395,7 @@ function MainPage() {
     </div>
   </div>
 </FadeInSection>
+
 
 
 

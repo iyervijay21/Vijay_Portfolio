@@ -234,7 +234,9 @@ function MainPage() {
     id="skills"
     className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6"
   >
-    <h2 className="text-3xl font-bold mb-8 text-white text-center">My Tech Stack</h2>
+    <h2 className="text-3xl font-bold mb-8 text-white text-center" style={{
+      textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
+    }}>My Tech Stack</h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
       
@@ -311,7 +313,9 @@ function MainPage() {
 {/* EDUCATION SECTION */}
 <FadeInSection className="py-20">
   <div id="education" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-8 text-white">Education</h2>
+    <h2 className="text-3xl font-bold mb-8 text-white" style={{
+      textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
+    }}>Education</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
       
       {/* KIT Card */}
@@ -406,7 +410,9 @@ function MainPage() {
      {/* WORK EXPERIENCE SECTION */}
 <FadeInSection className="py-20">
   <div id="experience" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-8 text-white">Work Experience</h2>
+    <h2 className="text-3xl font-bold mb-8 text-white" style={{
+      textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
+    }}>Work Experience</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
       {/* FZI */}
@@ -589,7 +595,9 @@ function MainPage() {
    {/* PROJECTS SECTION */}
 <FadeInSection className="py-20">
   <div id="projects" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-8 text-white">Projects</h2>
+    <h2 className="text-3xl font-bold mb-8 text-white" style={{
+      textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
+    }}>Projects</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
 
       
@@ -763,7 +771,9 @@ function MainPage() {
  {/* CONTACT SECTION */}
 <FadeInSection className="py-20">
   <div id="contact" className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6">
-    <h2 className="text-3xl font-bold mb-4 text-white">Contact Me</h2>
+    <h2 className="text-3xl font-bold mb-4 text-white" style={{
+      textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
+    }}>Contact Me</h2>
     <p className="text-purple-100 mb-8">
       I'm always up for a wild brainstorming session where we turn pixels into pure magic. Let’s chat if you're as excited about computer vision adventures as I am!
     </p>

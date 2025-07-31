@@ -229,7 +229,8 @@ function MainPage() {
       </FadeInSection>
  
 {/* SKILLS SECTION */}
-<FadeInSection className="py-32">
+<FadeInSection className="py-12 md:py-32">
+
 
   <div
     id="skills"

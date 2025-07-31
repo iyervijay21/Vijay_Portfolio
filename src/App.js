@@ -229,7 +229,8 @@ function MainPage() {
       </FadeInSection>
  
 {/* SKILLS SECTION */}
-<FadeInSection className="py-20">
+<FadeInSection className="py-32">
+
   <div
     id="skills"
     className="scroll-mt-32 w-full bg-black-900 bg-opacity-20 shadow-md mb-8 p-6"
@@ -331,7 +332,8 @@ function MainPage() {
     <h2 className="text-3xl font-bold mb-8 text-white" style={{
       textShadow: "0 0 6px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)",
     }}>Education</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-14 items-start">
+
       
       {/* KIT Card */}
       <div

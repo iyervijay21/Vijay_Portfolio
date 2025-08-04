@@ -165,7 +165,7 @@
 /* globals.css */
 @layer utilities {
   .shadow-purple-glow {
-    box-shadow: 0 0 12px rgba(126, 34, 206, 1);
+    box-shadow: 0 0 14px rgba(126, 34, 206, 1);
   }
 }
 

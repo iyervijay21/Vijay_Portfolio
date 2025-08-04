@@ -8,6 +8,7 @@
     "@icon/devicons": "^1.8.0-alpha.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.6",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",

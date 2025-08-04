@@ -243,7 +243,7 @@ function MainPage() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
       
       {/* AI/ML Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg shadow-purple-glow h-full">
         <h3 className="text-2xl font-bold text-white mb-4">AI / ML</h3>
         <div className="flex flex-wrap justify-center gap-4">
           {[
@@ -267,7 +267,7 @@ function MainPage() {
       </div>
 
       {/* Web Development Card */}
-      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
+      <div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg  shadow-purple-glow h-full">
         <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
         <div className="flex flex-wrap justify-center gap-4">
           {[
@@ -287,7 +287,7 @@ function MainPage() {
       </div>
 
       {/* Tools Card */}
-<div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg border-[3px] border-purple-700 shadow-purple-glow h-full">
+<div className="bg-transparent bg-opacity-70 rounded-2xl p-6 shadow-lg  shadow-purple-glow h-full">
   <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
   <div className="flex flex-wrap justify-center gap-4">
     {[
@@ -688,9 +688,7 @@ function MainPage() {
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-1">
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Python</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">filtering</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">FFT</span>
-              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">CWT</span>
+              <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Signal Processing</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">OpenCV</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Linux</span>
@@ -1270,7 +1268,8 @@ function AppRouter() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-b from-black via-[#31004d] to-[#190020]">
+      <div className="min-h-screen bg-gradient-to-tr from-[#3a005a] via-[#14001d] to-black">
+
 
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Routes>

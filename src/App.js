@@ -439,12 +439,24 @@ function MainPage() {
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
-          <img src={require('./media/1524.png')} alt="FZI Logo" className="h-20 w-20 rounded bg-white object-contain" />
-          <div>
-            <h3 className="text-xl font-bold text-white">FZI</h3>
-            <p className="text-purple-100">Research Assistant (Aug 2025 – Nov 2025)</p>
-          </div>
-        </div>
+  <img 
+    src={require('./media/1524.png')} 
+    alt="FZI Logo" 
+    className="h-20 w-20 rounded bg-white object-contain" 
+  />
+  <div>
+    <h3 className="text-xl font-bold text-white">
+      Forschungszentrum Informatik
+    </h3>
+    <p className="text-purple-100">
+      Research Assistant
+    </p>
+    <p className="text-sm text-purple-100 mt-2">
+      Sept 2025 – Nov 2025
+    </p>
+  </div>
+</div>
+
         <div className="flex flex-wrap mt-2 gap-1">
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Python</span>
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Signal Processing</span>
@@ -481,7 +493,8 @@ function MainPage() {
           <img src={require('./media/teco_trans.png')} alt="TecoLab Logo" className="h-20 w-20 rounded bg-white object-contain" />
           <div>
             <h3 className="text-xl font-bold text-white">TecoLab</h3>
-            <p className="text-purple-100">Working Student (Mar 2023 – Sept 2025)</p>
+            <p className="text-purple-100">Working Student</p>
+            <p className="text-sm text-purple-100 mt-2">Mar 2023 – Sept 2025</p>
           </div>
         </div>
         <div className="flex flex-wrap mt-2 gap-1">
@@ -517,12 +530,24 @@ function MainPage() {
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
-          <img src={require('./media/6379_access@kit_rgb_dt.png')} alt="Access@KIT Logo" className="h-20 w-20 rounded bg-white object-contain" />
-          <div>
-            <h3 className="text-xl font-bold text-white">Access@KIT</h3>
-            <p className="text-purple-100">Working Student (Mar 2023 – May 2023)</p>
-          </div>
-        </div>
+  <img 
+    src={require('./media/6379_access@kit_rgb_dt.png')} 
+    alt="Access@KIT Logo" 
+    className="h-20 w-20 rounded bg-white object-contain" 
+  />
+  <div>
+    <h3 className="text-xl font-bold text-white">
+      Access@KIT
+    </h3>
+    <p className="text-purple-100">
+      Working Student
+    </p>
+    <p className="text-sm text-purple-100 mt-2">
+      Mar 2023 – May 2023
+    </p>
+  </div>
+</div>
+
         <div className="flex flex-wrap mt-2 gap-1">
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">TTS</span>
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Deep Learning</span>
@@ -548,12 +573,24 @@ function MainPage() {
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
-          <img src={require('./media/Accenture.webp')} alt="Accenture Logo" className="h-20 w-20 rounded bg-white object-contain" />
-          <div>
-            <h3 className="text-xl font-bold text-white">Accenture India</h3>
-            <p className="text-purple-100">Associate SE (Feb 2022 – Apr 2022)</p>
-          </div>
-        </div>
+  <img 
+    src={require('./media/Accenture.webp')} 
+    alt="Accenture Logo" 
+    className="h-20 w-20 rounded bg-white object-contain" 
+  />
+  <div>
+    <h3 className="text-xl font-bold text-white">
+      Accenture India
+    </h3>
+    <p className="text-purple-100">
+      Associate SE
+    </p>
+    <p className="text-sm text-purple-100 mt-2">
+      Feb 2022 – Apr 2022
+    </p>
+  </div>
+</div>
+
         <div className="flex flex-wrap mt-2 gap-1">
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">COBOL</span>
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Mainframe</span>
@@ -577,12 +614,24 @@ function MainPage() {
   style={{ minHeight: '230px', maxHeight: '230px' }}
 >
         <div className="flex items-center space-x-4">
-          <img src={require('./media/accur_digitus_logo.jpg')} alt="Accur Digitus Logo" className="h-20 w-20 rounded bg-white object-contain" />
-          <div>
-            <h3 className="text-xl font-bold text-white">Accur Digitus</h3>
-            <p className="text-purple-100">Web Dev Intern (Jan 2020 – May 2020)</p>
-          </div>
-        </div>
+  <img 
+    src={require('./media/accur_digitus_logo.jpg')} 
+    alt="Accur Digitus Logo" 
+    className="h-20 w-20 rounded bg-white object-contain" 
+  />
+  <div>
+    <h3 className="text-xl font-bold text-white">
+      Accur Digitus
+    </h3>
+    <p className="text-purple-100">
+      Web Development Intern
+    </p>
+    <p className="text-sm text-purple-100 mt-2">
+      Jan 2020 – May 2020
+    </p>
+  </div>
+</div>
+
         <div className="flex flex-wrap mt-2 gap-1">
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">React.JS</span>
           <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Tailwind</span>
@@ -631,7 +680,11 @@ function MainPage() {
             className="h-20 w-20 object-cover rounded-full"
           />
           <div>
-            <h3 className="text-xl font-bold text-white">DeepFake Detection (FZI-2025)</h3>
+            <div>
+  <h3 className="text-xl font-bold text-white">DeepFake Detection</h3>
+  <p className="text-sm text-purple-100 mt-1">Forschungszentrum Informatik - 2025</p>
+</div>
+
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-1">
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Python</span>
@@ -671,7 +724,11 @@ function MainPage() {
             className="h-20 w-20 object-cover rounded-full"
           />
           <div>
-            <h3 className="text-xl font-bold text-white">CamCussion (Zeiss Innovation Hub-2024)</h3>
+            <div>
+  <h3 className="text-xl font-bold text-white">CamCussion</h3>
+  <p className="text-sm text-purple-100 mt-1">Zeiss Innovation Hub - 2024</p>
+</div>
+
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-1">
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">Python</span>
@@ -711,7 +768,11 @@ function MainPage() {
             className="h-20 w-20 object-cover rounded-full"
           />
           <div>
-            <h3 className="text-xl font-bold text-white">Self-Driving Car using LIDAR (2022)</h3>
+            <div>
+  <h3 className="text-xl font-bold text-white">Self-Driving Car using LIDAR</h3>
+  <p className="text-sm text-purple-100 mt-1">2022</p>
+</div>
+
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-1">
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">LIDAR</span>
@@ -751,7 +812,10 @@ function MainPage() {
             className="h-20 w-20 object-cover rounded-full"
           />
           <div>
-            <h3 className="text-xl font-bold text-white">Real Time Car Accident Alert System (2021)</h3>
+            <div>
+              <h3 className="text-xl font-bold text-white">Real Time Accident Alert System</h3>
+              <p className="text-sm text-purple-100 mt-1">2021</p>
+            </div>
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-1">
               <span className="bg-purple-700 text-white text-xs px-2 py-0.5 rounded-full">C++</span>

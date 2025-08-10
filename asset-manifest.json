@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Vijay_Portfolio/static/css/main.1030f998.css",
-    "main.js": "/Vijay_Portfolio/static/js/main.42d36359.js",
+    "main.css": "/Vijay_Portfolio/static/css/main.b1e8b7a3.css",
+    "main.js": "/Vijay_Portfolio/static/js/main.b9da3591.js",
     "static/media/RTC.png": "/Vijay_Portfolio/static/media/RTC.71ec259252f71197e69f.png",
     "static/media/lidar.png": "/Vijay_Portfolio/static/media/lidar.7c9b44884a4b007008ea.png",
     "static/media/Alert.png": "/Vijay_Portfolio/static/media/Alert.255ede38357df438fdee.png",
@@ -17,11 +17,11 @@
     "static/media/KIT.webp": "/Vijay_Portfolio/static/media/KIT.555374c4b4e2f28da886.webp",
     "static/media/Accenture.webp": "/Vijay_Portfolio/static/media/Accenture.ecb0107f5367eaedf074.webp",
     "index.html": "/Vijay_Portfolio/index.html",
-    "main.1030f998.css.map": "/Vijay_Portfolio/static/css/main.1030f998.css.map",
-    "main.42d36359.js.map": "/Vijay_Portfolio/static/js/main.42d36359.js.map"
+    "main.b1e8b7a3.css.map": "/Vijay_Portfolio/static/css/main.b1e8b7a3.css.map",
+    "main.b9da3591.js.map": "/Vijay_Portfolio/static/js/main.b9da3591.js.map"
   },
   "entrypoints": [
-    "static/css/main.1030f998.css",
-    "static/js/main.42d36359.js"
+    "static/css/main.b1e8b7a3.css",
+    "static/js/main.b9da3591.js"
   ]
 }

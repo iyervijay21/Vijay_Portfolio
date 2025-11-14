@@ -169,14 +169,3 @@
   }
 }
 
-@layer utilities {
-  .bg-gradient-mobile {
-    background-image: linear-gradient(to top right, #3a005a, #14001d, black);
-  }
-
-  @media (min-width: 768px) {
-    .bg-gradient-horizontal {
-      background-image: linear-gradient(to right, #3a005a, #14001d, black);
-    }
-  }
-}
